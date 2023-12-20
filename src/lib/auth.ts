@@ -13,6 +13,15 @@ export const {
   adapter: PrismaAdapter(prisma),
   providers: [GitHub],
   debug: process.env.NODE_ENV !== "production",
+  callbacks: {
+    // Add the user id from the database to the session's user object
+    async session({ session, user }) {
+      if (session && session.user && user) {
+        session.user.id = user.id;
+      }
+      return session;
+    },
+  },
 });
 
 export const signInAction = async () => {
