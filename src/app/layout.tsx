@@ -5,7 +5,7 @@ import { Analytics } from "@/components/misc";
 
 import "./globals.css";
 
-const outfit = Outfit({ weight: "variable", subsets: ["latin"], variable: "--font-outfit" });
+const outfit = Outfit({ weight: "variable", subsets: ["latin"], variable: "--global-font-body" });
 
 export const metadata: Metadata = {
   title: "inkhorn",

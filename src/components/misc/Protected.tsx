@@ -3,7 +3,7 @@
 import React, { ReactNode } from "react";
 import { redirect } from "next/navigation";
 
-import { auth } from "@/lib/auth";
+import { auth } from "@/lib/auth/config";
 
 type ProtectedProps = {
   children: ReactNode;

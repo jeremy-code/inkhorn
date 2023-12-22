@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { container, hstack } from "styled-system/patterns";
 
+import { FormButton } from "@/components/ui";
 import logo from "@/assets/logo.svg";
 import { auth, signInAction, signOutAction } from "@/lib/auth";
-import { Button } from "./Button";
 
 export const Navbar = async () => {
   const session = await auth();
@@ -27,13 +27,9 @@ export const Navbar = async () => {
       </Link>
 
       {session?.user ? (
-        <form action={signOutAction}>
-          <Button>Logout</Button>
-        </form>
+        <FormButton action={signOutAction}>Logout</FormButton>
       ) : (
-        <form action={signInAction}>
-          <Button>Login</Button>
-        </form>
+        <FormButton action={signInAction}>Login</FormButton>
       )}
     </div>
   );

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { css } from "styled-system/css";
 import { container, grid, stack } from "styled-system/patterns";
 
-import { Button, Heading, Navbar } from "@/components/ui";
+import { FormButton, Heading, Navbar } from "@/components/ui";
 import heroImage from "@/assets/hero-image.svg";
 import { signInAction } from "@/lib/auth";
 
@@ -24,9 +24,7 @@ const Home = async () => {
               the next-generation assistant for students
             </Heading>
             <div>
-              <form action={signInAction}>
-                <Button>Login</Button>
-              </form>
+              <FormButton action={signInAction}>Login</FormButton>
             </div>
           </div>
           <Image

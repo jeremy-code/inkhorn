@@ -9,10 +9,15 @@ export default defineConfig({
   presets: ["@pandacss/preset-base", "@park-ui/panda-preset"],
   theme: {
     extend: {
+      keyframes: {
+        spin: {
+          to: { transform: "rotate(360deg)" },
+        },
+      },
       tokens: {
         colors: {
           primary: {
-            DEFAULT: { value: "#76f7bf" },
+            DEFAULT: { value: "#68daa9" },
             50: { value: "#e3fdf2" },
             100: { value: "#79f7c1" },
             200: { value: "#68daa9" },

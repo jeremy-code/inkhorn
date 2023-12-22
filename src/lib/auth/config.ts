@@ -1,8 +1,8 @@
-import { PrismaAdapter } from "@auth/prisma-adapter";
+import { DrizzleAdapter } from "@auth/drizzle-adapter";
 import NextAuth from "next-auth";
 import GitHub from "next-auth/providers/github";
 
-import { prisma } from "@/lib/database";
+import { db } from "@/lib";
 
 export const {
   handlers: { GET, POST },
@@ -10,7 +10,7 @@ export const {
   signIn,
   signOut,
 } = NextAuth({
-  adapter: PrismaAdapter(prisma),
+  adapter: DrizzleAdapter(db),
   providers: [GitHub],
   debug: process.env.NODE_ENV !== "production",
   callbacks: {
@@ -23,15 +23,3 @@ export const {
     },
   },
 });
-
-export const signInAction = async () => {
-  "use server";
-  await signIn(undefined, {
-    redirectTo: "/app",
-  });
-};
-
-export const signOutAction = async () => {
-  "use server";
-  await signOut();
-};
