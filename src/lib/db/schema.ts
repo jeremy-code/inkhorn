@@ -19,6 +19,7 @@ export const courses = pgTable("course", {
     .$defaultFn(() => crypto.randomUUID())
     .primaryKey(),
   name: text("name").notNull(),
+  daysOfTheWeek: text("daysOfTheWeek").array(),
   userId: text("userId"),
 });
 

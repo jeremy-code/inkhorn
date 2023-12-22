@@ -4,14 +4,16 @@ import { Card } from "@/components/ui";
 
 type CourseProps = {
   name: string;
+  daysOfTheWeek: string[] | null;
 };
 
-const Course = ({ name }: CourseProps) => {
+const Course = ({ name, daysOfTheWeek }: CourseProps) => {
   return (
     <Card.Root maxW="md">
-      <Card.CardHeader>
-        <Card.CardTitle>{name}</Card.CardTitle>
-      </Card.CardHeader>
+      <Card.Header>
+        <Card.Title>{name}</Card.Title>
+      </Card.Header>
+      <Card.Body>{daysOfTheWeek}</Card.Body>
     </Card.Root>
   );
 };

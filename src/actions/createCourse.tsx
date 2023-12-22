@@ -3,20 +3,23 @@
 import { getUser } from "@/actions";
 import { courses, db } from "@/lib";
 
-const createCourse = async (data: FormData) => {
+const DAY_PREFIX = "day-of-the-week";
+
+const createCourse = async (formData: FormData) => {
   const user = await getUser();
-  const name = data.get("name") as string;
+  if (!user?.id) return null;
 
-  console.log(user, user?.id, name);
+  const name = formData.get("name") as string;
+  if (!name) return null;
 
-  if (!user || !user.id || !name) {
-    return null;
-  }
+  const daysOfTheWeek = Array.from(formData.entries())
+    .filter(([key, value]) => key.startsWith(DAY_PREFIX) && value === "on")
+    .map(([key]) => key.slice(DAY_PREFIX.length + 1));
 
-  return await db.insert(courses).values({
+  return db.insert(courses).values({
     name,
     userId: user.id,
+    daysOfTheWeek,
   });
 };
-
 export default createCourse;

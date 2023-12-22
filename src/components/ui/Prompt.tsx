@@ -36,7 +36,7 @@ export const Prompt = ({ label, title, description, children, action, ...props }
             </Stack>
             <form>
               {children}
-              <Stack gap="3" direction="row" width="full" mt={8}>
+              <Stack gap="3" direction="row" width="full" mt={6}>
                 <Dialog.CloseTrigger asChild>
                   <Button variant="outline" width="full">
                     Cancel
