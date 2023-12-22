@@ -14,6 +14,13 @@ export default defineConfig({
           to: { transform: "rotate(360deg)" },
         },
       },
+      semanticTokens: {
+        colors: {
+          bg: {
+            canvas: { value: { base: "#faf9f5", _dark: "{colors.gray.5}" } },
+          },
+        },
+      },
       tokens: {
         colors: {
           primary: {

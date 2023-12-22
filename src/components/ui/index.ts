@@ -1,6 +1,5 @@
 // Park UI components
 // see https://park-ui.com/
-export * from "./Navbar";
 export * from "./Button";
 export * from "./Heading";
 export * from "./IconButton";

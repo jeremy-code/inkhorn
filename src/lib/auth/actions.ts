@@ -1,10 +1,15 @@
 "use server";
 
-import { signIn, signOut } from "@/lib/auth/config";
+import { redirect } from "next/navigation";
+
+import { auth, signIn, signOut } from "@/lib/auth/config";
 
 export const signInAction = async () => {
+  const session = await auth();
+  if (session?.user) redirect("/courses");
+
   await signIn(undefined, {
-    redirectTo: "/app",
+    redirectTo: "/courses",
   });
 };
 

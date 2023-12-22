@@ -11,6 +11,10 @@ const daysOfTheWeek = [
     value: "sunday",
   },
   {
+    abbr: "M",
+    value: "monday",
+  },
+  {
     abbr: "T",
     value: "tuesday",
   },

@@ -5,11 +5,9 @@ import { container, hstack } from "styled-system/patterns";
 
 import { FormButton } from "@/components/ui";
 import logo from "@/assets/logo.svg";
-import { auth, signInAction, signOutAction } from "@/lib/auth";
+import { signInAction } from "@/lib/auth";
 
-export const Navbar = async () => {
-  const session = await auth();
-
+const Navbar = async () => {
   return (
     <div
       className={container({
@@ -17,6 +15,8 @@ export const Navbar = async () => {
         justifyContent: "space-between",
         alignItems: "center",
         py: 3,
+        borderBottom: "1px solid",
+        borderColor: "gray.4",
       })}
     >
       <Link href="/">
@@ -26,11 +26,9 @@ export const Navbar = async () => {
         </p>
       </Link>
 
-      {session?.user ? (
-        <FormButton action={signOutAction}>Logout</FormButton>
-      ) : (
-        <FormButton action={signInAction}>Login</FormButton>
-      )}
+      <FormButton action={signInAction}>Login</FormButton>
     </div>
   );
 };
+
+export default Navbar;
