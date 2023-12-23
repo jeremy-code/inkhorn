@@ -1,4 +1,4 @@
-import { defineConfig } from "@pandacss/dev";
+import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
 
 export default defineConfig({
   preflight: true,
@@ -7,6 +7,21 @@ export default defineConfig({
   emitPackage: true,
   prefix: "inkhorn",
   presets: ["@pandacss/preset-base", "@park-ui/panda-preset"],
+  globalCss: {
+    "html, body": {
+      height: "100%",
+    },
+    body: {
+      display: "flex",
+      flexDirection: "column",
+    },
+    "body > main": {
+      flex: "0 1 auto",
+    },
+    "header, footer": {
+      flexShrink: 0,
+    },
+  },
   theme: {
     extend: {
       keyframes: {

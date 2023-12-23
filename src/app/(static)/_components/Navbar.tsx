@@ -9,7 +9,7 @@ import { signInAction } from "@/lib/auth";
 
 const Navbar = async () => {
   return (
-    <div
+    <main
       className={container({
         display: "flex",
         justifyContent: "space-between",
@@ -17,6 +17,7 @@ const Navbar = async () => {
         py: 3,
         borderBottom: "1px solid",
         borderColor: "gray.4",
+        w: "full",
       })}
     >
       <Link href="/">
@@ -27,7 +28,7 @@ const Navbar = async () => {
       </Link>
 
       <FormButton action={signInAction}>Login</FormButton>
-    </div>
+    </main>
   );
 };
 

@@ -10,6 +10,7 @@ const outfit = Outfit({ weight: "variable", subsets: ["latin"], variable: "--glo
 export const metadata: Metadata = {
   title: "inkhorn",
   description: "inkhorn",
+  metadataBase: new URL("https://inkhorn.io"),
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {

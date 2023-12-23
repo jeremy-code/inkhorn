@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { styled } from "styled-system/jsx";
 import { container, hstack } from "styled-system/patterns";
 
 import { FormButton } from "@/components/ui";
@@ -11,12 +12,15 @@ const Navbar = async () => {
   const session = await auth();
 
   return (
-    <div
+    <header
       className={container({
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center",
         alignItems: "center",
-        py: 3,
+        py: 4,
+        bg: "white",
+        boxShadow: "md",
+        w: "full",
       })}
     >
       <Link href="/courses">
@@ -26,12 +30,14 @@ const Navbar = async () => {
         </p>
       </Link>
 
-      {session?.user ? (
-        <FormButton action={signOutAction}>Logout</FormButton>
-      ) : (
-        <FormButton action={signInAction}>Login</FormButton>
-      )}
-    </div>
+      <styled.div position="absolute" right={2}>
+        {session?.user ? (
+          <FormButton action={signOutAction}>Logout</FormButton>
+        ) : (
+          <FormButton action={signInAction}>Login</FormButton>
+        )}
+      </styled.div>
+    </header>
   );
 };
 
