@@ -1,11 +1,14 @@
 import React, { ReactNode } from "react";
 
-import { Footer, Navbar } from "./_components";
+import { Footer, FormButton, Navbar } from "@/components/ui";
+import { signInAction } from "@/lib/auth";
 
 const StaticLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <Navbar />
+      <Navbar justify="spaced" outline="border">
+        <FormButton action={signInAction}>Login</FormButton>
+      </Navbar>
       {children}
       <Footer />
     </>

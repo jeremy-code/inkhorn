@@ -5,10 +5,13 @@ import type { HTMLStyledProps } from "styled-system/types";
 
 type SpinnerProps = {
   isLoading?: boolean;
-  color?: string;
 } & HTMLStyledProps<"div">;
 
-export const Spinner = ({ isLoading = true, color = "#3498db", ...props }: SpinnerProps) => {
+// to change color, change prop borderTopColor
+// unfortunately, no current way to change css prop name in panda css per
+// "Due to the static nature of Panda, you can't rename properties at runtime."
+// https://panda-css.com/docs/concepts/style-props
+export const Spinner = ({ isLoading = true, ...props }: SpinnerProps) => {
   const [cssProps, rest] = splitCssProps(props);
 
   return (
@@ -16,11 +19,11 @@ export const Spinner = ({ isLoading = true, color = "#3498db", ...props }: Spinn
       <Circle
         className={css(
           {
-            border: "4px solid #f3f3f3",
-            borderTopColor: color,
+            border: "4px solid token(colors.gray.4)",
+            borderTopColor: "blue.10",
             width: "24px",
             height: "24px",
-            animation: "spin 1s linear infinite",
+            animation: "spin",
           },
           cssProps
         )}

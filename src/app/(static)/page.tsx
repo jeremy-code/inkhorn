@@ -17,7 +17,7 @@ const Home = async () => {
           alignContent: "center",
         })}
       >
-        <div className={stack({ gap: 5, justifyContent: "center" })}>
+        <div className={stack({ gap: 5, justify: "center" })}>
           <Heading as="h1" textStyle="5xl" maxW="15ch">
             the next-generation assistant for students
           </Heading>

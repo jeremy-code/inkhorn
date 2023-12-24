@@ -1,5 +1,21 @@
 import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
 
+const globalCss = defineGlobalStyles({
+  "html, body": {
+    height: "100%",
+  },
+  body: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  "body > main": {
+    flex: "0 1 auto",
+  },
+  "header, footer": {
+    flexShrink: 0,
+  },
+});
+
 export default defineConfig({
   preflight: true,
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -7,21 +23,7 @@ export default defineConfig({
   emitPackage: true,
   prefix: "inkhorn",
   presets: ["@pandacss/preset-base", "@park-ui/panda-preset"],
-  globalCss: {
-    "html, body": {
-      height: "100%",
-    },
-    body: {
-      display: "flex",
-      flexDirection: "column",
-    },
-    "body > main": {
-      flex: "0 1 auto",
-    },
-    "header, footer": {
-      flexShrink: 0,
-    },
-  },
+  globalCss,
   theme: {
     extend: {
       keyframes: {
@@ -37,6 +39,11 @@ export default defineConfig({
         },
       },
       tokens: {
+        animations: {
+          spin: {
+            value: "spin 1s linear infinite",
+          },
+        },
         colors: {
           primary: {
             DEFAULT: { value: "#68daa9" },

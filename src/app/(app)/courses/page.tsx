@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { container, stack } from "styled-system/patterns";
+import { stack } from "styled-system/patterns";
 
 import { Course } from "@/components/course";
 import { Input, Label, Prompt, WeekDaySelector } from "@/components/ui";

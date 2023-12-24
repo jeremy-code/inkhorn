@@ -17,3 +17,5 @@ export * from "./Spinner";
 export * from "./SubmitButton";
 export * from "./FormButton";
 export * from "./WeekDaySelector";
+export * from "./Navbar";
+export * from "./Footer";

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ButtonProps, SubmitButton } from "@/components/ui";
+import { SubmitButton, type ButtonProps } from "@/components/ui";
 
 type FormButtonProps = {
   action: (data: FormData) => Promise<any>;

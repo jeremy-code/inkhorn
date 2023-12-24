@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { useFormStatus } from "react-dom";
 import { css } from "styled-system/css";
 
-import { Button, ButtonProps } from "./Button";
+import { Button, type ButtonProps } from "./Button";
 import { Spinner } from "./Spinner";
 
 type SubmitButtonProps = {
