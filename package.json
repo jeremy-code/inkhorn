@@ -10,7 +10,7 @@
   },
   "homepage": "https://github.com/jeremy-code/inkhorn#readme",
   "scripts": {
-    "prepare": "husky install && panda codegen",
+    "postinstall": "husky install && panda codegen",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -44,14 +44,18 @@
     "@types/node": "^20.10.4",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
     "drizzle-kit": "^0.20.7",
     "eslint": "^8.56.0",
     "eslint-config-next": "14.0.4",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-drizzle": "^0.2.2",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "postcss": "^8.4.32",
     "prettier": "^3.1.1",
     "typescript": "^5.3.3"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }
