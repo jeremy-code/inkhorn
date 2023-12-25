@@ -69,6 +69,12 @@ export default defineConfig({
           backgroundImage: `radial-gradient(${value})`,
         }),
       },
+      linkDecor: {
+        values: { type: "boolean" },
+        transform: (value) => ({
+          textDecoration: value ? undefined : "none",
+        }),
+      },
     },
   },
   jsxFramework: "react",

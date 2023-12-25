@@ -1,6 +1,6 @@
 # inkhorn [![GitHub Actions badge](https://github.com/jeremy-code/inkhorn/actions/workflows/ci.yml/badge.svg)](https://github.com/jeremy-code/inkhorn/actions/workflows/ci.yml) [![License](https://img.shields.io/github/license/jeremy-code/inkhorn)](LICENSE)
 
-> Inkhorn is a next-gen web app for students. Built with [Next.js](https://nextjs.org/), [Drizzle ORM](https://orm.drizzle.team/), [Panda CSS](https://panda-css.com/), and [Ark UI](https://ark-ui.com/).
+> inkhorn is a next-gen web app for students. Built with [Next.js](https://nextjs.org), [Drizzle ORM](https://orm.drizzle.team), [Panda CSS](https://panda-css.com), and [Ark UI](https://ark-ui.com).
 
 ## 🛠️ Installation
 

@@ -1,2 +1,3 @@
-export * from "./auth/config";
+export * from "./auth";
 export * from "./db";
+export * from "./styled";

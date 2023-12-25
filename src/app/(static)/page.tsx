@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { css } from "styled-system/css";
-import { container, grid, stack } from "styled-system/patterns";
+import { Stack } from "styled-system/jsx";
+import { container, grid } from "styled-system/patterns";
 
 import { FormButton } from "@/components/form";
 import { Heading } from "@/components/ui";
@@ -18,20 +19,20 @@ const Home = async () => {
           alignContent: "center",
         })}
       >
-        <div className={stack({ gap: 5, justify: "center" })}>
+        <Stack gap="5" justify="center">
           <Heading as="h1" textStyle="5xl" maxW="15ch">
             the next-generation assistant for students
           </Heading>
           <div>
             <FormButton action={signInAction}>Login</FormButton>
           </div>
-        </div>
+        </Stack>
         <Image
           src={heroImage}
           height="400"
-          alt="hey"
+          alt="hero image"
           priority
-          className={css({ display: ["none", null, "block"], mx: "auto" })}
+          className={css({ mx: "auto", hideBelow: "md" })}
         />
       </div>
     </main>

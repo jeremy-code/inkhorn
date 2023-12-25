@@ -5,6 +5,7 @@ export * from "./Spinner";
 
 // Park UI components
 // see https://park-ui.com/
+export * from "./Badge";
 export * from "./Button";
 export * from "./Heading";
 export * from "./IconButton";

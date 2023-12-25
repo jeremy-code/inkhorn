@@ -41,7 +41,7 @@ export const Prompt = ({ label, title, description, children, action, ...props }
                     Cancel
                   </Button>
                 </Dialog.CloseTrigger>
-                {/* Closes Dialog after completition */}
+                {/* Closes Dialog after completion */}
                 <SubmitButton
                   width="full"
                   type="submit"

@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { grid } from "styled-system/patterns";
+import { Grid } from "styled-system/jsx";
 
 type CoursesLayoutProps = {
   children: ReactNode;
@@ -8,10 +8,10 @@ type CoursesLayoutProps = {
 
 const CoursesLayout = ({ children, course }: CoursesLayoutProps) => {
   return (
-    <div className={grid({ columns: 2, h: "full", w: "full" })}>
+    <Grid h="full" w="full" gridTemplateColumns="2fr 3fr">
       {children}
       {course}
-    </div>
+    </Grid>
   );
 };
 
