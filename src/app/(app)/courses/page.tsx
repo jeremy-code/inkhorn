@@ -1,10 +1,15 @@
 import React from "react";
-import { Divider, Stack, styled } from "styled-system/jsx";
+import type { Metadata } from "next";
+import { Stack, styled } from "styled-system/jsx";
 
 import { Course } from "@/components/course";
 import { Prompt, WeekDaysSelector } from "@/components/form";
 import { Input, Label } from "@/components/ui";
 import { createCourse, getUser } from "@/actions";
+
+export const metadata: Metadata = {
+  title: "courses | inkhorn",
+};
 
 const CoursesPage = async () => {
   const user = await getUser();
