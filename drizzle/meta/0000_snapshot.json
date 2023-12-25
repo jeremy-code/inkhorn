@@ -1,5 +1,5 @@
 {
-  "id": "a2895a10-57e4-4bba-a69f-f8e46255906f",
+  "id": "e9077e64-442e-4178-8b1f-6cdda72bfc49",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -118,11 +118,17 @@
           "primaryKey": false,
           "notNull": true
         },
+        "daysOfTheWeek": {
+          "name": "daysOfTheWeek",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": false
+        },
         "userId": {
           "name": "userId",
           "type": "text",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         }
       },
       "indexes": {},

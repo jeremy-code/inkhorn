@@ -1,18 +1,12 @@
-import React from "react";
 import Link from "next/link";
 
 import { Card } from "@/components/ui";
-
-type CourseProps = {
-  id: string;
-  name: string;
-  daysOfTheWeek: string[] | null;
-};
+import type { Course as CourseProps } from "@/interfaces";
 
 const Course = ({ id, name, daysOfTheWeek }: CourseProps) => {
   return (
     <Link href={`/courses/${id}`}>
-      <Card.Root maxW="md">
+      <Card.Root w="md">
         <Card.Header>
           <Card.Title>{name}</Card.Title>
         </Card.Header>

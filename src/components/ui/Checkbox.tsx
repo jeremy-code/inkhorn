@@ -29,7 +29,7 @@ export {
   Root,
 };
 
-export interface CheckboxProps extends HTMLStyledProps<typeof Checkbox> {}
-export interface CheckboxControlProps extends HTMLStyledProps<typeof CheckboxControl> {}
-export interface CheckboxIndicatorProps extends HTMLStyledProps<typeof CheckboxIndicator> {}
-export interface CheckboxLabelProps extends HTMLStyledProps<typeof CheckboxLabel> {}
+export type CheckboxProps = HTMLStyledProps<typeof Checkbox>;
+export type CheckboxControlProps = HTMLStyledProps<typeof CheckboxControl>;
+export type CheckboxIndicatorProps = HTMLStyledProps<typeof CheckboxIndicator>;
+export type CheckboxLabelProps = HTMLStyledProps<typeof CheckboxLabel>;

@@ -4,17 +4,16 @@ import React, { useState } from "react";
 import { XMarkIcon } from "@heroicons/react/16/solid";
 import { Stack } from "styled-system/jsx";
 
+import { SubmitButton } from "@/components/form/SubmitButton";
 import { Button } from "@/components/ui/Button";
 import * as Dialog from "@/components/ui/Dialog";
 import { IconButton } from "@/components/ui/IconButton";
-import { SubmitButton } from "@/components/ui/SubmitButton";
 
 type PromptProps = {
   label: string;
   title: string;
   description?: string;
   children?: React.ReactNode;
-
   action?: (formData: FormData) => void;
 } & Dialog.DialogProps;
 
@@ -42,6 +41,7 @@ export const Prompt = ({ label, title, description, children, action, ...props }
                     Cancel
                   </Button>
                 </Dialog.CloseTrigger>
+                {/* Closes Dialog after completition */}
                 <SubmitButton
                   width="full"
                   type="submit"

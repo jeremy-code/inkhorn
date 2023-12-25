@@ -8,7 +8,7 @@ const globalCss = defineGlobalStyles({
     display: "flex",
     flexDirection: "column",
   },
-  "body > main": {
+  "body > div, body > main": {
     flex: "0 1 auto",
   },
   "header, footer": {
@@ -59,6 +59,15 @@ export default defineConfig({
             900: { value: "#1b392c" },
           },
         },
+      },
+    },
+  },
+  utilities: {
+    extend: {
+      radialGradient: {
+        transform: (value) => ({
+          backgroundImage: `radial-gradient(${value})`,
+        }),
       },
     },
   },

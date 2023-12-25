@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 
-import { Footer, FormButton, Navbar } from "@/components/ui";
+import { FormButton } from "@/components/form";
+import { Footer, Navbar } from "@/components/ui";
 import { signInAction } from "@/lib/auth";
 
 const StaticLayout = ({ children }: { children: ReactNode }) => {

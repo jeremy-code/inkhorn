@@ -1,15 +1,15 @@
-import React from "react";
 import { styled } from "styled-system/jsx";
 
-import { FormButton, Navbar } from "@/components/ui";
+import { FormButton } from "@/components/form";
+import { Navbar } from "@/components/ui";
 import { auth, signInAction, signOutAction } from "@/lib/auth";
 
 const AppNavbar = async () => {
   const session = await auth();
 
   return (
-    <Navbar justify="center" outline="shadow">
-      <styled.div position="absolute" right={2}>
+    <Navbar justify="center" outline="shadow" height="16">
+      <styled.div position="absolute" right={4}>
         {session?.user ? (
           <FormButton action={signOutAction}>Logout</FormButton>
         ) : (

@@ -1,10 +1,10 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { cva } from "styled-system/css";
-import { splitCssProps, styled } from "styled-system/jsx";
-import { container, hstack } from "styled-system/patterns";
+import { splitCssProps, styled, type HTMLStyledProps } from "styled-system/jsx";
+import { container } from "styled-system/patterns";
 
+import { Link } from "@/components/ui";
 import { logo } from "@/assets";
 
 const navbar = cva({
@@ -34,16 +34,16 @@ const navbar = cva({
   },
 });
 
-type NavbarProps = {
+export type NavbarProps = {
   children?: ReactNode;
-};
+} & HTMLStyledProps<"header">;
 
 export const Navbar = styled(({ children, ...props }: NavbarProps) => {
   const [cssProps, rest] = splitCssProps(props);
 
   return (
     <header className={container(cssProps)} {...rest}>
-      <Link href="/courses" className={hstack({ fontWeight: "bold" })}>
+      <Link href="/" fontWeight="bold" display="flex" textDecoration="none">
         <Image src={logo} alt="inkhorn logo" width={15} height={15} />
         inkhorn
       </Link>

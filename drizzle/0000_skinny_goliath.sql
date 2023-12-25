@@ -16,7 +16,8 @@ CREATE TABLE IF NOT EXISTS "account" (
 CREATE TABLE IF NOT EXISTS "course" (
 	"id" text PRIMARY KEY NOT NULL,
 	"name" text NOT NULL,
-	"userId" text
+	"daysOfTheWeek" text[],
+	"userId" text NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "session" (

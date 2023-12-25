@@ -1,13 +1,13 @@
 import React, { ReactNode } from "react";
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
+import { Flex, styled, type FlexProps } from "styled-system/jsx";
 
 type SidebarProps = {
   children: ReactNode;
-} & HTMLStyledProps<"div">;
+} & FlexProps;
 
 const Sidebar = ({ children, ...rest }: SidebarProps) => {
   return (
-    <styled.main display="flex" h="full" {...rest}>
+    <Flex h="full" zIndex="banner" {...rest}>
       <styled.aside
         bg="white"
         w="15rem"
@@ -23,13 +23,15 @@ const Sidebar = ({ children, ...rest }: SidebarProps) => {
           right: "-30px",
           // a somewhat hacky way of doing an inverted border radius for the connection between navbar and sidebar
           // 32px to approximate a drop shadow of color gray (30px would be solid white with no shadow)
-          bg: "radial-gradient(circle at 100% 100%, transparent 30px, token(colors.gray.3), white 32px)",
+          radialGradient: "circle at 100% 100%, transparent 30px, token(colors.gray.3), white 32px",
         }}
       >
         Sidebar
       </styled.aside>
-      {children}
-    </styled.main>
+      <styled.main px={4} w="full" mx="auto" h="full">
+        {children}
+      </styled.main>
+    </Flex>
   );
 };
 

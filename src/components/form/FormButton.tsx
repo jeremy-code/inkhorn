@@ -1,10 +1,8 @@
-import React from "react";
-
-import { SubmitButton, type ButtonProps } from "@/components/ui";
+import { SubmitButton, type SubmitButtonProps } from "@/components/form";
 
 type FormButtonProps = {
-  action: (data: FormData) => Promise<any>;
-} & ButtonProps;
+  action: (formData: FormData) => unknown | Promise<unknown>;
+} & SubmitButtonProps;
 
 export const FormButton = ({ action, children, ...rest }: FormButtonProps) => {
   return (

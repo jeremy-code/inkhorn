@@ -45,11 +45,11 @@ export {
   Trigger,
 };
 
-export interface DialogProps extends HTMLStyledProps<typeof Dialog> {}
-export interface DialogBackdropProps extends HTMLStyledProps<typeof DialogBackdrop> {}
-export interface DialogCloseTriggerProps extends HTMLStyledProps<typeof DialogCloseTrigger> {}
-export interface DialogContentProps extends HTMLStyledProps<typeof DialogContent> {}
-export interface DialogDescriptionProps extends HTMLStyledProps<typeof DialogDescription> {}
-export interface DialogPositionerProps extends HTMLStyledProps<typeof DialogPositioner> {}
-export interface DialogTitleProps extends HTMLStyledProps<typeof DialogTitle> {}
-export interface DialogTriggerProps extends HTMLStyledProps<typeof DialogTrigger> {}
+export type DialogProps = HTMLStyledProps<typeof Dialog>;
+export type DialogBackdropProps = HTMLStyledProps<typeof DialogBackdrop>;
+export type DialogCloseTriggerProps = HTMLStyledProps<typeof DialogCloseTrigger>;
+export type DialogContentProps = HTMLStyledProps<typeof DialogContent>;
+export type DialogDescriptionProps = HTMLStyledProps<typeof DialogDescription>;
+export type DialogPositionerProps = HTMLStyledProps<typeof DialogPositioner>;
+export type DialogTitleProps = HTMLStyledProps<typeof DialogTitle>;
+export type DialogTriggerProps = HTMLStyledProps<typeof DialogTrigger>;

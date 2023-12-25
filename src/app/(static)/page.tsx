@@ -2,8 +2,9 @@ import Image from "next/image";
 import { css } from "styled-system/css";
 import { container, grid, stack } from "styled-system/patterns";
 
-import { FormButton, Heading } from "@/components/ui";
-import heroImage from "@/assets/hero-image.svg";
+import { FormButton } from "@/components/form";
+import { Heading } from "@/components/ui";
+import { heroImage } from "@/assets";
 import { signInAction } from "@/lib/auth";
 
 const Home = async () => {

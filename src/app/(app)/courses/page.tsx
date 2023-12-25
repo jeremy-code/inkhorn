@@ -1,29 +1,27 @@
 import React from "react";
-import Link from "next/link";
-import { stack } from "styled-system/patterns";
+import { Stack, styled } from "styled-system/jsx";
 
 import { Course } from "@/components/course";
-import { Input, Label, Prompt, WeekDaySelector } from "@/components/ui";
+import { Prompt, WeekDaysSelector } from "@/components/form";
+import { Input, Label } from "@/components/ui";
 import { createCourse, getUser } from "@/actions";
 
 const CoursesPage = async () => {
   const user = await getUser();
 
   return (
-    <div>
+    <styled.div overflowY="scroll" pt={4}>
       <Prompt label="Create New Course" title="Create New Course" action={createCourse}>
         <Label>Course Name</Label>
         <Input placeholder="Course Name" type="text" name="name" />
 
-        <WeekDaySelector mt={4} />
+        <WeekDaysSelector mt={4} />
       </Prompt>
 
-      <Link href="/courses/1">Test me</Link>
-
-      <div className={stack({ mt: 4 })}>
+      <Stack mt={4} align="center">
         {user?.courses.map((course) => <Course {...course} key={course.id} />)}
-      </div>
-    </div>
+      </Stack>
+    </styled.div>
   );
 };
 

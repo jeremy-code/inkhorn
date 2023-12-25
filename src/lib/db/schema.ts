@@ -20,7 +20,7 @@ export const courses = pgTable("course", {
     .primaryKey(),
   name: text("name").notNull(),
   daysOfTheWeek: text("daysOfTheWeek").array(),
-  userId: text("userId"),
+  userId: text("userId").notNull(),
 });
 
 export const coursesRelations = relations(courses, ({ one }) => ({

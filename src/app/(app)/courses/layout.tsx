@@ -8,18 +8,10 @@ type CoursesLayoutProps = {
 
 const CoursesLayout = ({ children, course }: CoursesLayoutProps) => {
   return (
-    <main
-      className={grid({
-        columns: 2,
-        flexGrow: 1,
-        py: 8,
-        maxW: "60rem",
-        mx: "auto",
-      })}
-    >
+    <div className={grid({ columns: 2, h: "full", w: "full" })}>
       {children}
       {course}
-    </main>
+    </div>
   );
 };
 
