@@ -2,7 +2,7 @@ import { HStack } from "styled-system/jsx";
 
 import { ShallowPage } from "@/components/misc";
 import { Badge, Card } from "@/components/ui";
-import { db } from "@/lib";
+import { getCourse } from "@/actions";
 
 type CoursePageProps = {
   params: {
@@ -11,10 +11,7 @@ type CoursePageProps = {
 };
 
 const CoursePage = async ({ params }: CoursePageProps) => {
-  const course = await db.query.courses.findFirst({
-    where: (c, { eq }) => eq(c.id, params.id),
-  });
-
+  const course = await getCourse(params.id);
   if (!course) return;
 
   const { name, daysOfTheWeek } = course;

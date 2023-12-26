@@ -16,10 +16,12 @@ const createCourse = async (formData: FormData) => {
     .filter(([key, value]) => key.startsWith(DAY_PREFIX) && value === "on")
     .map(([key]) => key.slice(DAY_PREFIX.length + 1));
 
+  if (!daysOfTheWeek.length) return null;
+
   return db.insert(courses).values({
     name,
-    userId: user.id,
     daysOfTheWeek,
+    userId: user.id,
   });
 };
 export default createCourse;

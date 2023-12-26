@@ -4,10 +4,8 @@ import React, { useState } from "react";
 import { XMarkIcon } from "@heroicons/react/16/solid";
 import { Stack } from "styled-system/jsx";
 
-import { SubmitButton } from "@/components/form/SubmitButton";
-import { Button } from "@/components/ui/Button";
-import * as Dialog from "@/components/ui/Dialog";
-import { IconButton } from "@/components/ui/IconButton";
+import { SubmitButton } from "@/components/form";
+import { Button, Dialog, IconButton } from "@/components/ui";
 
 type PromptProps = {
   label: string;

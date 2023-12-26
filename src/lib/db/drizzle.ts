@@ -4,7 +4,7 @@ import postgres from "postgres";
 import * as schema from "./schema";
 
 const drizzleSingleton = () => {
-  return drizzle(postgres(process.env.DB_URL!), { schema, logger: true });
+  return drizzle(postgres(process.env.DB_URL!), { schema });
 };
 
 declare global {

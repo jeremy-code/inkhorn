@@ -8,9 +8,26 @@ import "./globals.css";
 const outfit = Outfit({ weight: "variable", subsets: ["latin"], variable: "--global-font-body" });
 
 export const metadata: Metadata = {
-  title: "inkhorn",
-  description: "inkhorn",
   metadataBase: new URL("https://inkhorn.io"),
+  title: "inkhorn",
+  description: "an open-source next-gen notetaking app for students",
+  applicationName: "inkhorn",
+  authors: {
+    name: "Jeremy Nguyen",
+    url: "https://jeremy.ng",
+  },
+  keywords: ["notetaking", "note-taking", "notes", "students", "education", "open-source"],
+  creator: "Jeremy Nguyen",
+  openGraph: {
+    type: "website",
+    url: "https://inkhorn.io",
+    title: "inkhorn",
+    description: "an open-source next-gen notetaking app for students",
+  },
+  twitter: {
+    description: "an open-source next-gen notetaking app for students",
+    title: "inkhorn",
+  },
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
