@@ -5,7 +5,7 @@ import Discord from "next-auth/providers/discord";
 import GitHub from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
 
-import { db } from "@/lib";
+import { db } from "@/lib/db/drizzle";
 
 export const {
   handlers: { GET, POST },

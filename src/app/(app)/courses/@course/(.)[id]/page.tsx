@@ -2,7 +2,7 @@ import { HStack } from "styled-system/jsx";
 
 import { ShallowPage } from "@/components/misc";
 import { Badge, Card } from "@/components/ui";
-import { getCourse } from "@/actions";
+import { getCourse } from "@/actions/course";
 
 type CoursePageProps = {
   params: {

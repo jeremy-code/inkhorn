@@ -2,7 +2,8 @@ import { styled } from "styled-system/jsx";
 
 import { FormButton } from "@/components/form";
 import { Navbar } from "@/components/ui";
-import { auth, signInAction, signOutAction } from "@/lib/auth";
+import { signInAction, signOutAction } from "@/actions";
+import { auth } from "@/lib/auth";
 
 const AppNavbar = async () => {
   const session = await auth();

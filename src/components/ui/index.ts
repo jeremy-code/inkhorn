@@ -17,3 +17,4 @@ export * from "./Link";
 export * as Checkbox from "./Checkbox";
 export * as Card from "./Card";
 export * as Dialog from "./Dialog";
+export * from "./Toast";

@@ -2,19 +2,22 @@
 
 import { redirect } from "next/navigation";
 
-import { auth, signIn, signOut } from "@/lib/auth/config";
+import { auth, signIn, signOut } from "@/lib/auth";
+
+const SIGN_IN_REDIRECT = "/courses";
+const SIGN_OUT_REDIRECT = "/";
 
 export const signInAction = async () => {
   const session = await auth();
   if (session?.user) redirect("/courses");
 
   await signIn(undefined, {
-    redirectTo: "/courses",
+    redirectTo: SIGN_IN_REDIRECT,
   });
 };
 
 export const signOutAction = async () => {
   await signOut({
-    redirectTo: "/",
+    redirectTo: SIGN_OUT_REDIRECT,
   });
 };

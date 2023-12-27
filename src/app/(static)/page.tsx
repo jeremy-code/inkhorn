@@ -5,8 +5,8 @@ import { container, grid } from "styled-system/patterns";
 
 import { FormButton } from "@/components/form";
 import { Heading } from "@/components/ui";
+import { signInAction } from "@/actions/auth";
 import { heroImage } from "@/assets";
-import { signInAction } from "@/lib/auth";
 
 const Home = async () => {
   return (

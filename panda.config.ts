@@ -2,14 +2,14 @@ import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
 
 const globalCss = defineGlobalStyles({
   "html, body": {
-    height: "100%",
+    h: "100%",
   },
   body: {
     display: "flex",
-    flexDirection: "column",
+    flexDir: "column",
   },
   "body > div, body > main": {
-    flex: "0 1 auto",
+    flex: "initial",
   },
   "header, footer": {
     flexShrink: 0,
@@ -30,6 +30,9 @@ export default defineConfig({
         spin: {
           to: { transform: "rotate(360deg)" },
         },
+        pulse: {
+          "50%": { opacity: 0.5 },
+        },
       },
       semanticTokens: {
         colors: {
@@ -42,6 +45,9 @@ export default defineConfig({
         animations: {
           spin: {
             value: "spin 1s linear infinite",
+          },
+          pulse: {
+            value: "pulse 2s cubic-bezier(.4,0,.6,1) infinite",
           },
         },
         colors: {

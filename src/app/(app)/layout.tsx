@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 
-import { Navbar, Protected, Sidebar } from "./_components";
+import { Protected } from "@/components/misc";
+import { Navbar, Sidebar } from "./_components";
 
 const AppLayout = ({ children }: { children: ReactNode }) => {
   return (
