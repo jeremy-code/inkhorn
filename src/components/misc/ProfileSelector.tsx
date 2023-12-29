@@ -53,7 +53,7 @@ const ProfileSelector = async () => {
                 <ProfileAvatar {...user} />
                 <div>
                   <styled.p>{user.name}</styled.p>
-                  <styled.p color="GrayText">{user.email}</styled.p>
+                  <styled.p color="fg.muted">{user.email}</styled.p>
                 </div>
               </HStack>
             </Popover.Title>

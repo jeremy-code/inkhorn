@@ -8,6 +8,7 @@ const Course = ({ id, name, daysOfTheWeek }: CourseProps) => {
     <Link href={`/courses/${encodeURIComponent(id)}`} linkDecor={false} w="full">
       <Card.Root
         w="full"
+        minW="xs"
         transitionTimingFunction="ease-in-out"
         transitionDuration="fast"
         // On hover, scale up and make the shadow more pronounced

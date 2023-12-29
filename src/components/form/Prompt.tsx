@@ -42,7 +42,7 @@ export const Prompt = ({ label, title, description, children, action, ...props }
       {...props}
     >
       <Dialog.Trigger asChild>
-        <Button>{label}</Button>
+        <Button py={2}>{label}</Button>
       </Dialog.Trigger>
       <Dialog.Backdrop />
       <Dialog.Positioner>

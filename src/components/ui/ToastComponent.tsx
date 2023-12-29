@@ -1,6 +1,6 @@
 "use client";
 
-import { type CreateToasterProps } from "@ark-ui/react/toast";
+import type { CreateToasterProps } from "@ark-ui/react/toast";
 import { XMarkIcon } from "@heroicons/react/16/solid";
 
 import { IconButton, Toast } from "@/components/ui";

@@ -1,8 +1,8 @@
 import { HStack, styled } from "styled-system/jsx";
 
 import { FormButton } from "@/components/form";
+import { Navbar } from "@/components/layout";
 import { ProfileSelector } from "@/components/misc";
-import { Navbar } from "@/components/ui";
 import { signInAction, signOutAction } from "@/actions";
 import { auth } from "@/lib/auth";
 

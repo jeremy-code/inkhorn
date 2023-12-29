@@ -1,5 +1,9 @@
+"use client";
+
 import React, { ReactNode } from "react";
-import { Grid } from "styled-system/jsx";
+import { useSelectedLayoutSegment } from "next/navigation";
+
+import { Splitter } from "@/components/ui";
 
 type CoursesLayoutProps = {
   children: ReactNode;
@@ -7,11 +11,34 @@ type CoursesLayoutProps = {
 };
 
 const CoursesLayout = ({ children, course }: CoursesLayoutProps) => {
+  // layoutSegment is only defined when the route is /courses/[id] (excluding intercepting routes)
+  // necessary because otherwise Splitter.ResizeTrigger will be rendered on every page
+  if (useSelectedLayoutSegment()) return <>{children}</>;
+
+  // Setting overflow to visible! since Splitter components are overflow: hidden by default
+  // It also fixes the resizing not adhering the min/max size of its children
   return (
-    <Grid h="full" w="full" gridTemplateColumns="2fr 3fr">
-      {children}
-      {course}
-    </Grid>
+    <Splitter.Root
+      defaultSize={[
+        {
+          id: "courses",
+          size: 40,
+        },
+        {
+          id: "course",
+          size: 60,
+        },
+      ]}
+      overflow="visible!"
+    >
+      <Splitter.Panel id="courses" border="none" overflow="visible!">
+        {children}
+      </Splitter.Panel>
+      <Splitter.ResizeTrigger id="courses:course" mx={1} />
+      <Splitter.Panel id="course" border="none" overflow="visible!">
+        {course}
+      </Splitter.Panel>
+    </Splitter.Root>
   );
 };
 

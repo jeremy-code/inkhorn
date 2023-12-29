@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Stack, styled } from "styled-system/jsx";
+import { Divider, Stack } from "styled-system/jsx";
 
 import { Course } from "@/components/course";
 import { Prompt, WeekDaysSelector } from "@/components/form";
@@ -15,21 +15,19 @@ const CoursesPage = async () => {
   const courses = await getCourses();
 
   return (
-    <styled.div overflowY="scroll" p={4}>
+    <Stack h="full" w="full" overflow="hidden auto" px={2} pb={2}>
       {/* Create Course Prompt */}
       <Prompt label="Create New Course" title="Create New Course" action={createCourse}>
         <Label>Course Name</Label>
         <Input placeholder="Course Name" type="text" name="name" />
         <WeekDaysSelector mt={4} />
       </Prompt>
-
+      <Divider my={2} />
       {/* List of Courses */}
-      <Stack mt={4}>
-        {courses.map((course) => (
-          <Course {...course} key={course.id} />
-        ))}
-      </Stack>
-    </styled.div>
+      {courses.map((course) => (
+        <Course {...course} key={course.id} />
+      ))}
+    </Stack>
   );
 };
 

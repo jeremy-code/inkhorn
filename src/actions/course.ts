@@ -10,9 +10,13 @@ import type { StatefulFormAction } from "@/interfaces";
 import { courses, db, insertCourseSchema, type InsertCourse } from "@/lib";
 
 export const getCourse = cache(async (id: string) => {
-  return await db.query.courses.findFirst({
+  const course = await db.query.courses.findFirst({
     where: (c, { eq }) => eq(c.id, id),
   });
+
+  if (!course) throw new Error("Course not found");
+
+  return course;
 });
 
 export const getCourses = unstable_cache(async () => {

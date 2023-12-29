@@ -11,13 +11,10 @@ type CoursePageProps = {
 };
 
 const CoursePage = async ({ params }: CoursePageProps) => {
-  const course = await getCourse(params.id);
-  if (!course) return;
-
-  const { name, daysOfTheWeek } = course;
+  const { id, name, daysOfTheWeek } = await getCourse(params.id);
 
   return (
-    <Card.Root m="4" animation="drawer-in-right">
+    <Card.Root animation="drawer-in-right" h="full" w="full" minW="lg" mx={2}>
       <Card.Header>
         <Card.Title>{name}</Card.Title>
         <HStack>{daysOfTheWeek?.map((day) => <Badge key={day}>{day}</Badge>)}</HStack>
@@ -26,7 +23,7 @@ const CoursePage = async ({ params }: CoursePageProps) => {
         <FormButton
           action={async () => {
             "use server";
-            await deleteCourse(course.id);
+            await deleteCourse(id);
           }}
         >
           Delete

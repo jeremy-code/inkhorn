@@ -8,29 +8,17 @@ import { createStyleContext } from "@/lib/styled";
 
 const { withProvider, withContext } = createStyleContext(popover);
 
-const Popover = withProvider(ArkPopover.Root);
-const PopoverAnchor = withContext(styled(ArkPopover.Anchor), "anchor");
-const PopoverArrow = withContext(styled(ArkPopover.Arrow), "arrow");
-const PopoverArrowTip = withContext(styled(ArkPopover.ArrowTip), "arrowTip");
-const PopoverCloseTrigger = withContext(styled(ArkPopover.CloseTrigger), "closeTrigger");
-const PopoverContent = withContext(styled(ArkPopover.Content), "content");
-const PopoverDescription = withContext(styled(ArkPopover.Description), "description");
-const PopoverIndicator = withContext(styled(ArkPopover.Indicator), "indicator");
-const PopoverPositioner = withContext(styled(ArkPopover.Positioner), "positioner");
-const PopoverTitle = withContext(styled(ArkPopover.Title), "title");
-const PopoverTrigger = withContext(styled(ArkPopover.Trigger), "trigger");
-
-const Root = Popover;
-const Anchor = PopoverAnchor;
-const Arrow = PopoverArrow;
-const ArrowTip = PopoverArrowTip;
-const CloseTrigger = PopoverCloseTrigger;
-const Content = PopoverContent;
-const Description = PopoverDescription;
-const Indicator = PopoverIndicator;
-const Positioner = PopoverPositioner;
-const Title = PopoverTitle;
-const Trigger = PopoverTrigger;
+const Root = withProvider(ArkPopover.Root);
+const Anchor = withContext(styled(ArkPopover.Anchor), "anchor");
+const Arrow = withContext(styled(ArkPopover.Arrow), "arrow");
+const ArrowTip = withContext(styled(ArkPopover.ArrowTip), "arrowTip");
+const CloseTrigger = withContext(styled(ArkPopover.CloseTrigger), "closeTrigger");
+const Content = withContext(styled(ArkPopover.Content), "content");
+const Description = withContext(styled(ArkPopover.Description), "description");
+const Indicator = withContext(styled(ArkPopover.Indicator), "indicator");
+const Positioner = withContext(styled(ArkPopover.Positioner), "positioner");
+const Title = withContext(styled(ArkPopover.Title), "title");
+const Trigger = withContext(styled(ArkPopover.Trigger), "trigger");
 
 export {
   Anchor,
@@ -40,31 +28,20 @@ export {
   Content,
   Description,
   Indicator,
-  Popover,
-  PopoverAnchor,
-  PopoverArrow,
-  PopoverArrowTip,
-  PopoverCloseTrigger,
-  PopoverContent,
-  PopoverDescription,
-  PopoverIndicator,
-  PopoverPositioner,
-  PopoverTitle,
-  PopoverTrigger,
   Positioner,
   Root,
   Title,
   Trigger,
 };
 
-export interface PopoverProps extends HTMLStyledProps<typeof Popover> {}
-export interface PopoverAnchorProps extends HTMLStyledProps<typeof PopoverAnchor> {}
-export interface PopoverArrowProps extends HTMLStyledProps<typeof PopoverArrow> {}
-export interface PopoverArrowTipProps extends HTMLStyledProps<typeof PopoverArrowTip> {}
-export interface PopoverCloseTriggerProps extends HTMLStyledProps<typeof PopoverCloseTrigger> {}
-export interface PopoverContentProps extends HTMLStyledProps<typeof PopoverContent> {}
-export interface PopoverDescriptionProps extends HTMLStyledProps<typeof PopoverDescription> {}
-export interface PopoverIndicatorProps extends HTMLStyledProps<typeof PopoverIndicator> {}
-export interface PopoverPositionerProps extends HTMLStyledProps<typeof PopoverPositioner> {}
-export interface PopoverTitleProps extends HTMLStyledProps<typeof PopoverTitle> {}
-export interface PopoverTriggerProps extends HTMLStyledProps<typeof PopoverTrigger> {}
+export type PopoverProps = HTMLStyledProps<typeof Root>;
+export type PopoverAnchorProps = HTMLStyledProps<typeof Anchor>;
+export type PopoverArrowProps = HTMLStyledProps<typeof Arrow>;
+export type PopoverArrowTipProps = HTMLStyledProps<typeof ArrowTip>;
+export type PopoverCloseTriggerProps = HTMLStyledProps<typeof CloseTrigger>;
+export type PopoverContentProps = HTMLStyledProps<typeof Content>;
+export type PopoverDescriptionProps = HTMLStyledProps<typeof Description>;
+export type PopoverIndicatorProps = HTMLStyledProps<typeof Indicator>;
+export type PopoverPositionerProps = HTMLStyledProps<typeof Positioner>;
+export type PopoverTitleProps = HTMLStyledProps<typeof Title>;
+export type PopoverTriggerProps = HTMLStyledProps<typeof Trigger>;
