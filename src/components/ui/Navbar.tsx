@@ -44,7 +44,7 @@ export const Navbar = styled(({ children, ...props }: NavbarProps) => {
   return (
     <header className={container(cssProps)} {...rest}>
       <Link href="/" fontWeight="bold" display="flex" linkDecor={false}>
-        <Image src={logo} alt="inkhorn logo" width={15} height={15} />
+        <Image src={logo} alt="inkhorn logo" width={15} height={15} priority />
         inkhorn
       </Link>
       {children}

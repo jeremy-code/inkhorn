@@ -1,9 +1,11 @@
 "use client";
 
 import React, { FormHTMLAttributes, ReactNode, useEffect } from "react";
+import { createToaster } from "@ark-ui/react";
+import { XMarkIcon } from "@heroicons/react/16/solid";
 import { useFormState } from "react-dom";
 
-import { toast, Toaster } from "@/components/ui";
+import { IconButton, Toast, ToastComponent } from "@/components/ui";
 import type { StatefulFormAction } from "@/interfaces";
 
 type FormProps = {
@@ -23,6 +25,10 @@ type FormProps = {
  */
 export const Form = ({ children, action, onSubmitSuccess, ...rest }: FormProps) => {
   const [state, formAction] = useFormState(action, null);
+  const [Toaster, toast] = createToaster({
+    placement: "top-end",
+    render: ToastComponent,
+  });
 
   useEffect(() => {
     if (state?.status === "error") {
@@ -37,7 +43,7 @@ export const Form = ({ children, action, onSubmitSuccess, ...rest }: FormProps) 
     } else if (state?.status === "ok" && onSubmitSuccess) {
       onSubmitSuccess();
     }
-  }, [onSubmitSuccess, state]);
+  }, [onSubmitSuccess, state, toast]);
 
   return (
     <>

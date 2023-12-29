@@ -12,9 +12,10 @@ export * from "./IconButton";
 export * from "./Input";
 export * from "./Label";
 export * from "./Link";
+export * from "./ToastComponent";
 
 // Contextful Park UI components
 export * as Checkbox from "./Checkbox";
 export * as Card from "./Card";
 export * as Dialog from "./Dialog";
-export * from "./Toast";
+export * as Toast from "./Toast";
