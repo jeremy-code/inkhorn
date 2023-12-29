@@ -1,6 +1,8 @@
 "use server";
 
 import { cache } from "react";
+import { unstable_cache } from "next/cache";
+import { eq } from "drizzle-orm";
 import { z } from "zod";
 
 import { getUser } from "@/actions/user";
@@ -12,6 +14,19 @@ export const getCourse = cache(async (id: string) => {
     where: (c, { eq }) => eq(c.id, id),
   });
 });
+
+export const getCourses = unstable_cache(async () => {
+  const user = await getUser();
+  if (!user?.id) return [];
+
+  return await db.query.courses.findMany({
+    where: (c, { eq }) => eq(c.userId, user.id),
+  });
+}, ["courses"]);
+
+export const deleteCourse = async (id: string) => {
+  await db.delete(courses).where(eq(courses.id, id));
+};
 
 const DAY_PREFIX = "day-of-the-week";
 
@@ -25,10 +40,13 @@ const courseSchema = z.object({
  *
  */
 const parseCourse = (formData: FormData) => {
+  // Convert the FormData object into a plain object (value is a string and not FormDataEntryValue)
   const course = Object.fromEntries(
     Array.from(formData).map(([key, value]) => [key, value.toString()])
   );
 
+  // Get all the days of the week that are checked
+  // a bit complicated because using checkboxes with name "day-of-the-week-day"
   const daysOfTheWeek = Object.keys(course)
     .filter((key) => key.startsWith(DAY_PREFIX) && course[key] === "on")
     .map((key) => key.slice(DAY_PREFIX.length + 1));

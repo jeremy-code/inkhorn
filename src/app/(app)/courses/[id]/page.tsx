@@ -1,3 +1,4 @@
+import { FormButton } from "@/components/form";
 import { db } from "@/lib";
 
 const CoursePage = async ({ params }: { params: { id: string } }) => {

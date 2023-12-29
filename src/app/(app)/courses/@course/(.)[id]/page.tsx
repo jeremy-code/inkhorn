@@ -1,8 +1,8 @@
 import { HStack } from "styled-system/jsx";
 
-import { ShallowPage } from "@/components/misc";
+import { FormButton } from "@/components/form";
 import { Badge, Card } from "@/components/ui";
-import { getCourse } from "@/actions/course";
+import { deleteCourse, getCourse } from "@/actions/course";
 
 type CoursePageProps = {
   params: {
@@ -17,16 +17,22 @@ const CoursePage = async ({ params }: CoursePageProps) => {
   const { name, daysOfTheWeek } = course;
 
   return (
-    <ShallowPage>
-      <Card.Root m="4" animation="drawer-in-right">
-        <Card.Header>
-          <Card.Title>{name}</Card.Title>
-          <Card.Description>
-            <HStack>{daysOfTheWeek?.map((day) => <Badge key={day}>{day}</Badge>)}</HStack>
-          </Card.Description>
-        </Card.Header>
-      </Card.Root>
-    </ShallowPage>
+    <Card.Root m="4" animation="drawer-in-right">
+      <Card.Header>
+        <Card.Title>{name}</Card.Title>
+        <HStack>{daysOfTheWeek?.map((day) => <Badge key={day}>{day}</Badge>)}</HStack>
+      </Card.Header>
+      <Card.Footer>
+        <FormButton
+          action={async () => {
+            "use server";
+            await deleteCourse(course.id);
+          }}
+        >
+          Delete
+        </FormButton>
+      </Card.Footer>
+    </Card.Root>
   );
 };
 

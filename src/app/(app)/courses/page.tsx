@@ -5,14 +5,14 @@ import { Stack, styled } from "styled-system/jsx";
 import { Course } from "@/components/course";
 import { Prompt, WeekDaysSelector } from "@/components/form";
 import { Input, Label } from "@/components/ui";
-import { createCourse, getUser } from "@/actions";
+import { createCourse, getCourses } from "@/actions";
 
 export const metadata: Metadata = {
   title: "courses | inkhorn",
 };
 
 const CoursesPage = async () => {
-  const user = await getUser();
+  const courses = await getCourses();
 
   return (
     <styled.div overflowY="scroll" pt={4} px={2}>
@@ -25,7 +25,9 @@ const CoursesPage = async () => {
 
       {/* List of Courses */}
       <Stack mt={4} align="center">
-        {user?.courses.map((c) => <Course {...c} key={c.id} />)}
+        {courses.map((c) => (
+          <Course {...c} key={c.id} />
+        ))}
       </Stack>
     </styled.div>
   );
