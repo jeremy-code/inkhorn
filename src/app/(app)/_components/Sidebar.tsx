@@ -43,20 +43,21 @@ const Sidebar = ({ children, ...rest }: SidebarProps) => {
           radialGradient: "circle at 100% 100%, transparent 30px, token(colors.gray.3), white 32px",
         }}
       >
-        {NAV_ITEMS.map((item) => (
+        {NAV_ITEMS.map(({ label, href }) => (
           <Link
-            key={item.label}
-            href={item.href}
+            key={label}
+            href={href}
             display="block"
             px={4}
             py={2}
             borderBottomWidth="1px"
             borderBottomColor="gray.3"
+            linkDecor={false}
             _hover={{
               bg: "gray.1",
             }}
           >
-            {item.label}
+            {label}
           </Link>
         ))}
       </styled.aside>

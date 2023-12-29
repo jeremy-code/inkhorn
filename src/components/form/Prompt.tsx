@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useCallback, useState } from "react";
-import { revalidatePath, revalidateTag } from "next/cache";
+import React, { ReactNode, useCallback, useState } from "react";
 import { XMarkIcon } from "@heroicons/react/16/solid";
 import { Stack } from "styled-system/jsx";
 
@@ -13,10 +12,20 @@ type PromptProps = {
   label: string;
   title: string;
   description?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
   action: StatefulFormAction<any>;
 } & Dialog.DialogProps;
 
+/**
+ * A wrapper around the Dialog component that handles form submission and error handling. For all
+ * errors, a toast notification is shown.
+ *
+ * @param label The label of the button that opens the dialog
+ * @param title The title of the dialog
+ * @param description The description of the dialog
+ * @param children The form elements
+ * @param action The form action (with state)
+ */
 export const Prompt = ({ label, title, description, children, action, ...props }: PromptProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -43,8 +52,8 @@ export const Prompt = ({ label, title, description, children, action, ...props }
               <Dialog.Title>{title}</Dialog.Title>
               {description && <Dialog.Description>{description}</Dialog.Description>}
             </Stack>
-            {/* Since there should only ever be one prompt at a time and the submit button has to be nested
-             /* inside a stack, using the id here is ok and necessary */}
+            {/* Since there should only ever be one prompt at a time and the submit button
+             /* has to be nested inside a stack, using the id here is ok and necessary */}
             <Form id="prompt-form" action={action} onSubmitSuccess={onSubmitSuccess}>
               {children}
               <Stack gap="3" direction="row" width="full" mt={6}>
@@ -54,6 +63,7 @@ export const Prompt = ({ label, title, description, children, action, ...props }
                   </Button>
                 </Dialog.CloseTrigger>
                 {/* Closes Dialog after completion */}
+                {/* FormTarget = "prompt-form" based on <Form /> id prop*/}
                 <SubmitButton width="full" type="submit" formTarget="prompt-form">
                   Confirm
                 </SubmitButton>

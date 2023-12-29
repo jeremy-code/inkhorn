@@ -2,10 +2,9 @@
 
 import React, { FormHTMLAttributes, ReactNode, useEffect } from "react";
 import { createToaster } from "@ark-ui/react";
-import { XMarkIcon } from "@heroicons/react/16/solid";
 import { useFormState } from "react-dom";
 
-import { IconButton, Toast, ToastComponent } from "@/components/ui";
+import { ToastComponent } from "@/components/ui";
 import type { StatefulFormAction } from "@/interfaces";
 
 type FormProps = {
@@ -19,9 +18,9 @@ type FormProps = {
  * all errors, a toast notification is shown.
  *
  * @param children The form elements
- * @param action The form action
+ * @param action The form action (with state) that is used in `useFormState()`
  * @param onSubmitSuccess A callback that is called when the form is successfully submitted
- *                        (state.status === "ok")
+ *                        (i.e. state.status === "ok")
  */
 export const Form = ({ children, action, onSubmitSuccess, ...rest }: FormProps) => {
   const [state, formAction] = useFormState(action, null);
@@ -31,8 +30,12 @@ export const Form = ({ children, action, onSubmitSuccess, ...rest }: FormProps) 
   });
 
   useEffect(() => {
-    if (state?.status === "error") {
-      Object.values(state?.error || {})
+    if (!state) return;
+
+    if (state.status === "ok" && onSubmitSuccess) {
+      onSubmitSuccess();
+    } else if (state.status === "error") {
+      Object.values(state.error ?? {})
         .flat()
         .forEach((description) =>
           toast.error({
@@ -40,9 +43,12 @@ export const Form = ({ children, action, onSubmitSuccess, ...rest }: FormProps) 
             description,
           })
         );
-    } else if (state?.status === "ok" && onSubmitSuccess) {
-      onSubmitSuccess();
     }
+
+    return () => {
+      // Dismiss all toasts when the component unmounts
+      toast.dismiss();
+    };
   }, [onSubmitSuccess, state, toast]);
 
   return (

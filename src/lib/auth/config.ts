@@ -16,9 +16,9 @@ export const {
   adapter: DrizzleAdapter(db),
   providers: [GitHub, Discord, Google],
   callbacks: {
-    // Add the user id from the database to the session's user object
+    // Add the User ID from the database to the session's user object
     async session({ session, user }) {
-      if (session && session.user && user) {
+      if (session.user) {
         session.user.id = user.id;
       }
       return session;

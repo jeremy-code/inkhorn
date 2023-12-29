@@ -1,9 +1,8 @@
 "use client";
 
-import { HStack, HstackProps } from "styled-system/jsx";
+import { HStack, styled, type HstackProps } from "styled-system/jsx";
 
 import * as Checkbox from "@/components/ui/Checkbox";
-import type { CheckboxProps } from "@/components/ui/Checkbox";
 import { daysOfTheWeek } from "./constants";
 
 export const WeekDaysSelector = (props: HstackProps) => {
@@ -20,16 +19,16 @@ export const WeekDaysSelector = (props: HstackProps) => {
   );
 };
 
-type WeekDayCheckbox = {
+type WeekDayCheckboxProps = {
   label: string;
-} & CheckboxProps;
+} & Checkbox.CheckboxProps;
 
-const WeekDayCheckbox = ({ label, ...rest }: WeekDayCheckbox) => {
+const WeekDayCheckbox = ({ label, ...rest }: WeekDayCheckboxProps) => {
   return (
     <Checkbox.Root {...rest}>
       {({ isChecked }) => (
         <Checkbox.Control>
-          <span style={{ color: isChecked ? "white" : "black" }}>{label}</span>
+          <styled.span color={isChecked ? "white" : "black"}>{label}</styled.span>
         </Checkbox.Control>
       )}
     </Checkbox.Root>

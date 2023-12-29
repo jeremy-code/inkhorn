@@ -15,7 +15,7 @@ export const ToastComponent: CreateToasterProps["render"] = (toast) => {
       <Toast.Title {...titleProps}>{title}</Toast.Title>
       <Toast.Description {...descriptionProps}>{description}</Toast.Description>
       <Toast.CloseTrigger asChild {...closeTriggerProps}>
-        <IconButton size="sm" variant="link">
+        <IconButton size="sm" variant="link" aria-label="Close Toast">
           <XMarkIcon />
         </IconButton>
       </Toast.CloseTrigger>

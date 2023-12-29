@@ -15,7 +15,7 @@ const CoursesPage = async () => {
   const courses = await getCourses();
 
   return (
-    <styled.div overflowY="scroll" pt={4} px={2}>
+    <styled.div overflowY="scroll" p={4}>
       {/* Create Course Prompt */}
       <Prompt label="Create New Course" title="Create New Course" action={createCourse}>
         <Label>Course Name</Label>
@@ -24,9 +24,9 @@ const CoursesPage = async () => {
       </Prompt>
 
       {/* List of Courses */}
-      <Stack mt={4} align="center">
-        {courses.map((c) => (
-          <Course {...c} key={c.id} />
+      <Stack mt={4}>
+        {courses.map((course) => (
+          <Course {...course} key={course.id} />
         ))}
       </Stack>
     </styled.div>
