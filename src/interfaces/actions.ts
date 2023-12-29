@@ -12,7 +12,7 @@ export type FormState<Data> = {
   status: "error" | "ok";
   data: Data;
   error?: {
-    [key: string]: string[];
+    [key: string]: string[] | undefined;
   };
 } | null;
 

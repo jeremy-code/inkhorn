@@ -9,6 +9,8 @@ export type User = {
 export type Course = {
   id: string;
   name: string;
-  daysOfTheWeek: string[] | null;
+  daysOfTheWeek: DayOfTheWeek[] | null | undefined;
   userId: string;
 };
+
+type DayOfTheWeek = "sunday" | "monday" | "tuesday" | "wednesday" | "thursday" | "friday";
