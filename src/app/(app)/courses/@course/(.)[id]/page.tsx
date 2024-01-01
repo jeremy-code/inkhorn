@@ -14,7 +14,7 @@ const CoursePage = async ({ params }: CoursePageProps) => {
   const { id, name, daysOfTheWeek } = await getCourse(params.id);
 
   return (
-    <Card.Root animation="drawer-in-right" h="full" w="full" minW="lg" mx={2}>
+    <Card.Root animation="drawer-in-right" h="full" w="full" minW="lg" m={2}>
       <Card.Header>
         <Card.Title>{name}</Card.Title>
         <HStack>{daysOfTheWeek?.map((day) => <Badge key={day}>{day}</Badge>)}</HStack>

@@ -34,7 +34,7 @@ const CoursesLayout = ({ children, course }: CoursesLayoutProps) => {
       <Splitter.Panel id="courses" border="none" overflow="visible!">
         {children}
       </Splitter.Panel>
-      <Splitter.ResizeTrigger id="courses:course" mx={1} />
+      <Splitter.ResizeTrigger id="courses:course" mx="2" />
       <Splitter.Panel id="course" border="none" overflow="visible!">
         {course}
       </Splitter.Panel>

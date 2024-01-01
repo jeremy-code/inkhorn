@@ -1,16 +1,6 @@
-export type User = {
-  id: string;
-  name: string | null;
-  email: string;
-  emailVerified: Date | null;
-  image: string | null;
-};
+import { InferInsertModel } from "drizzle-orm";
 
-export type Course = {
-  id: string;
-  name: string;
-  daysOfTheWeek: DayOfTheWeek[] | null | undefined;
-  userId: string;
-};
+import { courses, users } from "@/lib/db/schema";
 
-type DayOfTheWeek = "sunday" | "monday" | "tuesday" | "wednesday" | "thursday" | "friday";
+export type User = InferInsertModel<typeof users>;
+export type Course = Required<InferInsertModel<typeof courses>>;

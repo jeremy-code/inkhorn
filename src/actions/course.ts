@@ -40,9 +40,7 @@ const DAY_PREFIX = "day-of-the-week";
  */
 const parseCourse = (formData: FormData) => {
   // Convert the FormData object into a plain object (value is a string and not FormDataEntryValue)
-  const course = Object.fromEntries(
-    Array.from(formData).map(([key, value]) => [key, value.toString()])
-  );
+  const course = Object.fromEntries(Array.from(formData).map(([k, v]) => [k, v.toString()]));
 
   // Get all the days of the week that are checked
   // a bit complicated because using checkboxes with name "day-of-the-week-day"

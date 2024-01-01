@@ -23,9 +23,9 @@ const NAV_ITEMS = [
 const AppLayout = ({ children }: { children: ReactNode }) => {
   return (
     <Protected>
-      <Navbar />
+      <Navbar h="16" />
       {/* Full screen minus height of navbar (4rem or 16) */}
-      <Flex h="calc(100% - 4rem)">
+      <Flex h="calc(100% - token(sizes.16))">
         <Sidebar sidebarItems={NAV_ITEMS} />
         <styled.main w="full" h="full" p={8}>
           {children}

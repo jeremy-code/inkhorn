@@ -40,7 +40,7 @@ export const Sidebar = ({ children, sidebarItems, ...rest }: SidebarProps) => {
       _before={{
         content: "''",
         position: "absolute",
-        aspectRatio: 1,
+        aspectRatio: "square",
         w: "30px",
         right: "-30px",
         // a somewhat hacky way of doing an inverted border radius for the connection between navbar

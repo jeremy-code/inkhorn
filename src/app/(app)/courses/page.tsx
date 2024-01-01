@@ -15,7 +15,7 @@ const CoursesPage = async () => {
   const courses = await getCourses();
 
   return (
-    <Stack h="full" w="full" overflow="hidden auto" px={2} pb={2}>
+    <Stack h="full" w="full" overflow="hidden auto" p={2}>
       {/* Create Course Prompt */}
       <Prompt label="Create New Course" title="Create New Course" action={createCourse}>
         <Label>Course Name</Label>

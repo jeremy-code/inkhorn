@@ -1,18 +1,20 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import Image from "next/image";
 import { cva } from "styled-system/css";
-import { splitCssProps, styled, type HTMLStyledProps } from "styled-system/jsx";
-import { container } from "styled-system/patterns";
+import { styled, type HTMLStyledProps } from "styled-system/jsx";
 
 import { Link } from "@/components/ui";
 import { logo } from "@/assets";
 
 const navbar = cva({
   base: {
-    p: 4,
+    py: 4,
     w: "full",
     display: "flex",
     alignItems: "center",
+    maxWidth: "8xl",
+    mx: "auto",
+    px: { base: 4, md: 6, lg: 8 },
   },
   variants: {
     justify: {
@@ -34,20 +36,16 @@ const navbar = cva({
   },
 });
 
-export type NavbarProps = {
-  children?: ReactNode;
-} & HTMLStyledProps<"header">;
-
-export const Navbar = styled(({ children, ...props }: NavbarProps) => {
-  const [cssProps, rest] = splitCssProps(props);
-
+export const Navbar = styled(({ children, ...props }: HTMLStyledProps<"header">) => {
   return (
-    <header className={container(cssProps)} {...rest}>
-      <Link href="/" fontWeight="bold" display="flex" linkDecor={false}>
+    <styled.header {...props}>
+      <Link href="/" fontWeight="medium" fontSize="lg" display="flex" linkDecor={false}>
         <Image src={logo} alt="inkhorn logo" width={15} height={15} priority />
         inkhorn
       </Link>
       {children}
-    </header>
+    </styled.header>
   );
 }, navbar);
+
+export type NavbarProps = HTMLStyledProps<typeof Navbar>;
