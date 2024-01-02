@@ -6,8 +6,8 @@ import { eq } from "drizzle-orm";
 import { flatten, safeParse } from "valibot";
 
 import { getUser } from "@/actions/user";
-import type { StatefulFormAction } from "@/interfaces";
-import { courses, db, insertCourseSchema, type InsertCourse } from "@/lib";
+import type { StatefulFormAction } from "@/interfaces/actions";
+import { courses, db, insertCourseSchema, type InsertCourse } from "@/lib/db";
 
 export const getCourse = cache(async (id: string) => {
   const course = await db.query.courses.findFirst({

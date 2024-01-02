@@ -1,6 +1,7 @@
-import { Icon, ToggleGroup } from "@/components/ui";
+import { Icon } from "@/components/misc";
+import { ToggleGroup } from "@/components/ui";
 
-const Toolbar = () => {
+export const Toolbar = () => {
   return (
     <ToggleGroup.Root multiple>
       <ToggleGroup.Item value="bold" aria-label="Toggle Bold">
@@ -15,5 +16,3 @@ const Toolbar = () => {
     </ToggleGroup.Root>
   );
 };
-
-export default Toolbar;

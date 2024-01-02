@@ -1,3 +1,4 @@
-export { default as Analytics } from "./Analytics";
-export { default as Protected } from "./Protected";
-export { default as ProfileSelector } from "./ProfileSelector";
+export * from "./Analytics";
+export * from "./Protected";
+export * from "./ProfileSelector";
+export * from "./Icon";

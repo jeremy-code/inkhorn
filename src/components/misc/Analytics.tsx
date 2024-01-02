@@ -1,7 +1,7 @@
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const Analytics = () => {
+export const Analytics = () => {
   return (
     <>
       <SpeedInsights />
@@ -9,5 +9,3 @@ const Analytics = () => {
     </>
   );
 };
-
-export default Analytics;

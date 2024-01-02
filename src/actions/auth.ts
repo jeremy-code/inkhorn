@@ -2,7 +2,7 @@
 
 import { redirect } from "next/navigation";
 
-import { auth, signIn, signOut } from "@/lib/auth";
+import { auth, signIn, signOut } from "@/lib/auth/config";
 
 const SIGN_IN_REDIRECT = "/courses";
 const SIGN_OUT_REDIRECT = "/";

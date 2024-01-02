@@ -1,4 +1,4 @@
-import { db } from "@/lib";
+import { db } from "@/lib/db/drizzle";
 
 const CoursePage = async ({ params }: { params: { id: string } }) => {
   const course = await db.query.courses.findFirst({

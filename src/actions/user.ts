@@ -2,8 +2,9 @@
 
 import { cache } from "react";
 
-import type { User } from "@/interfaces";
-import { auth, db } from "@/lib";
+import type { User } from "@/interfaces/database";
+import { auth } from "@/lib/auth/config";
+import { db } from "@/lib/db/drizzle";
 
 export const getUser = cache(async (): Promise<User | null | undefined> => {
   const session = await auth();

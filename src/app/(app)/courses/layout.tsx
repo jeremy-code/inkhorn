@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode } from "react";
+import React, { type ReactNode } from "react";
 import { useSelectedLayoutSegment } from "next/navigation";
 
 import { Splitter } from "@/components/ui";

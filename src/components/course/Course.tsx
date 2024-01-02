@@ -1,9 +1,9 @@
 import { HStack } from "styled-system/jsx";
 
 import { Badge, Card, Link } from "@/components/ui";
-import type { Course as CourseProps } from "@/interfaces";
+import type { Course as CourseProps } from "@/interfaces/database";
 
-const Course = ({ id, name, daysOfTheWeek }: CourseProps) => {
+export const Course = ({ id, name, daysOfTheWeek }: CourseProps) => {
   return (
     <Link href={`/courses/${encodeURIComponent(id)}`} linkDecor={false} w="full">
       <Card.Root
@@ -27,5 +27,3 @@ const Course = ({ id, name, daysOfTheWeek }: CourseProps) => {
     </Link>
   );
 };
-
-export default Course;

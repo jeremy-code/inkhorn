@@ -2,7 +2,7 @@
 
 import { HStack, styled, type HstackProps } from "styled-system/jsx";
 
-import * as Checkbox from "@/components/ui/Checkbox";
+import { Checkbox } from "@/components/ui";
 import { daysOfTheWeek } from "./constants";
 
 export const WeekDaysSelector = (props: HstackProps) => {

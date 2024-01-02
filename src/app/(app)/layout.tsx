@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { type ReactNode } from "react";
 import { Flex, styled } from "styled-system/jsx";
 
 import { Sidebar } from "@/components/layout";

@@ -1,11 +1,11 @@
 "use client";
 
-import React, { FormHTMLAttributes, ReactNode, useEffect } from "react";
-import { createToaster } from "@ark-ui/react";
+import React, { useEffect, type FormHTMLAttributes, type ReactNode } from "react";
+import { createToaster } from "@ark-ui/react/toast";
 import { useFormState } from "react-dom";
 
 import { ToastComponent } from "@/components/ui";
-import type { StatefulFormAction } from "@/interfaces";
+import type { StatefulFormAction } from "@/interfaces/actions";
 
 type FormProps = {
   children?: ReactNode;

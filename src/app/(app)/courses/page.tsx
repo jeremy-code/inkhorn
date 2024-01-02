@@ -1,11 +1,10 @@
-import React from "react";
 import type { Metadata } from "next";
 import { Divider, Stack } from "styled-system/jsx";
 
 import { Course } from "@/components/course";
 import { Prompt, WeekDaysSelector } from "@/components/form";
 import { Input, Label } from "@/components/ui";
-import { createCourse, getCourses } from "@/actions";
+import { createCourse, getCourses } from "@/actions/course";
 
 export const metadata: Metadata = {
   title: "courses | inkhorn",

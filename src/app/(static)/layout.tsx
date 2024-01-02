@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { type ReactNode } from "react";
 import { HStack } from "styled-system/jsx";
 
 import { FormButton } from "@/components/form";
