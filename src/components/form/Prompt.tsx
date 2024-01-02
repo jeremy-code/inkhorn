@@ -1,11 +1,10 @@
 "use client";
 
 import React, { ReactNode, useCallback, useState } from "react";
-import { XMarkIcon } from "@heroicons/react/16/solid";
 import { Stack } from "styled-system/jsx";
 
 import { Form, SubmitButton } from "@/components/form";
-import { Button, Dialog, IconButton } from "@/components/ui";
+import { Button, Dialog, Icon, IconButton } from "@/components/ui";
 import type { StatefulFormAction } from "@/interfaces";
 
 type PromptProps = {
@@ -72,7 +71,7 @@ export const Prompt = ({ label, title, description, children, action, ...props }
           </Stack>
           <Dialog.CloseTrigger asChild position="absolute" top="4" right="4">
             <IconButton aria-label="Close Dialog" variant="ghost" size="sm">
-              <XMarkIcon />
+              <Icon name="X" />
             </IconButton>
           </Dialog.CloseTrigger>
         </Dialog.Content>

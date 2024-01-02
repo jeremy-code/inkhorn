@@ -976,15 +976,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@heroicons/react@npm:^2.1.1":
-  version: 2.1.1
-  resolution: "@heroicons/react@npm:2.1.1"
-  peerDependencies:
-    react: ">= 16"
-  checksum: c85f76d4ccb5bdad9e6ffaa62bfdcde1c1f9ebaf3287908a7be0994c2d0f6151b9017f6e41d0a1ec9ba1eb1c53ab88f30704b0d25c72adc59896882b0a60147e
-  languageName: node
-  linkType: hard
-
 "@humanwhocodes/config-array@npm:^0.11.13":
   version: 0.11.13
   resolution: "@humanwhocodes/config-array@npm:0.11.13"
@@ -5414,7 +5405,6 @@ __metadata:
   dependencies:
     "@ark-ui/react": "npm:^1.2.1"
     "@auth/drizzle-adapter": "npm:^0.3.12"
-    "@heroicons/react": "npm:^2.1.1"
     "@ianvs/prettier-plugin-sort-imports": "npm:^4.1.1"
     "@next/bundle-analyzer": "npm:^14.0.5-canary.29"
     "@pandacss/dev": "npm:^0.23.0"
@@ -5439,6 +5429,7 @@ __metadata:
     eslint-plugin-drizzle: "npm:^0.2.3"
     husky: "npm:^8.0.3"
     lint-staged: "npm:^15.2.0"
+    lucide-react: "npm:^0.303.0"
     next: "npm:^14.0.5-canary.29"
     next-auth: "npm:^5.0.0-beta.4"
     pg: "npm:^8.11.3"
@@ -6203,6 +6194,15 @@ __metadata:
   dependencies:
     es5-ext: "npm:~0.10.2"
   checksum: 83517032b46843601c4528be65e8aaf85f5a7860a9cfa3e4f2b5591da436e7cd748d95b450c91434c4ffb75d3ae4c069ddbdd9f71ada56a99a00c03088c51b4d
+  languageName: node
+  linkType: hard
+
+"lucide-react@npm:^0.303.0":
+  version: 0.303.0
+  resolution: "lucide-react@npm:0.303.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0
+  checksum: 58dc833311a4aa29b4a71ce1dade2c55eba3d07d5f9207fdabe55ed06499f13d62439bb37942b7aaebea90f638deb7ec67adde1e12404fb4d9f82a19ba1727f5
   languageName: node
   linkType: hard
 

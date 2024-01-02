@@ -1,4 +1,5 @@
 // Custom components
+export * from "./Icon";
 export * from "./Spinner";
 export * from "./Spacer";
 export * from "./ToastComponent";
@@ -21,3 +22,4 @@ export * as Dialog from "./Dialog";
 export * as Popover from "./Popover";
 export * as Splitter from "./Splitter";
 export * as Toast from "./Toast";
+export * as ToggleGroup from "./ToggleGroup";

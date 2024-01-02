@@ -1,9 +1,8 @@
 "use client";
 
 import type { CreateToasterProps } from "@ark-ui/react/toast";
-import { XMarkIcon } from "@heroicons/react/16/solid";
 
-import { IconButton, Toast } from "@/components/ui";
+import { Icon, IconButton, Toast } from "@/components/ui";
 
 // Somewhat more organized than putting everything in @/components/Toast.tsx
 // Also, prevents some bugs with server components and conditional rendering
@@ -16,7 +15,7 @@ export const ToastComponent: CreateToasterProps["render"] = (toast) => {
       <Toast.Description {...descriptionProps}>{description}</Toast.Description>
       <Toast.CloseTrigger asChild {...closeTriggerProps}>
         <IconButton size="sm" variant="link" aria-label="Close Toast">
-          <XMarkIcon />
+          <Icon name="X" />
         </IconButton>
       </Toast.CloseTrigger>
     </Toast.Root>

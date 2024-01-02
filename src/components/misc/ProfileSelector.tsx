@@ -1,9 +1,8 @@
 import React from "react";
-import { UserIcon, XMarkIcon } from "@heroicons/react/16/solid";
 import { Box, Circle, Divider, HStack, Stack, styled } from "styled-system/jsx";
 
 import { FormButton } from "@/components/form";
-import { Avatar, Button, IconButton, Link, Popover } from "@/components/ui";
+import { Avatar, Button, Icon, IconButton, Link, Popover } from "@/components/ui";
 import { getUser, signOutAction } from "@/actions";
 import { User } from "@/interfaces";
 
@@ -14,7 +13,7 @@ const ProfileAvatar = (user: User) => {
         <Avatar.Image src={user.image} alt="avatar" />
       ) : (
         <Avatar.Fallback p={2} color="gray.8">
-          <UserIcon />
+          <Icon name="User" />
         </Avatar.Fallback>
       )}
     </Avatar.Root>
@@ -43,7 +42,7 @@ const ProfileSelector = async () => {
           <Box position="absolute" top="1" right="1">
             <Popover.CloseTrigger asChild>
               <IconButton aria-label="Close Popover" variant="ghost" size="sm">
-                <XMarkIcon />
+                <Icon name="X" />
               </IconButton>
             </Popover.CloseTrigger>
           </Box>
