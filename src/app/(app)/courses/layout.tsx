@@ -5,12 +5,7 @@ import { useSelectedLayoutSegment } from "next/navigation";
 
 import { Splitter } from "@/components/ui";
 
-type CoursesLayoutProps = {
-  children: ReactNode;
-  course: ReactNode;
-};
-
-const CoursesLayout = ({ children, course }: CoursesLayoutProps) => {
+const CoursesLayout = ({ children, course }: { children: ReactNode; course: ReactNode }) => {
   // layoutSegment is only defined when the route is /courses/[id] (excluding intercepting routes)
   // necessary because otherwise Splitter.ResizeTrigger will be rendered on every page
   if (useSelectedLayoutSegment()) return <>{children}</>;

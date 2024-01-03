@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "note | inkhorn",
+  title: "note",
 };
 
 const NotePage = () => {

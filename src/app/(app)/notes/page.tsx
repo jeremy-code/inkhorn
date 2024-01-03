@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { Toolbar } from "@/components/notes";
 
 export const metadata: Metadata = {
-  title: "notes | inkhorn",
+  title: "notes",
 };
 
 const Editor = dynamic(() => import("@/components/notes/Editor"));

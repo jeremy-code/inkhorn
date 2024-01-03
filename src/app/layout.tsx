@@ -9,7 +9,7 @@ const outfit = Outfit({ weight: "variable", subsets: ["latin"], variable: "--glo
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://inkhorn.io"),
-  title: "inkhorn",
+  title: { default: "inkhorn", template: "%s | inkhorn" },
   description: "an open-source next-gen notetaking app for students",
   applicationName: "inkhorn",
   authors: {

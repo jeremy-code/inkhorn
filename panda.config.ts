@@ -2,10 +2,7 @@ import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
 
 const globalCss = defineGlobalStyles({
   "html, body": { h: "100%" },
-  body: {
-    display: "flex",
-    flexDir: "column",
-  },
+  body: { display: "flex", flexDir: "column" },
   "body > div, body > main": { flex: "initial" },
   "header, footer": { flexShrink: 0 },
 });
@@ -23,13 +20,6 @@ export default defineConfig({
       keyframes: {
         spin: { to: { transform: "rotate(360deg)" } },
         pulse: { "50%": { opacity: 0.5 } },
-      },
-      semanticTokens: {
-        colors: {
-          bg: {
-            canvas: { value: { base: "#faf9f5", _dark: "{colors.gray.5}" } },
-          },
-        },
       },
       tokens: {
         animations: {
@@ -71,15 +61,11 @@ export default defineConfig({
   utilities: {
     extend: {
       radialGradient: {
-        transform: (value: string) => ({
-          backgroundImage: `radial-gradient(${value})`,
-        }),
+        transform: (value: string) => ({ backgroundImage: `radial-gradient(${value})` }),
       },
       linkDecor: {
         values: { type: "boolean" },
-        transform: (value: boolean) => ({
-          textDecoration: value ? undefined : "none",
-        }),
+        transform: (value: boolean) => (value ? {} : { textDecoration: "none" }),
       },
     },
   },

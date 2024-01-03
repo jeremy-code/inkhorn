@@ -3,22 +3,8 @@ import { Flex, styled } from "styled-system/jsx";
 
 import { Sidebar } from "@/components/layout";
 import { Protected } from "@/components/misc";
+import { NAV_ITEMS } from "@/utils/constants";
 import { Navbar } from "./_components";
-
-const NAV_ITEMS = [
-  {
-    label: "Courses",
-    href: "/courses",
-  },
-  {
-    label: "Notes",
-    href: "/notes",
-  },
-  {
-    label: "Schedule",
-    href: "/schedule",
-  },
-];
 
 const AppLayout = ({ children }: { children: ReactNode }) => {
   return (

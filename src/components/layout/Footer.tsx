@@ -1,3 +1,4 @@
+import React, { type ComponentPropsWithRef } from "react";
 import { cva, type RecipeVariantProps } from "styled-system/css";
 import { styled, type HTMLStyledProps } from "styled-system/jsx";
 
@@ -14,14 +15,19 @@ const footer = cva({
   },
 });
 
-export const Footer = styled((props) => {
+export const Footer = styled((props: HTMLStyledProps<"footer">) => {
   return (
-    <footer {...props}>
+    <styled.footer {...props}>
       {"Made with ❤️ by "}
-      <Link href="https://jeremy.ng/" target="_blank" rel="noreferrer noopener">
+      <Link
+        href="https://jeremy.ng"
+        colorPalette="primary"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         Jeremy
       </Link>
-    </footer>
+    </styled.footer>
   );
 }, footer);
 

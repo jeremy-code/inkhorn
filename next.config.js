@@ -14,9 +14,15 @@ const componentDirs = fs
 /** @type {import('next').NextConfig} */
 module.exports = withBundleAnalyzer({
   poweredByHeader: false,
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
   experimental: {
-    ppr: true,
-    webpackBuildWorker: true,
     optimizePackageImports: [...componentDirs],
+    ppr: true,
+    taint: true,
+    webpackBuildWorker: true,
   },
 });

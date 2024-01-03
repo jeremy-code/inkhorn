@@ -1,12 +1,12 @@
 import { styled } from "styled-system/jsx";
 
-import { Spinner } from "@/components/ui";
+import { Card, Spinner } from "@/components/ui";
 
 const Loading = () => {
   return (
-    <styled.div m="auto">
-      <Spinner />
-    </styled.div>
+    <Card.Root animation="drawer-in-right" h="full" w="full" minW="lg" m={2}>
+      <Spinner m="auto" />
+    </Card.Root>
   );
 };
 

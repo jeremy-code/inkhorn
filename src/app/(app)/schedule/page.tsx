@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "schedule | inkhorn",
+  title: "schedule",
 };
 
 const SchedulePage = () => {

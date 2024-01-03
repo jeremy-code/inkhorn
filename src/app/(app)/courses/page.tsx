@@ -7,7 +7,7 @@ import { Input, Label } from "@/components/ui";
 import { createCourse, getCourses } from "@/actions/course";
 
 export const metadata: Metadata = {
-  title: "courses | inkhorn",
+  title: "courses",
 };
 
 const CoursesPage = async () => {

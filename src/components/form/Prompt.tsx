@@ -39,6 +39,8 @@ export const Prompt = ({ label, title, description, children, action, ...props }
       onOpenChange={(e) => setIsOpen(e.open)}
       closeOnEscapeKeyDown={false}
       closeOnInteractOutside={false}
+      // necessary to ensure form and `isOpen` state are reset on close
+      unmountOnExit
       {...props}
     >
       <Dialog.Trigger asChild>

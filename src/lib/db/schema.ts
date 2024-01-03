@@ -2,6 +2,8 @@ import type { AdapterAccount } from "@auth/core/adapters";
 import { relations } from "drizzle-orm";
 import { integer, pgTable, primaryKey, text, timestamp } from "drizzle-orm/pg-core";
 
+import { days } from "@/utils/constants";
+
 export const users = pgTable("user", {
   id: text("id").primaryKey(),
   name: text("name"),
@@ -19,9 +21,7 @@ export const courses = pgTable("course", {
     .$defaultFn(() => crypto.randomUUID())
     .primaryKey(),
   name: text("name").notNull(),
-  daysOfTheWeek: text("daysOfTheWeek", {
-    enum: ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday"],
-  }).array(),
+  daysOfTheWeek: text("daysOfTheWeek", { enum: days }).array(),
   userId: text("userId").notNull(),
 });
 

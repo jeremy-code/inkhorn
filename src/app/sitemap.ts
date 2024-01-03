@@ -1,12 +1,10 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 
-const sitemap = (): MetadataRoute.Sitemap => {
-  return [
-    {
-      url: "https://inkhorn.io",
-      lastModified: new Date(),
-    },
-  ];
-};
+const sitemap = (): MetadataRoute.Sitemap => [
+  {
+    url: "https://inkhorn.io",
+    lastModified: new Date(),
+  },
+];
 
 export default sitemap;
