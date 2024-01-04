@@ -20,10 +20,15 @@ export const metadata: Metadata = {
     url: "https://inkhorn.io",
     title: "inkhorn",
     description: "an open-source next-gen notetaking app for students",
-  },
-  twitter: {
-    description: "an open-source next-gen notetaking app for students",
-    title: "inkhorn",
+    images: [
+      {
+        url: "https://inkhorn.io/og-image.jpg",
+        alt: "inkhorn",
+        type: "image/jpeg",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
