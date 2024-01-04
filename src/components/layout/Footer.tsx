@@ -1,4 +1,3 @@
-import React, { type ComponentPropsWithRef } from "react";
 import { cva, type RecipeVariantProps } from "styled-system/css";
 import { styled, type HTMLStyledProps } from "styled-system/jsx";
 

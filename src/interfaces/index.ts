@@ -1,2 +1,2 @@
-export * from "./actions";
-export * from "./database";
+export type * from "./actions";
+export type * from "./database";

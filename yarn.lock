@@ -5430,6 +5430,7 @@ __metadata:
     prettier: "npm:^3.1.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
+    server-only: "npm:^0.0.1"
     typescript: "npm:^5.3.3"
     valibot: "npm:^0.25.0"
   languageName: unknown

@@ -1,4 +1,4 @@
-import { InferInsertModel } from "drizzle-orm";
+import type { InferInsertModel } from "drizzle-orm";
 
 import { courses, users } from "@/lib/db/schema";
 

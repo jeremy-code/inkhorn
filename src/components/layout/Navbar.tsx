@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { cva } from "styled-system/css";
 import { styled, type HTMLStyledProps } from "styled-system/jsx";

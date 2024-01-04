@@ -24,18 +24,15 @@ type FormProps = {
  */
 export const Form = ({ children, action, onSubmitSuccess, ...rest }: FormProps) => {
   const [state, formAction] = useFormState(action, null);
-  const [Toaster, toast] = createToaster({
-    placement: "top-end",
-    render: ToastComponent,
-  });
+  const [Toaster, toast] = createToaster({ placement: "top-end", render: ToastComponent });
 
   useEffect(() => {
     if (!state) return;
 
     if (state.status === "ok" && onSubmitSuccess) {
       onSubmitSuccess();
-    } else if (state.status === "error") {
-      Object.values(state.error ?? {})
+    } else if (state.status === "error" && !!state.error) {
+      Object.values(state.error)
         .flat()
         .forEach((description) =>
           toast.error({
