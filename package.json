@@ -1,8 +1,8 @@
 {
   "name": "inkhorn",
+  "description": "an open-source next-gen notetaking app for students",
   "version": "0.0.0",
   "private": true,
-  "description": "next-gen assistant for students",
   "keywords": [
     "next",
     "typescript",
@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
-    "@pandacss/dev": "^0.23.0",
+    "@pandacss/dev": "^0.24.2",
     "@park-ui/panda-preset": "^0.28.0",
     "@types/node": "^20.10.6",
     "@types/pg": "^8.10.9",
@@ -70,7 +70,7 @@
     "eslint-plugin-drizzle": "^0.2.3",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
-    "postcss": "^8.4.32",
+    "postcss": "^8.4.33",
     "prettier": "^3.1.1",
     "typescript": "^5.3.3"
   },

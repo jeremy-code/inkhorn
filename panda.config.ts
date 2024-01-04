@@ -71,13 +71,8 @@ export default defineConfig({
   },
   staticCss: {
     recipes: {
-      button: [
-        {
-          // autogenerate sizes "md" and "lg" for buttons
-          size: ["md", "lg"],
-          responsive: true,
-        },
-      ],
+      // autogenerate sizes "md" and "lg" for buttons
+      button: [{ size: ["md", "lg"], responsive: true }],
     },
   },
   jsxFramework: "react",

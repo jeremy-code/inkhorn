@@ -12,10 +12,7 @@ export const metadata: Metadata = {
   title: { default: "inkhorn", template: "%s | inkhorn" },
   description: "an open-source next-gen notetaking app for students",
   applicationName: "inkhorn",
-  authors: {
-    name: "Jeremy Nguyen",
-    url: "https://jeremy.ng",
-  },
+  authors: { name: "Jeremy Nguyen", url: "https://jeremy.ng" },
   keywords: ["notetaking", "note-taking", "notes", "students", "education", "open-source"],
   creator: "Jeremy Nguyen",
   openGraph: {

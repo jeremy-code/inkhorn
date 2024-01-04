@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 const manifest = (): MetadataRoute.Manifest => ({
   name: "inkhorn",
   short_name: "inkhorn",
-  description: "inkhorn",
+  description: "an open-source next-gen notetaking app for students",
   start_url: "/",
   display: "standalone",
   background_color: "#fff",

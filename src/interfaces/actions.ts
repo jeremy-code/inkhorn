@@ -11,9 +11,7 @@ export type StatefulAction<State> = (
 export type FormState<Data> = {
   status: "error" | "ok";
   data: Data;
-  error?: {
-    [key: string]: string[] | undefined;
-  };
+  error?: { [key: string]: string[] | undefined };
 } | null;
 
 // Action type that will return the above FormState, used in useFormState()
