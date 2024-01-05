@@ -11,7 +11,7 @@ import { courses, db, insertCourseSchema, type InsertCourse } from "@/lib/db";
 import { parseCourse } from "@/utils/course";
 
 // Return the course with the given id
-export const getCourse = async (id: string) => {
+export const getCourse = async (id: number) => {
   const course = await db.query.courses.findFirst({ where: (c, { eq }) => eq(c.id, id) });
 
   if (!course) notFound();
@@ -20,7 +20,7 @@ export const getCourse = async (id: string) => {
 };
 
 // Delete the course with the given id
-export const deleteCourse = async (id: string) => {
+export const deleteCourse = async (id: number) => {
   await db.delete(courses).where(eq(courses.id, id));
   revalidateTag("courses");
   // necessary because if in intercepted route or current page, may break

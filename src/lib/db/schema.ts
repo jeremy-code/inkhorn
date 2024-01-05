@@ -1,6 +1,6 @@
 import type { AdapterAccount } from "@auth/core/adapters";
 import { relations } from "drizzle-orm";
-import { integer, pgTable, primaryKey, text, timestamp } from "drizzle-orm/pg-core";
+import { integer, pgTable, primaryKey, serial, text, timestamp } from "drizzle-orm/pg-core";
 
 import { days } from "@/utils/constants";
 
@@ -17,18 +17,40 @@ export const usersRelations = relations(users, ({ many }) => ({
 }));
 
 export const courses = pgTable("course", {
-  id: text("id")
-    .$defaultFn(() => crypto.randomUUID())
-    .primaryKey(),
+  id: serial("id").primaryKey(),
   name: text("name").notNull(),
   daysOfTheWeek: text("daysOfTheWeek", { enum: days }).array(),
   userId: text("userId").notNull(),
+  courseCode: text("courseCode"),
+  subjectId: text("subjectId"),
+  startTime: timestamp("startTime"),
+  endTime: timestamp("endTime"),
+  instructorId: text("instructorId"),
+});
+
+export const subjects = pgTable("subject", {
+  id: serial("id").primaryKey(),
+  abbr: text("abbr").notNull(),
+  name: text("name").notNull(),
+});
+
+export const instructors = pgTable("instructor", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
 });
 
 export const coursesRelations = relations(courses, ({ one }) => ({
   user: one(users, {
     fields: [courses.userId],
     references: [users.id],
+  }),
+  subject: one(subjects, {
+    fields: [courses.subjectId],
+    references: [subjects.id],
+  }),
+  instructor: one(instructors, {
+    fields: [courses.instructorId],
+    references: [instructors.id],
   }),
 }));
 

@@ -14,16 +14,32 @@ CREATE TABLE IF NOT EXISTS "account" (
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "course" (
-	"id" text PRIMARY KEY NOT NULL,
+	"id" serial PRIMARY KEY NOT NULL,
 	"name" text NOT NULL,
 	"daysOfTheWeek" text[],
-	"userId" text NOT NULL
+	"userId" text NOT NULL,
+	"courseCode" text,
+	"subjectId" text,
+	"startTime" timestamp,
+	"endTime" timestamp,
+	"instructorId" text
+);
+--> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "instructor" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"name" text NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "session" (
 	"sessionToken" text PRIMARY KEY NOT NULL,
 	"userId" text NOT NULL,
 	"expires" timestamp NOT NULL
+);
+--> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "subject" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"abbr" text NOT NULL,
+	"name" text NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "user" (

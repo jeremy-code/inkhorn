@@ -3,9 +3,10 @@ import { Divider, HStack } from "styled-system/jsx";
 import { FormButton } from "@/components/form";
 import { Badge, Card } from "@/components/ui";
 import { deleteCourse, getCourse } from "@/actions/course";
+import { decode } from "@/utils/sqid";
 
 const CoursePage = async ({ params }: { params: { id: string } }) => {
-  const { id, name, daysOfTheWeek } = await getCourse(params.id);
+  const { id, name, daysOfTheWeek } = await getCourse(decode(params.id));
 
   return (
     <Card.Root h="full" w="full" minW="lg" m={2}>

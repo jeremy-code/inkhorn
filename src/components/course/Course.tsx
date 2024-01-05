@@ -2,10 +2,11 @@ import { HStack } from "styled-system/jsx";
 
 import { Badge, Card, Link } from "@/components/ui";
 import type { Course as CourseProps } from "@/interfaces/database";
+import { encode } from "@/utils/sqid";
 
 export const Course = ({ id, name, daysOfTheWeek }: CourseProps) => {
   return (
-    <Link href={`/courses/${encodeURIComponent(id)}`} linkDecor={false} w="full">
+    <Link href={`/courses/${encode(id)}`} linkDecor={false} w="full">
       <Card.Root
         w="full"
         minW="xs"

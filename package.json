@@ -31,6 +31,7 @@
     "format": "prettier 'src/**/*.{js,jsx,ts,tsx,json}' --write --ignore-path .gitignore",
     "db:push": "drizzle-kit push:pg",
     "db:generate": "drizzle-kit generate:pg",
+    "db:migrate": "tsx ./src/lib/db/migrate.ts",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
@@ -42,6 +43,7 @@
     "@tiptap/starter-kit": "^2.1.13",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.2",
+    "dotenv": "^16.3.1",
     "drizzle-orm": "^0.29.3",
     "drizzle-valibot": "^0.1.1",
     "lucide-react": "^0.303.0",
@@ -51,6 +53,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "server-only": "^0.0.1",
+    "sqids": "^0.3.0",
     "valibot": "^0.25.0"
   },
   "devDependencies": {
@@ -72,6 +75,7 @@
     "lint-staged": "^15.2.0",
     "postcss": "^8.4.33",
     "prettier": "^3.1.1",
+    "tsx": "^4.7.0",
     "typescript": "^5.3.3"
   },
   "packageManager": "yarn@4.0.2"
