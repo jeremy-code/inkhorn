@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS "course" (
 	"daysOfTheWeek" text[],
 	"userId" text NOT NULL,
 	"courseCode" text,
-	"subjectId" text,
+	"subject" text,
 	"startTime" timestamp,
 	"endTime" timestamp,
 	"instructorId" text

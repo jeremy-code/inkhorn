@@ -1,5 +1,5 @@
 {
-  "id": "5a4c2ec9-06a4-4b1b-b5d1-71d75e0ff3bd",
+  "id": "deda9a71-971e-4358-820b-0c124229a5b7",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -136,8 +136,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "subjectId": {
-          "name": "subjectId",
+        "subject": {
+          "name": "subject",
           "type": "text",
           "primaryKey": false,
           "notNull": false

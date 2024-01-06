@@ -12,11 +12,13 @@ export * from "./IconButton";
 export * from "./Input";
 export * from "./Label";
 export * from "./Link";
+export * from "./Text";
 
 // Contextful Park UI components
 export * as Avatar from "./Avatar";
 export * as Card from "./Card";
 export * as Checkbox from "./Checkbox";
+export * as Combobox from "./Combobox";
 export * as Dialog from "./Dialog";
 export * as Popover from "./Popover";
 export * as Splitter from "./Splitter";

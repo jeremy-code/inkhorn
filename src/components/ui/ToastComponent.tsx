@@ -1,7 +1,7 @@
 "use client";
 
 import type { CreateToasterProps } from "@ark-ui/react/toast";
-import { XIcon } from "lucide-react";
+import { X } from "lucide-react";
 
 import { IconButton, Toast } from "@/components/ui";
 
@@ -16,7 +16,7 @@ export const ToastComponent: CreateToasterProps["render"] = (toast) => {
       <Toast.Description {...descriptionProps}>{description}</Toast.Description>
       <Toast.CloseTrigger asChild {...closeTriggerProps}>
         <IconButton size="sm" variant="link" aria-label="Close Toast">
-          <XIcon />
+          <X />
         </IconButton>
       </Toast.CloseTrigger>
     </Toast.Root>

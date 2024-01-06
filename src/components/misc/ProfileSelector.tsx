@@ -2,7 +2,7 @@ import { Box, Circle, Divider, HStack, Stack, styled } from "styled-system/jsx";
 
 import { FormButton } from "@/components/form";
 import { Icon } from "@/components/misc";
-import { Avatar, Button, IconButton, Link, Popover } from "@/components/ui";
+import { Avatar, Button, IconButton, Link, Popover, Text } from "@/components/ui";
 import { getUser, signOutAction } from "@/actions";
 import { User } from "@/interfaces/database";
 
@@ -22,8 +22,6 @@ const ProfileAvatar = ({ image }: User) => {
 
 export const ProfileSelector = async () => {
   const user = await getUser();
-
-  if (!user) return;
 
   return (
     <Popover.Root positioning={{ placement: "bottom-end" }}>
@@ -47,8 +45,8 @@ export const ProfileSelector = async () => {
               <HStack>
                 <ProfileAvatar {...user} />
                 <div>
-                  <styled.p>{user.name}</styled.p>
-                  <styled.p color="fg.muted">{user.email}</styled.p>
+                  <Text>{user.name}</Text>
+                  <Text color="fg.muted">{user.email}</Text>
                 </div>
               </HStack>
             </Popover.Title>

@@ -1,17 +1,27 @@
+import { notFound } from "next/navigation";
 import { Divider, HStack } from "styled-system/jsx";
 
 import { FormButton } from "@/components/form";
-import { Badge, Card } from "@/components/ui";
+import { Badge, Card, Text } from "@/components/ui";
 import { deleteCourse, getCourse } from "@/actions/course";
-import { decode } from "@/utils/sqid";
+import { getUser } from "@/actions/user";
+import { decodeId } from "@/utils/sqid";
 
 const CoursePage = async ({ params }: { params: { id: string } }) => {
-  const { id, name, daysOfTheWeek } = await getCourse(decode(params.id));
+  const { id, userId, name, daysOfTheWeek, subject } = await getCourse(decodeId(params.id));
+  const { id: currentUserId } = await getUser();
+
+  if (userId !== currentUserId) notFound();
 
   return (
     <Card.Root h="full" w="full" minW="lg" m={2}>
       <Card.Header>
-        <Card.Title>{name}</Card.Title>
+        <HStack>
+          <Card.Title>{name} </Card.Title>
+          <Text fontSize="sm" color="fg.muted">
+            {subject}
+          </Text>
+        </HStack>
         <HStack>{daysOfTheWeek?.map((day) => <Badge key={day}>{day}</Badge>)}</HStack>
       </Card.Header>
       <Card.Body></Card.Body>

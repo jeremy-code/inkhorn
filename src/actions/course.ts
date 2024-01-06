@@ -13,7 +13,6 @@ import { parseCourse } from "@/utils/course";
 // Return the course with the given id
 export const getCourse = async (id: number) => {
   const course = await db.query.courses.findFirst({ where: (c, { eq }) => eq(c.id, id) });
-
   if (!course) notFound();
 
   return course;
@@ -31,7 +30,6 @@ export const deleteCourse = async (id: number) => {
 export const getCourses = unstable_cache(
   async () => {
     const user = await getUser();
-    if (!user?.id) return [];
 
     return await db.query.courses.findMany({ where: (c, { eq }) => eq(c.userId, user.id) });
   },

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useState, type ReactNode } from "react";
-import { XIcon } from "lucide-react";
+import { X } from "lucide-react";
 import { Stack } from "styled-system/jsx";
 
 import { Form, SubmitButton } from "@/components/form";
@@ -74,7 +74,7 @@ export const Prompt = ({ label, title, description, children, action, ...props }
           </Stack>
           <Dialog.CloseTrigger asChild position="absolute" top="4" right="4">
             <IconButton aria-label="Close Dialog" variant="ghost" size="sm">
-              <XIcon />
+              <X />
             </IconButton>
           </Dialog.CloseTrigger>
         </Dialog.Content>

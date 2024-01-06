@@ -22,7 +22,7 @@ export const courses = pgTable("course", {
   daysOfTheWeek: text("daysOfTheWeek", { enum: days }).array(),
   userId: text("userId").notNull(),
   courseCode: text("courseCode"),
-  subjectId: text("subjectId"),
+  subject: text("subject"),
   startTime: timestamp("startTime"),
   endTime: timestamp("endTime"),
   instructorId: text("instructorId"),
@@ -43,10 +43,6 @@ export const coursesRelations = relations(courses, ({ one }) => ({
   user: one(users, {
     fields: [courses.userId],
     references: [users.id],
-  }),
-  subject: one(subjects, {
-    fields: [courses.subjectId],
-    references: [subjects.id],
   }),
   instructor: one(instructors, {
     fields: [courses.instructorId],

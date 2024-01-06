@@ -54,6 +54,13 @@ export default defineConfig({
               stops: ["{colors.blue.4}", "{colors.primary.5}"],
             },
           },
+          textHighlight: {
+            value: {
+              type: "linear",
+              placement: "to right",
+              stops: ["{colors.primary.3}", "{colors.primary.5}"],
+            },
+          },
         },
       },
     },

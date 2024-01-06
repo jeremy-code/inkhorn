@@ -1,12 +1,12 @@
 import { HStack } from "styled-system/jsx";
 
-import { Badge, Card, Link } from "@/components/ui";
+import { Badge, Card, Link, Text } from "@/components/ui";
 import type { Course as CourseProps } from "@/interfaces/database";
-import { encode } from "@/utils/sqid";
+import { encodeId } from "@/utils/sqid";
 
-export const Course = ({ id, name, daysOfTheWeek }: CourseProps) => {
+export const Course = async ({ id, name, daysOfTheWeek, subject }: CourseProps) => {
   return (
-    <Link href={`/courses/${encode(id)}`} linkDecor={false} w="full">
+    <Link href={`/courses/${encodeId(id)}`} linkDecor={false} w="full">
       <Card.Root
         w="full"
         minW="xs"
@@ -18,8 +18,11 @@ export const Course = ({ id, name, daysOfTheWeek }: CourseProps) => {
           boxShadow: "xl",
         }}
       >
-        <Card.Header>
+        <Card.Header flexDir="row" alignItems="center" gap={3}>
           <Card.Title>{name}</Card.Title>
+          <Text fontSize="sm" color="fg.muted">
+            {subject}
+          </Text>
         </Card.Header>
         <Card.Body>
           <HStack>{daysOfTheWeek?.map((day) => <Badge key={day}>{day}</Badge>)}</HStack>

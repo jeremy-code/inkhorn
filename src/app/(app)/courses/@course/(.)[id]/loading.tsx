@@ -1,5 +1,3 @@
-import { styled } from "styled-system/jsx";
-
 import { Card, Spinner } from "@/components/ui";
 
 const Loading = () => {
