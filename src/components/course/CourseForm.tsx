@@ -1,6 +1,6 @@
-import { Stack, StackProps } from "styled-system/jsx";
+import { HStack, Stack, StackProps } from "styled-system/jsx";
 
-import { AsyncAutocomplete, WeekDaysSelector } from "@/components/form";
+import { AsyncAutocomplete, TimeAutocomplete, WeekDaysSelector } from "@/components/form";
 import { Input, Label } from "@/components/ui";
 import { fetchSubjects } from "@/actions/subject";
 
@@ -25,6 +25,11 @@ export const CourseForm = (props: StackProps) => {
 
       <Label mt={2}>Schedule</Label>
       <WeekDaysSelector />
+
+      <HStack mt={2}>
+        <TimeAutocomplete label="From" w="32" name="startTime" />
+        <TimeAutocomplete label="To" w="32" name="endTime" />
+      </HStack>
     </Stack>
   );
 };

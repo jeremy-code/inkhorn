@@ -24,3 +24,23 @@ export function debounce<T extends (...args: any[]) => any>(
     if (callNow) func.apply(context, args);
   };
 }
+
+// create an array of time slots in 15 minute increments
+export const createTimeSlots = () =>
+  Array.from({ length: 96 }, (_, i) => {
+    const hour = Math.floor(i / 4) % 12 || 12;
+    const minute = (i % 4) * 15;
+    const amPm = i < 48 ? "am" : "pm";
+    return `${hour}:${minute.toString().padStart(2, "0")}${amPm}`;
+  });
+
+export const convertToTimeObject = (timeString: string): Date => {
+  const [time, modifier] = timeString.split(/(am|pm)/i);
+  return new Date(`1970-01-01 ${time} ${modifier.toUpperCase()}`);
+};
+
+export const formatTime = (time: Date): string =>
+  new Date(time).toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });

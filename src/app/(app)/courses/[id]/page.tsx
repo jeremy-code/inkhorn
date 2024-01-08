@@ -4,10 +4,13 @@ import { HStack } from "styled-system/jsx";
 import { Badge, Heading, Text } from "@/components/ui";
 import { getCourse } from "@/actions/course";
 import { getUser } from "@/actions/user";
+import { formatTime } from "@/utils/common";
 import { decodeId } from "@/utils/sqid";
 
 const CoursePage = async ({ params }: { params: { id: string } }) => {
-  const { name, daysOfTheWeek, userId, subject } = await getCourse(decodeId(params.id));
+  const { name, daysOfTheWeek, userId, subject, startTime, endTime } = await getCourse(
+    decodeId(params.id)
+  );
   const { id: currentUserId } = await getUser();
 
   if (userId !== currentUserId) notFound();
@@ -21,6 +24,11 @@ const CoursePage = async ({ params }: { params: { id: string } }) => {
         </Text>
       </HStack>
       <HStack mt={2}>{daysOfTheWeek?.map((day) => <Badge key={day}>{day}</Badge>)}</HStack>
+      {startTime && endTime && (
+        <Text fontSize="sm" color="fg.muted">
+          {formatTime(startTime)} - {formatTime(endTime)}
+        </Text>
+      )}
     </>
   );
 };

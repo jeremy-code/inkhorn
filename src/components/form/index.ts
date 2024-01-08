@@ -5,3 +5,4 @@ export * from "./WeekDaysSelector";
 export * from "./Form";
 export * from "./Autocomplete";
 export * from "./AsyncAutocomplete";
+export * from "./TimeAutocomplete";

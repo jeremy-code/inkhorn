@@ -1,5 +1,4 @@
-import type { Course } from "@/interfaces/database";
-import { parseFormData } from "./common";
+import { convertToTimeObject, parseFormData } from "./common";
 import { DAY_PREFIX } from "./constants";
 
 /**
@@ -16,5 +15,10 @@ export const parseCourse = (formData: FormData): any => {
     .filter((key) => key.startsWith(DAY_PREFIX) && course[key] === "on")
     .map((key) => key.slice(DAY_PREFIX.length + 1));
 
-  return { ...course, daysOfTheWeek };
+  return {
+    ...course,
+    daysOfTheWeek,
+    startTime: convertToTimeObject(course.startTime),
+    endTime: convertToTimeObject(course.endTime),
+  };
 };

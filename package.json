@@ -38,6 +38,7 @@
     "@ark-ui/react": "^1.2.1",
     "@auth/drizzle-adapter": "^0.3.12",
     "@next/bundle-analyzer": "^14.0.5-canary.35",
+    "@tanstack/react-virtual": "^3.0.1",
     "@tiptap/pm": "^2.1.13",
     "@tiptap/react": "^2.1.13",
     "@tiptap/starter-kit": "^2.1.13",
