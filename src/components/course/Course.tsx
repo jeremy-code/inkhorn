@@ -4,14 +4,7 @@ import { Badge, Card, Link, Text } from "@/components/ui";
 import type { Course as CourseProps } from "@/interfaces/database";
 import { encodeId } from "@/utils/sqid";
 
-export const Course = async ({
-  id,
-  name,
-  daysOfTheWeek,
-  subject,
-  startTime,
-  endTime,
-}: CourseProps) => {
+export const Course = async ({ id, name, daysOfTheWeek, subject }: CourseProps) => {
   return (
     <Link href={`/courses/${encodeId(id)}`} linkDecor={false} w="full">
       <Card.Root

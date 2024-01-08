@@ -1,5 +1,5 @@
 {
-  "id": "deda9a71-971e-4358-820b-0c124229a5b7",
+  "id": "49ca2c26-4039-4a45-b8f1-38a7a663f7e8",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -81,6 +81,7 @@
           "name": "account_userId_user_id_fk",
           "tableFrom": "account",
           "tableTo": "user",
+          "schemaTo": "public",
           "columnsFrom": [
             "userId"
           ],
@@ -217,6 +218,7 @@
           "name": "session_userId_user_id_fk",
           "tableFrom": "session",
           "tableTo": "user",
+          "schemaTo": "public",
           "columnsFrom": [
             "userId"
           ],

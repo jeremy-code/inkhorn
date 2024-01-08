@@ -34,7 +34,7 @@ export const createTimeSlots = () =>
     return `${hour}:${minute.toString().padStart(2, "0")}${amPm}`;
   });
 
-export const convertToTimeObject = (timeString: string): Date => {
+export const convertToTimeObject = (timeString: string) => {
   const [time, modifier] = timeString.split(/(am|pm)/i);
   return new Date(`1970-01-01 ${time} ${modifier.toUpperCase()}`);
 };

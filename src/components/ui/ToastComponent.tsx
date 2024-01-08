@@ -7,9 +7,14 @@ import { IconButton, Toast } from "@/components/ui";
 
 // Somewhat more organized than putting everything in @/components/Toast.tsx
 // Also, prevents some bugs with server components and conditional rendering
-export const ToastComponent: CreateToasterProps["render"] = (toast) => {
-  const { rootProps, titleProps, descriptionProps, closeTriggerProps, title, description } = toast;
-
+export const ToastComponent: CreateToasterProps["render"] = ({
+  rootProps,
+  titleProps,
+  descriptionProps,
+  closeTriggerProps,
+  title,
+  description,
+}) => {
   return (
     <Toast.Root {...rootProps}>
       <Toast.Title {...titleProps}>{title}</Toast.Title>
