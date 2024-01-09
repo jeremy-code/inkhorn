@@ -1,10 +1,10 @@
 "use client";
 
 import { Checkbox as ArkCheckbox } from "@ark-ui/react/checkbox";
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
-import { checkbox } from "styled-system/recipes";
 
 import { createStyleContext } from "@/lib/styled";
+import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { checkbox } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(checkbox);
 

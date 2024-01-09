@@ -1,10 +1,10 @@
 "use client";
 
 import { Popover as ArkPopover } from "@ark-ui/react/popover";
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
-import { popover } from "styled-system/recipes";
 
 import { createStyleContext } from "@/lib/styled";
+import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { popover } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(popover);
 

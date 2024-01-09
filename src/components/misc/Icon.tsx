@@ -1,5 +1,6 @@
 import { icons, type LucideProps } from "lucide-react";
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
+
+import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
 
 /**
  * since using Server Components, importing all icons will not increase bundle size

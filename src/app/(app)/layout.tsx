@@ -1,8 +1,8 @@
 import React, { type ReactNode } from "react";
-import { Flex, styled } from "styled-system/jsx";
 
 import { Sidebar } from "@/components/layout";
 import { Protected } from "@/components/misc";
+import { Flex, styled } from "@/lib/styled/jsx";
 import { NAV_ITEMS } from "@/utils/constants";
 import { Navbar } from "./_components";
 

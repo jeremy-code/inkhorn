@@ -7,13 +7,24 @@ const globalCss = defineGlobalStyles({
   "header, footer": { flexShrink: 0 },
 });
 
+const isProduction = process.env.NODE_ENV === "production";
+
 export default defineConfig({
+  presets: ["@pandacss/preset-base", "@park-ui/panda-preset"],
   preflight: true,
+  prefix: "inkhorn",
+  minify: isProduction,
+  hash: isProduction,
+  clean: isProduction,
+  importMap: {
+    css: "@/lib/styled/css",
+    recipes: "@/lib/styled/recipes",
+    patterns: "@/lib/styled/patterns",
+    jsx: "@/lib/styled/jsx",
+  },
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
   exclude: [],
-  emitPackage: true,
-  prefix: "inkhorn",
-  presets: ["@pandacss/preset-base", "@park-ui/panda-preset"],
+  watch: !isProduction,
   globalCss,
   theme: {
     extend: {
@@ -83,6 +94,4 @@ export default defineConfig({
     },
   },
   jsxFramework: "react",
-  outdir: "styled-system",
-  minify: true,
 });

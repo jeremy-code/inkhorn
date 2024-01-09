@@ -1,10 +1,10 @@
 "use client";
 
 import { ToggleGroup as ArkToggleGroup } from "@ark-ui/react/toggle-group";
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
-import { toggleGroup } from "styled-system/recipes";
 
 import { createStyleContext } from "@/lib/styled";
+import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { toggleGroup } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(toggleGroup);
 

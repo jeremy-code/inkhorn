@@ -1,6 +1,5 @@
-import { styled } from "styled-system/jsx";
-
 import { Spinner } from "@/components/ui";
+import { styled } from "@/lib/styled/jsx";
 
 const Loading = () => {
   return (

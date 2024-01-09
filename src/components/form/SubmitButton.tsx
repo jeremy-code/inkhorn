@@ -1,9 +1,9 @@
 "use client";
 
 import { useFormStatus } from "react-dom";
-import { css } from "styled-system/css";
 
 import { Button, Spinner, type ButtonProps } from "@/components/ui";
+import { css } from "@/lib/styled/css";
 
 export type SubmitButtonProps = ButtonProps;
 

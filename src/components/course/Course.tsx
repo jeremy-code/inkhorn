@@ -1,7 +1,6 @@
-import { HStack } from "styled-system/jsx";
-
 import { Badge, Card, Link, Text } from "@/components/ui";
 import type { Course as CourseProps } from "@/interfaces/database";
+import { HStack } from "@/lib/styled/jsx";
 import { encodeId } from "@/utils/sqid";
 
 export const Course = async ({ id, name, daysOfTheWeek, subject }: CourseProps) => {

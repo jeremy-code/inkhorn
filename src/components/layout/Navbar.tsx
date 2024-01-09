@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { cva } from "styled-system/css";
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
 
 import { Link } from "@/components/ui";
 import { logo } from "@/assets";
+import { cva } from "@/lib/styled/css";
+import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
 
 const navbar = cva({
   base: {

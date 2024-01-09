@@ -1,4 +1,4 @@
-import { Circle, type CircleProps } from "styled-system/jsx";
+import { Circle, type CircleProps } from "@/lib/styled/jsx";
 
 export type SpinnerProps = {
   isLoading?: boolean;

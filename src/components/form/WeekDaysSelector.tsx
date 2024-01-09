@@ -1,8 +1,7 @@
 "use client";
 
-import { HStack, styled, type HstackProps } from "styled-system/jsx";
-
 import { Checkbox } from "@/components/ui";
+import { HStack, styled, type HstackProps } from "@/lib/styled/jsx";
 import { DAY_PREFIX, daysOfTheWeek } from "@/utils/constants";
 
 export const WeekDaysSelector = (props: HstackProps) => {

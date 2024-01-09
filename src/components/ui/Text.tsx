@@ -1,4 +1,4 @@
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
+import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
 
 type As = "p" | "span" | "div" | "label";
 

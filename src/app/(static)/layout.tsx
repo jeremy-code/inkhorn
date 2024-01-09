@@ -1,9 +1,9 @@
 import React, { type ReactNode } from "react";
-import { HStack } from "styled-system/jsx";
 
 import { FormButton } from "@/components/form";
 import { Footer, Navbar } from "@/components/layout";
 import { signInAction } from "@/actions/auth";
+import { HStack } from "@/lib/styled/jsx";
 
 const StaticLayout = ({ children }: { children: ReactNode }) => {
   return (

@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { css } from "styled-system/css";
-import { Grid, Stack, styled } from "styled-system/jsx";
-import { container } from "styled-system/patterns";
 
 import { FormButton } from "@/components/form";
 import { Heading, Text } from "@/components/ui";
 import { signInAction } from "@/actions/auth";
 import { heroImage } from "@/assets";
+import { css } from "@/lib/styled/css";
+import { Grid, Stack, styled } from "@/lib/styled/jsx";
+import { container } from "@/lib/styled/patterns";
 
 const Home = async () => {
   return (

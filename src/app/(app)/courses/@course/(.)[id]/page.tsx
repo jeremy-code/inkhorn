@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
-import { Divider, HStack } from "styled-system/jsx";
 
 import { FormButton } from "@/components/form";
 import { Badge, Card, Text } from "@/components/ui";
 import { deleteCourse, getCourse } from "@/actions/course";
 import { getUser } from "@/actions/user";
+import { Divider, HStack } from "@/lib/styled/jsx";
 import { formatTime } from "@/utils/common";
 import { decodeId } from "@/utils/sqid";
 

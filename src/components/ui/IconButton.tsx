@@ -1,6 +1,7 @@
 import { ark } from "@ark-ui/react/factory";
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
-import { iconButton } from "styled-system/recipes";
+
+import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { iconButton } from "@/lib/styled/recipes";
 
 export const IconButton = styled(ark.button, iconButton);
 export type IconButtonProps = HTMLStyledProps<typeof IconButton>;

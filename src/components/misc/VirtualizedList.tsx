@@ -2,7 +2,8 @@
 
 import React, { useRef, type CSSProperties, type ReactNode } from "react";
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { styled } from "styled-system/jsx";
+
+import { styled } from "@/lib/styled/jsx";
 
 type VirtualizedListProps = {
   listItems: (key: number | string, index: number, start: number, size: number) => ReactNode;

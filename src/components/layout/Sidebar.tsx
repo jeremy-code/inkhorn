@@ -1,6 +1,5 @@
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
-
 import { Link } from "@/components/ui";
+import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
 
 type NavItem = {
   label: string;

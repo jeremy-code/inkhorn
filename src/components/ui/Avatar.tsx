@@ -1,10 +1,10 @@
 "use client";
 
 import { Avatar as ArkAvatar } from "@ark-ui/react/avatar";
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
-import { avatar } from "styled-system/recipes";
 
 import { createStyleContext } from "@/lib/styled";
+import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { avatar } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(avatar);
 

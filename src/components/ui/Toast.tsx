@@ -1,10 +1,10 @@
 "use client";
 
 import { Toast as ArkToast } from "@ark-ui/react/toast";
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
-import { toast as toastRecipe } from "styled-system/recipes";
 
 import { createStyleContext } from "@/lib/styled";
+import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { toast as toastRecipe } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(toastRecipe);
 

@@ -1,10 +1,10 @@
 "use client";
 
 import { Dialog as ArkDialog } from "@ark-ui/react/dialog";
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
-import { dialog } from "styled-system/recipes";
 
 import { createStyleContext } from "@/lib/styled";
+import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { dialog } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(dialog);
 

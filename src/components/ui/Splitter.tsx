@@ -1,10 +1,10 @@
 "use client";
 
 import { Splitter as ArkSplitter } from "@ark-ui/react/splitter";
-import { styled, type HTMLStyledProps } from "styled-system/jsx";
-import { splitter } from "styled-system/recipes";
 
 import { createStyleContext } from "@/lib/styled";
+import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { splitter } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(splitter);
 

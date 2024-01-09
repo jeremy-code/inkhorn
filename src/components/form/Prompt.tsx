@@ -2,11 +2,11 @@
 
 import React, { useCallback, useState, type ReactNode } from "react";
 import { X } from "lucide-react";
-import { Stack } from "styled-system/jsx";
 
 import { Form, SubmitButton } from "@/components/form";
 import { Button, Dialog, IconButton } from "@/components/ui";
 import type { StatefulFormAction } from "@/interfaces/actions";
+import { Stack } from "@/lib/styled/jsx";
 
 type PromptProps = {
   label: string;
