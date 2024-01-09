@@ -2,11 +2,11 @@ import Image from "next/image";
 
 import { FormButton } from "@/components/form";
 import { Heading, Text } from "@/components/ui";
-import { signInAction } from "@/actions/auth";
-import { heroImage } from "@/assets";
 import { css } from "@/lib/styled/css";
 import { Grid, Stack, styled } from "@/lib/styled/jsx";
 import { container } from "@/lib/styled/patterns";
+import { signInAction } from "@/actions/auth";
+import { heroImage } from "@/assets";
 
 const Home = async () => {
   return (

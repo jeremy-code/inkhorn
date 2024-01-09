@@ -1,7 +1,7 @@
 import { AsyncAutocomplete, TimeAutocomplete, WeekDaysSelector } from "@/components/form";
 import { Input, Label } from "@/components/ui";
-import { fetchSubjects } from "@/actions/subject";
 import { HStack, Stack, StackProps } from "@/lib/styled/jsx";
+import { fetchSubjects } from "@/actions/subject";
 
 export const CourseForm = (props: StackProps) => {
   const fetchSubjectItems = async (value: string) => {

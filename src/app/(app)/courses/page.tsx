@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 import { Course, CourseForm } from "@/components/course";
 import { Prompt } from "@/components/form";
-import { createCourse, getCourses } from "@/actions/course";
 import { Divider, Stack } from "@/lib/styled/jsx";
+import { createCourse, getCourses } from "@/actions/course";
 
 export const metadata: Metadata = { title: "courses" };
 

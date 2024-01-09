@@ -2,8 +2,8 @@ import React, { type ReactNode } from "react";
 
 import { FormButton } from "@/components/form";
 import { Footer, Navbar } from "@/components/layout";
-import { signInAction } from "@/actions/auth";
 import { HStack } from "@/lib/styled/jsx";
+import { signInAction } from "@/actions/auth";
 
 const StaticLayout = ({ children }: { children: ReactNode }) => {
   return (

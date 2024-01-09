@@ -1,7 +1,9 @@
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
+    "dsznajder.es7-react-js-snippets",
     "esbenp.prettier-vscode",
-    "github.vscode-github-actions"
+    "github.vscode-github-actions",
+    "arcanis.vscode-zipfs"
   ]
 }

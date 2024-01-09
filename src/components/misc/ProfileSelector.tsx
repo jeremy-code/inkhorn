@@ -1,9 +1,9 @@
 import { FormButton } from "@/components/form";
 import { Icon } from "@/components/misc";
 import { Avatar, Button, IconButton, Link, Popover, Text } from "@/components/ui";
-import { getUser, signOutAction } from "@/actions";
 import { User } from "@/interfaces/database";
-import { Box, Circle, Divider, HStack, Stack, styled } from "@/lib/styled/jsx";
+import { Box, Circle, Divider, HStack, Stack } from "@/lib/styled/jsx";
+import { getUser, signOutAction } from "@/actions";
 
 const ProfileAvatar = ({ image }: User) => {
   return (

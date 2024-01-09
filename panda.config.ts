@@ -7,15 +7,11 @@ const globalCss = defineGlobalStyles({
   "header, footer": { flexShrink: 0 },
 });
 
-const isProduction = process.env.NODE_ENV === "production";
-
 export default defineConfig({
   presets: ["@pandacss/preset-base", "@park-ui/panda-preset"],
   preflight: true,
   prefix: "inkhorn",
-  minify: isProduction,
-  hash: isProduction,
-  clean: isProduction,
+  minify: true,
   importMap: {
     css: "@/lib/styled/css",
     recipes: "@/lib/styled/recipes",
@@ -24,7 +20,6 @@ export default defineConfig({
   },
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
   exclude: [],
-  watch: !isProduction,
   globalCss,
   theme: {
     extend: {

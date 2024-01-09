@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 
 import { Badge, Heading, Text } from "@/components/ui";
-import { getCourse } from "@/actions/course";
-import { getUser } from "@/actions/user";
 import { HStack } from "@/lib/styled/jsx";
 import { formatTime } from "@/utils/common";
 import { decodeId } from "@/utils/sqid";
+import { getCourse } from "@/actions/course";
+import { getUser } from "@/actions/user";
 
 const CoursePage = async ({ params }: { params: { id: string } }) => {
   const { name, daysOfTheWeek, userId, subject, startTime, endTime } = await getCourse(

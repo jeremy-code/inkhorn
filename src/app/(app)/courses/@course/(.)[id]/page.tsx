@@ -2,11 +2,11 @@ import { notFound } from "next/navigation";
 
 import { FormButton } from "@/components/form";
 import { Badge, Card, Text } from "@/components/ui";
-import { deleteCourse, getCourse } from "@/actions/course";
-import { getUser } from "@/actions/user";
 import { Divider, HStack } from "@/lib/styled/jsx";
 import { formatTime } from "@/utils/common";
 import { decodeId } from "@/utils/sqid";
+import { deleteCourse, getCourse } from "@/actions/course";
+import { getUser } from "@/actions/user";
 
 const CoursePage = async ({ params }: { params: { id: string } }) => {
   const { id, userId, name, daysOfTheWeek, subject, startTime, endTime } = await getCourse(

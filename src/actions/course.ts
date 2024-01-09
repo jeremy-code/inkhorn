@@ -5,10 +5,10 @@ import { notFound, redirect } from "next/navigation";
 import { eq } from "drizzle-orm";
 import { flatten, safeParse } from "valibot";
 
-import { getUser } from "@/actions/user";
 import type { StatefulFormAction } from "@/interfaces/actions";
 import { courses, db, insertCourseSchema, type InsertCourse } from "@/lib/db";
 import { parseCourse } from "@/utils/course";
+import { getUser } from "@/actions/user";
 
 // Return the course with the given id
 export const getCourse = async (id: number) => {
