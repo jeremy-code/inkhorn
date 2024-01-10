@@ -1,3 +1,4 @@
+// @ts-check
 const { relative } = require("path");
 
 /** @type {import('lint-staged').Config} */

@@ -6,7 +6,7 @@ import { DAY_PREFIX } from "./constants";
  * value pairs as an object of [k: string]: string, and all the days of the
  * week as an array)
  */
-export const parseCourse = (formData: FormData): any => {
+export const parseCourse = (formData: FormData) => {
   const course = parseFormData(formData);
 
   // Get all the days of the week that are checked

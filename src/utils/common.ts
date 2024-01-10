@@ -39,7 +39,7 @@ export const convertToTimeObject = (timeString: string) => {
   return new Date(`1970-01-01 ${time} ${modifier.toUpperCase()}`);
 };
 
-export const formatTime = (time: Date): string =>
+export const formatTime = (time: Date) =>
   new Date(time).toLocaleTimeString("en-US", {
     hour: "2-digit",
     minute: "2-digit",

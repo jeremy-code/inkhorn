@@ -11,12 +11,15 @@ import { parseCourse } from "@/utils/course";
 import { getUser } from "@/actions/user";
 
 // Return the course with the given id
-export const getCourse = async (id: number) => {
-  const course = await db.query.courses.findFirst({ where: (c, { eq }) => eq(c.id, id) });
-  if (!course) notFound();
+export const getCourse = unstable_cache(
+  async (id: number) => {
+    const course = await db.query.courses.findFirst({ where: (c, { eq }) => eq(c.id, id) });
+    if (!course) notFound();
 
-  return course;
-};
+    return course;
+  },
+  ["id"]
+);
 
 // Delete the course with the given id
 export const deleteCourse = async (id: number) => {
