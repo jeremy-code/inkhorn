@@ -1,4 +1,5 @@
 import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
+import { createPreset } from "@park-ui/panda-preset";
 
 const globalCss = defineGlobalStyles({
   "html, body": { h: "100%" },
@@ -8,16 +9,11 @@ const globalCss = defineGlobalStyles({
 });
 
 export default defineConfig({
-  presets: ["@pandacss/preset-base", "@park-ui/panda-preset"],
+  presets: ["@pandacss/preset-base", "@park-ui/panda-preset", createPreset({ grayColor: "sage" })],
   preflight: true,
   prefix: "inkhorn",
   minify: true,
-  importMap: {
-    css: "@/lib/styled/css",
-    recipes: "@/lib/styled/recipes",
-    patterns: "@/lib/styled/patterns",
-    jsx: "@/lib/styled/jsx",
-  },
+  importMap: "@/lib/styled",
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
   exclude: [],
   globalCss,
@@ -65,6 +61,15 @@ export default defineConfig({
               type: "linear",
               placement: "to right",
               stops: ["{colors.primary.3}", "{colors.primary.5}"],
+            },
+          },
+        },
+      },
+      semanticTokens: {
+        colors: {
+          bg: {
+            canvas: {
+              value: "{colors.white}",
             },
           },
         },

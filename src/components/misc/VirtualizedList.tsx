@@ -26,9 +26,9 @@ export const VirtualizedList = ({ listItems, ...rest }: VirtualizedListProps) =>
             pos="absolute"
             inset="0"
             h={`${size}px`}
-            transform="translateY(var(--y))"
+            translate="auto"
             // Panda CSS won't know the the number of pixels during runtime, so we need to use CSS variables
-            style={{ "--y": `${start}px` } as CSSProperties}
+            style={{ "--translate-y": `${start}px` } as CSSProperties}
           >
             {listItems(key, index, start, size)}
           </styled.div>

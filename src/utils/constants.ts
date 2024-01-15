@@ -20,15 +20,28 @@ export const DAY_PREFIX = "day-of-the-week";
 
 export const NAV_ITEMS = [
   {
-    label: "Courses",
-    href: "/courses",
+    label: "Dashboard",
+    href: "/dashboard",
+    icon: "LayoutGrid",
   },
   {
-    label: "Notes",
-    href: "/notes",
+    label: "Courses",
+    href: "/courses",
+    icon: "School",
   },
   {
     label: "Schedule",
     href: "/schedule",
+    icon: "Calendar",
   },
-];
+  {
+    label: "Notes",
+    href: "/notes",
+    icon: "NotebookText",
+  },
+  {
+    label: "Settings",
+    href: "/settings",
+    icon: "Settings",
+  },
+] as const;
