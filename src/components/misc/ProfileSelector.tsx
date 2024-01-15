@@ -38,7 +38,7 @@ const ProfilePopover = async () => {
   return (
     <Popover.Positioner>
       <Popover.Content minW="2xs">
-        <Box position="absolute" top="1" right="1">
+        <Box pos="absolute" top="1" right="1">
           <Popover.CloseTrigger asChild>
             <IconButton aria-label="Close Popover" variant="ghost" size="sm">
               <Icon name="X" />
@@ -84,7 +84,7 @@ export const ProfileSelector = async ({ children }: { children?: ReactNode }) =>
           px={2}
           justify="center"
           cursor="pointer"
-          _hover={{ bg: "bg.muted" }}
+          bg={{ base: "bg.subtle", _hover: "bg.muted" }}
         >
           <ProfileAvatar {...user} />
           {children}

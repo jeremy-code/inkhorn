@@ -9,28 +9,20 @@ const navbar = cva({
   base: {
     py: 4,
     w: "full",
+    maxW: "8xl",
     display: "flex",
     alignItems: "center",
-    maxWidth: "8xl",
     mx: "auto",
     px: { base: 4, md: 6, lg: 8 },
   },
   variants: {
     justify: {
-      center: {
-        justifyContent: "center",
-      },
-      spaced: {
-        justifyContent: "space-between",
-      },
+      center: { justifyContent: "center" },
+      spaced: { justifyContent: "space-between" },
     },
     outline: {
-      border: {
-        borderBottom: "1px solid token(colors.gray.4)",
-      },
-      shadow: {
-        boxShadow: "md",
-      },
+      border: { borderBottom: "muted" },
+      shadow: { boxShadow: "md" },
     },
   },
 });
@@ -39,7 +31,7 @@ export const Navbar = styled(({ children, ...props }: HTMLStyledProps<"header">)
   return (
     <styled.header {...props}>
       <Link href="/" fontWeight="medium" fontSize="lg" display="flex" linkDecor={false}>
-        <Image src={logo} alt="inkhorn logo" width={15} height={15} priority />
+        <Image src={logo} alt="inkhorn logo" width={16} height={16} priority />
         inkhorn
       </Link>
       {children}

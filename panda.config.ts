@@ -16,6 +16,7 @@ export default defineConfig({
   importMap: "@/lib/styled",
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
   exclude: [],
+  watch: true,
   globalCss,
   theme: {
     extend: {
@@ -23,10 +24,18 @@ export default defineConfig({
         spin: { to: { transform: "rotate(360deg)" } },
         pulse: { "50%": { opacity: 0.5 } },
       },
+      semanticTokens: {
+        colors: {
+          bg: { canvas: { value: "{colors.white}" } },
+        },
+      },
       tokens: {
         animations: {
           spin: { value: "spin 1s linear infinite" },
-          pulse: { value: "pulse 2s cubic-bezier(.4,0,.6,1) infinite" },
+          pulse: { value: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite" },
+        },
+        borders: {
+          muted: { value: "1px solid {colors.border.muted}" },
         },
         colors: {
           primary: {
@@ -65,25 +74,16 @@ export default defineConfig({
           },
         },
       },
-      semanticTokens: {
-        colors: {
-          bg: {
-            canvas: {
-              value: "{colors.white}",
-            },
-          },
-        },
-      },
     },
   },
   utilities: {
     extend: {
-      radialGradient: {
-        transform: (value: string) => ({ backgroundImage: `radial-gradient(${value})` }),
-      },
       linkDecor: {
         values: { type: "boolean" },
         transform: (value: boolean) => (value ? {} : { textDecoration: "none" }),
+      },
+      radialGradient: {
+        transform: (value: string) => ({ backgroundImage: `radial-gradient(${value})` }),
       },
     },
   },

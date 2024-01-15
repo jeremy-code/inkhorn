@@ -13,6 +13,9 @@ yarn
 ## 🚀 Usage
 
 ```bash
+# Set Node.js version
+nvm use
+
 # Run the development server locally
 yarn dev
 

@@ -1,15 +1,15 @@
-"use client";
-
-import React, { useRef, type CSSProperties, type ReactNode } from "react";
+import React, { useRef, type CSSProperties, type HTMLAttributes, type ReactNode } from "react";
 import { useVirtualizer } from "@tanstack/react-virtual";
 
+import { css, cx } from "@/lib/styled/css";
 import { styled } from "@/lib/styled/jsx";
 
 type VirtualizedListProps = {
   listItems: (key: number | string, index: number, start: number, size: number) => ReactNode;
-} & Omit<Parameters<typeof useVirtualizer>[0], "getScrollElement" | "getItemKey">;
+} & Omit<Parameters<typeof useVirtualizer>[0], "getScrollElement" | "getItemKey"> &
+  HTMLAttributes<HTMLDivElement>;
 
-export const VirtualizedList = ({ listItems, ...rest }: VirtualizedListProps) => {
+export const VirtualizedList = styled(({ listItems, className, ...rest }: VirtualizedListProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { getTotalSize, getVirtualItems } = useVirtualizer({
     getScrollElement: () => ref.current,
@@ -18,7 +18,7 @@ export const VirtualizedList = ({ listItems, ...rest }: VirtualizedListProps) =>
   });
 
   return (
-    <styled.div ref={ref} h="xs" overflow="auto">
+    <div ref={ref} className={cx(css({ h: "xs", overflow: "auto" }), className)}>
       <styled.div h={`${getTotalSize()}px`} w="full" pos="relative">
         {getVirtualItems().map(({ key, index, start, size }) => (
           <styled.div
@@ -34,6 +34,6 @@ export const VirtualizedList = ({ listItems, ...rest }: VirtualizedListProps) =>
           </styled.div>
         ))}
       </styled.div>
-    </styled.div>
+    </div>
   );
-};
+});

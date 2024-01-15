@@ -58,15 +58,15 @@ export const Prompt = ({ label, title, description, children, action, ...props }
              /* has to be nested inside a stack, using the id here is ok and necessary */}
             <Form id="prompt-form" action={action} onSubmitSuccess={onSubmitSuccess}>
               {children}
-              <Stack gap="3" direction="row" width="full" mt={6}>
+              <Stack gap="3" direction="row" w="full" mt={6}>
                 <Dialog.CloseTrigger asChild>
-                  <Button variant="outline" width="full">
+                  <Button variant="outline" w="full">
                     Cancel
                   </Button>
                 </Dialog.CloseTrigger>
                 {/* Closes Dialog after completion */}
                 {/* FormTarget = "prompt-form" based on <Form /> id prop*/}
-                <SubmitButton width="full" type="submit" formTarget="prompt-form">
+                <SubmitButton w="full" type="submit" formTarget="prompt-form">
                   Confirm
                 </SubmitButton>
               </Stack>

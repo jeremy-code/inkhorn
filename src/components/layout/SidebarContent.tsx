@@ -3,7 +3,8 @@ import Image from "next/image";
 import { NavLink, SidebarAddon } from "@/components/layout";
 import { Icon, ProfileInfo, ProfileSelector } from "@/components/misc";
 import { Link, Spacer } from "@/components/ui";
-import { Box, styled } from "@/lib/styled/jsx";
+import { Box } from "@/lib/styled/jsx";
+import { flex, stack } from "@/lib/styled/patterns";
 import { NAV_ITEMS } from "@/utils/constants";
 import { logo } from "@/assets";
 
@@ -15,33 +16,30 @@ import { logo } from "@/assets";
 export const SidebarContent = () => {
   return (
     <>
-      <styled.header
-        h="16"
-        p="4"
-        display="flex"
-        justifyContent="center"
-        borderBottom="1px solid token(colors.border.muted)"
-      >
+      {/* logo */}
+      <header className={flex({ h: 16, p: 4, justify: "center", borderBottom: "muted" })}>
         <Link href="/dashboard" fontWeight="medium" fontSize="lg" linkDecor={false}>
-          <Image src={logo} alt="inkhorn logo" width={15} height={15} priority />
+          <Image src={logo} alt="inkhorn logo" width={16} height={16} priority />
           <SidebarAddon>inkhorn</SidebarAddon>
         </Link>
         {/* Filler item for Sidebar Trigger */}
         <SidebarAddon flex="1" />
-      </styled.header>
+      </header>
 
-      <styled.nav p="4" display="flex" flexDir="column" gap={1}>
+      {/* nav items */}
+      <nav className={stack({ p: 4 })}>
         {NAV_ITEMS.map(({ href, icon, label }) => (
           <NavLink key={href} href={href} justifyContent="center">
             <Icon name={icon} />
             <SidebarAddon flex="1">{label}</SidebarAddon>
           </NavLink>
         ))}
-      </styled.nav>
+      </nav>
 
       <Spacer />
 
-      <Box h="20" maxW="full" p="4" borderTop="1px solid token(colors.border.muted)">
+      {/* profile */}
+      <Box h="20" maxW="full" p="4" borderTop="muted">
         <ProfileSelector>
           <SidebarAddon flex="1">
             <ProfileInfo />

@@ -14,11 +14,11 @@ const sidebar = sva({
     root: {
       pos: "relative",
       bg: "bg.subtle",
-      borderRight: "1px solid token(colors.border.muted)",
-      transition: "all",
+      borderRight: "muted",
       display: "flex",
       flexDir: "column",
       justifyContent: "space-between",
+      transition: "all",
     },
     trigger: {
       pos: "absolute",
@@ -41,8 +41,9 @@ const sidebar = sva({
           // Move trigger to the immediate right of the sidebar
           x: "full",
           mt: "3",
+          zIndex: "banner",
+          border: "muted",
           roundedLeft: "none",
-          border: "1px solid token(colors.border.muted)",
           borderLeft: "none",
         },
         addon: { display: "none" },

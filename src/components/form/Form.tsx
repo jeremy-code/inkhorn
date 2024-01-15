@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, type FormHTMLAttributes, type ReactNode } from "react";
 import { createToaster } from "@ark-ui/react/toast";
 import { useFormState } from "react-dom";
@@ -28,11 +26,12 @@ export const Form = ({ children, action, onSubmitSuccess, ...rest }: FormProps) 
 
   useEffect(() => {
     if (!state) return;
+    const { status, error } = state;
 
-    if (state.status === "ok" && onSubmitSuccess) {
+    if (status === "ok" && onSubmitSuccess) {
       onSubmitSuccess();
-    } else if (state.status === "error" && !!state.error) {
-      Object.values(state.error)
+    } else if (status === "error" && !!error) {
+      Object.values(error)
         .flat()
         .forEach((description) =>
           toast.error({

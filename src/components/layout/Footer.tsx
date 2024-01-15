@@ -8,7 +8,7 @@ const footer = cva({
     alignContent: "center",
     justifyContent: "center",
     p: 4,
-    borderTop: "1px solid token(colors.gray.3)",
+    borderTop: "muted",
     gap: 1,
   },
 });
