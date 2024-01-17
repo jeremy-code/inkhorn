@@ -61,48 +61,89 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ark-ui/react@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "@ark-ui/react@npm:1.2.1"
+"@ark-ui/anatomy@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@ark-ui/anatomy@npm:1.3.0"
   dependencies:
-    "@ark-ui/anatomy": "npm:1.2.0"
-    "@zag-js/accordion": "npm:0.31.1"
-    "@zag-js/avatar": "npm:0.31.1"
-    "@zag-js/carousel": "npm:0.31.1"
-    "@zag-js/checkbox": "npm:0.31.1"
-    "@zag-js/color-picker": "npm:0.31.1"
-    "@zag-js/color-utils": "npm:0.31.1"
-    "@zag-js/combobox": "npm:0.31.1"
-    "@zag-js/core": "npm:0.31.1"
-    "@zag-js/date-picker": "npm:0.31.1"
-    "@zag-js/date-utils": "npm:0.31.1"
-    "@zag-js/dialog": "npm:0.31.1"
-    "@zag-js/editable": "npm:0.31.1"
-    "@zag-js/file-upload": "npm:0.31.1"
-    "@zag-js/hover-card": "npm:0.31.1"
-    "@zag-js/menu": "npm:0.31.1"
-    "@zag-js/number-input": "npm:0.31.1"
-    "@zag-js/pagination": "npm:0.31.1"
-    "@zag-js/pin-input": "npm:0.31.1"
-    "@zag-js/popover": "npm:0.31.1"
-    "@zag-js/presence": "npm:0.31.1"
-    "@zag-js/radio-group": "npm:0.31.1"
-    "@zag-js/rating-group": "npm:0.31.1"
-    "@zag-js/react": "npm:0.31.1"
-    "@zag-js/select": "npm:0.31.1"
-    "@zag-js/slider": "npm:0.31.1"
-    "@zag-js/splitter": "npm:0.31.1"
-    "@zag-js/switch": "npm:0.31.1"
-    "@zag-js/tabs": "npm:0.31.1"
-    "@zag-js/tags-input": "npm:0.31.1"
-    "@zag-js/toast": "npm:0.31.1"
-    "@zag-js/toggle-group": "npm:0.31.1"
-    "@zag-js/tooltip": "npm:0.31.1"
-    "@zag-js/types": "npm:0.31.1"
+    "@zag-js/accordion": "npm:0.32.1"
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/avatar": "npm:0.32.1"
+    "@zag-js/carousel": "npm:0.32.1"
+    "@zag-js/checkbox": "npm:0.32.1"
+    "@zag-js/color-picker": "npm:0.32.1"
+    "@zag-js/color-utils": "npm:0.32.1"
+    "@zag-js/combobox": "npm:0.32.1"
+    "@zag-js/date-picker": "npm:0.32.1"
+    "@zag-js/date-utils": "npm:0.32.1"
+    "@zag-js/dialog": "npm:0.32.1"
+    "@zag-js/editable": "npm:0.32.1"
+    "@zag-js/file-upload": "npm:0.32.1"
+    "@zag-js/hover-card": "npm:0.32.1"
+    "@zag-js/menu": "npm:0.32.1"
+    "@zag-js/number-input": "npm:0.32.1"
+    "@zag-js/pagination": "npm:0.32.1"
+    "@zag-js/pin-input": "npm:0.32.1"
+    "@zag-js/popover": "npm:0.32.1"
+    "@zag-js/presence": "npm:0.32.1"
+    "@zag-js/progress": "npm:0.32.1"
+    "@zag-js/radio-group": "npm:0.32.1"
+    "@zag-js/rating-group": "npm:0.32.1"
+    "@zag-js/select": "npm:0.32.1"
+    "@zag-js/slider": "npm:0.32.1"
+    "@zag-js/splitter": "npm:0.32.1"
+    "@zag-js/switch": "npm:0.32.1"
+    "@zag-js/tabs": "npm:0.32.1"
+    "@zag-js/tags-input": "npm:0.32.1"
+    "@zag-js/toast": "npm:0.32.1"
+    "@zag-js/toggle-group": "npm:0.32.1"
+    "@zag-js/tooltip": "npm:0.32.1"
+  checksum: 54a4cb43cbd6a806f27cc12cd181fbaa2fce5df1c622e2958ff95af2c197f81b697537c7b2b8bf310004b43fae0729474960d12421fcaf1f882d57b937bbc026
+  languageName: node
+  linkType: hard
+
+"@ark-ui/react@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@ark-ui/react@npm:1.3.0"
+  dependencies:
+    "@ark-ui/anatomy": "npm:1.3.0"
+    "@zag-js/accordion": "npm:0.32.1"
+    "@zag-js/avatar": "npm:0.32.1"
+    "@zag-js/carousel": "npm:0.32.1"
+    "@zag-js/checkbox": "npm:0.32.1"
+    "@zag-js/color-picker": "npm:0.32.1"
+    "@zag-js/color-utils": "npm:0.32.1"
+    "@zag-js/combobox": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/date-picker": "npm:0.32.1"
+    "@zag-js/date-utils": "npm:0.32.1"
+    "@zag-js/dialog": "npm:0.32.1"
+    "@zag-js/editable": "npm:0.32.1"
+    "@zag-js/file-upload": "npm:0.32.1"
+    "@zag-js/hover-card": "npm:0.32.1"
+    "@zag-js/menu": "npm:0.32.1"
+    "@zag-js/number-input": "npm:0.32.1"
+    "@zag-js/pagination": "npm:0.32.1"
+    "@zag-js/pin-input": "npm:0.32.1"
+    "@zag-js/popover": "npm:0.32.1"
+    "@zag-js/presence": "npm:0.32.1"
+    "@zag-js/progress": "npm:0.32.1"
+    "@zag-js/radio-group": "npm:0.32.1"
+    "@zag-js/rating-group": "npm:0.32.1"
+    "@zag-js/react": "npm:0.32.1"
+    "@zag-js/select": "npm:0.32.1"
+    "@zag-js/slider": "npm:0.32.1"
+    "@zag-js/splitter": "npm:0.32.1"
+    "@zag-js/switch": "npm:0.32.1"
+    "@zag-js/tabs": "npm:0.32.1"
+    "@zag-js/tags-input": "npm:0.32.1"
+    "@zag-js/toast": "npm:0.32.1"
+    "@zag-js/toggle-group": "npm:0.32.1"
+    "@zag-js/tooltip": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
   peerDependencies:
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
-  checksum: 3569336c2a40b240b9c10525c60b82b92e5e85a08f774c41c411b7b8ac2e86789a92ef899e404a40708b748e4c828dae347855c43a6b497df5938e8a15834d60
+  checksum: 983f94dc93740c80f986bd399e1a29451f91885a89623f48b17d8d8eab665b1cb519cc0b445b1e09251b93f2c7abb41a892a19b52efbb7d126438e37a208a7b6
   languageName: node
   linkType: hard
 
@@ -125,7 +166,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@auth/core@npm:0.20.0, @auth/core@npm:^0.20.0":
+"@auth/core@npm:0.20.0":
   version: 0.20.0
   resolution: "@auth/core@npm:0.20.0"
   dependencies:
@@ -142,6 +183,26 @@ __metadata:
     nodemailer:
       optional: true
   checksum: 03948f36a033271b7d5412afc334e7e39fe92843a6a3c976de45ad7d6f7ef9046fe37b1ed164a019488088f0f2975c1caac2a79059e05910d62539925cdaf22a
+  languageName: node
+  linkType: hard
+
+"@auth/core@npm:^0.21.0":
+  version: 0.21.0
+  resolution: "@auth/core@npm:0.21.0"
+  dependencies:
+    "@panva/hkdf": "npm:^1.1.1"
+    "@types/cookie": "npm:0.6.0"
+    cookie: "npm:0.6.0"
+    jose: "npm:^5.1.3"
+    oauth4webapi: "npm:^2.4.0"
+    preact: "npm:10.11.3"
+    preact-render-to-string: "npm:5.2.3"
+  peerDependencies:
+    nodemailer: ^6.8.0
+  peerDependenciesMeta:
+    nodemailer:
+      optional: true
+  checksum: e34fc3a0b81512dcaa56177f86581c7b945e4df9328357ef43934a882806e63c59cf20bc6bb153396efe0f4b987617e70d14487f52b85410eab5a05dbe349f4f
   languageName: node
   linkType: hard
 
@@ -410,12 +471,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@drizzle-team/studio@npm:^0.0.37":
-  version: 0.0.37
-  resolution: "@drizzle-team/studio@npm:0.0.37"
+"@drizzle-team/studio@npm:^0.0.39":
+  version: 0.0.39
+  resolution: "@drizzle-team/studio@npm:0.0.39"
   dependencies:
     superjson: "npm:^2.2.1"
-  checksum: 21a0f199fbd93cad30bbef9ef83828d832e899d44be4afe9e32781e2f28b404a66057502e20f44636a3912e98b493990cf329f2c722e0c04505a5ba8621d1104
+  checksum: 9e37a31261fa8f6224238dc4f8249199bec8a3f7638da1044beae487cbceb5432bfcc350a13a325c45d75eb05b36713b984d2da14fdf1d608eb9f16576fd9294
   languageName: node
   linkType: hard
 
@@ -1120,6 +1181,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/core@npm:^1.5.3":
+  version: 1.5.3
+  resolution: "@floating-ui/core@npm:1.5.3"
+  dependencies:
+    "@floating-ui/utils": "npm:^0.2.0"
+  checksum: 5fc8fa0d6f99ac91ae42bdfc06c4dea60ae0a979d8f7c74ebc8e9e9770d3c88a0afa6efce459fcdc0c3922176763477d13bc27b93d3838c8b81851e753193976
+  languageName: node
+  linkType: hard
+
 "@floating-ui/dom@npm:1.5.3":
   version: 1.5.3
   resolution: "@floating-ui/dom@npm:1.5.3"
@@ -1130,10 +1200,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/dom@npm:1.5.4":
+  version: 1.5.4
+  resolution: "@floating-ui/dom@npm:1.5.4"
+  dependencies:
+    "@floating-ui/core": "npm:^1.5.3"
+    "@floating-ui/utils": "npm:^0.2.0"
+  checksum: 8a47ac5b8cf90214d73011d436d66821ccb7f4b9a29170e23117df2cc6008845834db7f59e73d998add19807f62f09e5e6a84516eed81cebbf25770dea595a84
+  languageName: node
+  linkType: hard
+
 "@floating-ui/utils@npm:^0.1.3":
   version: 0.1.6
   resolution: "@floating-ui/utils@npm:0.1.6"
   checksum: 0a089db0e0526b89e83cb0a773a903517db5c9067cd473febfd8fa91a3a2ccbc3a835234796c1bb528def21dbb67be50e28d9c473cb58a6d90679d7e549b9c0c
+  languageName: node
+  linkType: hard
+
+"@floating-ui/utils@npm:^0.2.0":
+  version: 0.2.1
+  resolution: "@floating-ui/utils@npm:0.2.1"
+  checksum: ee77756712cf5b000c6bacf11992ffb364f3ea2d0d51cc45197a7e646a17aeb86ea4b192c0b42f3fbb29487aee918a565e84f710b8c3645827767f406a6b4cc9
   languageName: node
   linkType: hard
 
@@ -1191,12 +1278,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@internationalized/date@npm:^3.5.1":
+  version: 3.5.1
+  resolution: "@internationalized/date@npm:3.5.1"
+  dependencies:
+    "@swc/helpers": "npm:^0.5.0"
+  checksum: 9d40fd8b7700d9080be4de2d488d511c492803667251389518cf6fdebfd5f511ca4cc81b4e456f7d3149e6b7458398b1f5cb2fbd382e6d462a8d1af9a52da06f
+  languageName: node
+  linkType: hard
+
 "@internationalized/number@npm:^3.4.0":
   version: 3.4.0
   resolution: "@internationalized/number@npm:3.4.0"
   dependencies:
     "@swc/helpers": "npm:^0.5.0"
   checksum: 3de08b34cdbe75f56279e5cf2b4ea997bbaeecbfd2bd6c0c52d9197f9f9027cb2b6c2e529ee1daad5e1e9e66c79cbee8376217db36bddc814800ba909941ffd6
+  languageName: node
+  linkType: hard
+
+"@internationalized/number@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "@internationalized/number@npm:3.5.0"
+  dependencies:
+    "@swc/helpers": "npm:^0.5.0"
+  checksum: 04d3dc7bcf8e797fb7dafa56c2bf4eb384e0814024d486dfc766b2e7fbed5b87340e1e87fcb7e0c4ea221408a5befbe274856abad97379c059d167d5fe9dfc69
   languageName: node
   linkType: hard
 
@@ -1393,35 +1498,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pandacss/config@npm:0.27.1, @pandacss/config@npm:^0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/config@npm:0.27.1"
+"@pandacss/config@npm:0.27.2, @pandacss/config@npm:^0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/config@npm:0.27.2"
   dependencies:
-    "@pandacss/error": "npm:0.27.1"
-    "@pandacss/logger": "npm:0.27.1"
-    "@pandacss/preset-base": "npm:0.27.1"
-    "@pandacss/preset-panda": "npm:0.27.1"
-    "@pandacss/shared": "npm:0.27.1"
-    "@pandacss/types": "npm:0.27.1"
+    "@pandacss/error": "npm:0.27.2"
+    "@pandacss/logger": "npm:0.27.2"
+    "@pandacss/preset-base": "npm:0.27.2"
+    "@pandacss/preset-panda": "npm:0.27.2"
+    "@pandacss/shared": "npm:0.27.2"
+    "@pandacss/types": "npm:0.27.2"
     bundle-n-require: "npm:^1.0.1"
     escalade: "npm:3.1.1"
     merge-anything: "npm:^5.1.7"
     microdiff: "npm:^1.3.2"
     typescript: "npm:^5.3.3"
-  checksum: 6b33ffe850a0acb90ebc5ad7f55ef6246f2f186948bb221d330fc847b7a82331f343deae64e33577edfa4fedd22b0e8aa175546455f2465cb34c00db105638ec
+  checksum: 11afe46d68b09ae2cb3437932003667b0c7ffbcf1c5fd4446657c3af6ce494f952245acecaa9d3aba8653e67722c278c74a30fc389d0f5e52745c332a671a0a2
   languageName: node
   linkType: hard
 
-"@pandacss/core@npm:0.27.1, @pandacss/core@npm:^0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/core@npm:0.27.1"
+"@pandacss/core@npm:0.27.2, @pandacss/core@npm:^0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/core@npm:0.27.2"
   dependencies:
-    "@pandacss/error": "npm:0.27.1"
-    "@pandacss/is-valid-prop": "npm:^0.27.1"
-    "@pandacss/logger": "npm:0.27.1"
-    "@pandacss/shared": "npm:0.27.1"
-    "@pandacss/token-dictionary": "npm:0.27.1"
-    "@pandacss/types": "npm:0.27.1"
+    "@pandacss/error": "npm:0.27.2"
+    "@pandacss/is-valid-prop": "npm:^0.27.2"
+    "@pandacss/logger": "npm:0.27.2"
+    "@pandacss/shared": "npm:0.27.2"
+    "@pandacss/token-dictionary": "npm:0.27.2"
+    "@pandacss/types": "npm:0.27.2"
     autoprefixer: "npm:10.4.15"
     browserslist: "npm:^4.22.2"
     hookable: "npm:5.5.3"
@@ -1437,100 +1542,99 @@ __metadata:
     postcss-normalize-whitespace: "npm:^6.0.0"
     postcss-selector-parser: "npm:^6.0.13"
     ts-pattern: "npm:5.0.5"
-  checksum: bef90023549730e2921016637ab93908fe1d6852e904e60cb22600f11a204054abcfd657f4ab40c2773a6ec8c11238cfdef693a5c5e22af68de0e822ae6ba884
+  checksum: 0ce7b2bd618721e3286415f6070aa502515b62050adcf02fbc739e15503fe5e8c7b8c104cf00cdbefb89b0e4b6059db75ded42f19411cd2a2a576d11e34e2de7
   languageName: node
   linkType: hard
 
-"@pandacss/dev@npm:^0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/dev@npm:0.27.1"
+"@pandacss/dev@npm:^0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/dev@npm:0.27.2"
   dependencies:
     "@clack/prompts": "npm:^0.6.3"
-    "@pandacss/config": "npm:0.27.1"
-    "@pandacss/error": "npm:0.27.1"
-    "@pandacss/logger": "npm:0.27.1"
-    "@pandacss/node": "npm:0.27.1"
-    "@pandacss/postcss": "npm:0.27.1"
-    "@pandacss/preset-panda": "npm:0.27.1"
-    "@pandacss/shared": "npm:0.27.1"
-    "@pandacss/token-dictionary": "npm:0.27.1"
-    "@pandacss/types": "npm:0.27.1"
+    "@pandacss/config": "npm:0.27.2"
+    "@pandacss/error": "npm:0.27.2"
+    "@pandacss/logger": "npm:0.27.2"
+    "@pandacss/node": "npm:0.27.2"
+    "@pandacss/postcss": "npm:0.27.2"
+    "@pandacss/preset-panda": "npm:0.27.2"
+    "@pandacss/shared": "npm:0.27.2"
+    "@pandacss/token-dictionary": "npm:0.27.2"
+    "@pandacss/types": "npm:0.27.2"
     cac: "npm:6.7.14"
-    pathe: "npm:1.1.2"
   bin:
     panda: bin.js
     pandacss: bin.js
-  checksum: 4a3abff0254793af02e4f95fa48f08c87276092b45a6aeb631d8d7c72098d70785a8d0f1609e71b0184cf837f1fda1ee0351d55eb43f6feecdb55027dac8538d
+  checksum: 8d8bbf7ccd26087921c462f4c60e4f4b5e166c1d65d1e23a0edc68797e4ef1f2d04448398d37b6eff72ee193bd80e6e602670ceda4e545e69570ab83f72bfbb0
   languageName: node
   linkType: hard
 
-"@pandacss/error@npm:0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/error@npm:0.27.1"
-  checksum: da20d1b77ee36ab4efa74afd3b497816722f84a45fb80e19705d9d2949ab604091479b75e8ff4de5bcd89e206e4ece08b4b99259c9384ea6536a4c4e37015578
+"@pandacss/error@npm:0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/error@npm:0.27.2"
+  checksum: 76e99561c150dd4087ef4f578da8ed897d1fc30d82665896d692c0c971c0a7e0d61812136ec30d61c60058459caeb31b89c501aa716bbb579d86cbf8e0c40dea
   languageName: node
   linkType: hard
 
-"@pandacss/extractor@npm:0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/extractor@npm:0.27.1"
+"@pandacss/extractor@npm:0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/extractor@npm:0.27.2"
   dependencies:
     ts-evaluator: "npm:^1.1.0"
     ts-morph: "npm:19.0.0"
-  checksum: 2649588c01af3644824b743d3e10cbe06b305420589bdee218dd1d6378607e4d3b3f0ac1b3bec580e9076261bd7277dcde46c261eccf4581b894008b51587e2e
+  checksum: 36b72c39b041db8de39845526382d1413527b36d9e12090f9e0232a702a06c323beda60ee65191b8a5dbba815a3629b4fd29ed603e7df7f7d1b6a85c236df188
   languageName: node
   linkType: hard
 
-"@pandacss/generator@npm:0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/generator@npm:0.27.1"
+"@pandacss/generator@npm:0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/generator@npm:0.27.2"
   dependencies:
-    "@pandacss/core": "npm:0.27.1"
-    "@pandacss/is-valid-prop": "npm:^0.27.1"
-    "@pandacss/logger": "npm:0.27.1"
-    "@pandacss/shared": "npm:0.27.1"
-    "@pandacss/token-dictionary": "npm:0.27.1"
-    "@pandacss/types": "npm:0.27.1"
+    "@pandacss/core": "npm:0.27.2"
+    "@pandacss/is-valid-prop": "npm:^0.27.2"
+    "@pandacss/logger": "npm:0.27.2"
+    "@pandacss/shared": "npm:0.27.2"
+    "@pandacss/token-dictionary": "npm:0.27.2"
+    "@pandacss/types": "npm:0.27.2"
     javascript-stringify: "npm:2.1.0"
     outdent: "npm: ^0.8.0"
     pluralize: "npm:8.0.0"
     postcss: "npm:^8.4.31"
     ts-pattern: "npm:5.0.5"
-  checksum: d11361a2b7abb6eba012b5a52cec361e1d41aff0de62ffe809d687e7907e5a961ea00ce40d10d12f130d0f95322d8bb734011ac139ce54be69f492c8815e7adc
+  checksum: 2abf65ff0f763c67efb7e5e6e66f8a177d85e17a6f41abbc6ad33d342326919eb77390af8fb104a6b99d1385ef47bd7b11241b5e1a7db131798aa49cf9053592
   languageName: node
   linkType: hard
 
-"@pandacss/is-valid-prop@npm:^0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/is-valid-prop@npm:0.27.1"
-  checksum: 153030898c3b3b6489ffb7a32804f27c7c8af6d00c0a3725f44d444c7e2896be2be0fc329f5cee5eac81778484fea31008af1880196bbc9a379ecd01293100a5
+"@pandacss/is-valid-prop@npm:^0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/is-valid-prop@npm:0.27.2"
+  checksum: 72ecd54d537d7b0b6b8a64510350fa66b66cd9d2365e4289eb434cc1ef3b3116aa4f48c8c87c2bd6230b6612855e122fa7f379e6a0c14cd53095b8b2396fc25f
   languageName: node
   linkType: hard
 
-"@pandacss/logger@npm:0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/logger@npm:0.27.1"
+"@pandacss/logger@npm:0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/logger@npm:0.27.2"
   dependencies:
     kleur: "npm:^4.1.5"
     lil-fp: "npm:1.4.5"
-  checksum: 3b30930e5b736169712106f2bc76adf07a1ac6db9a9842f2fd6d7ad6706150dc796ad1deddf8dfd342fbc324db0b022f2bbae74460788b5ae55f268284f052a4
+  checksum: f9957c634584d0a2203e35b90047920070ea74800dc2716d86b2a097ed6031b73a848d5c5bae4073da58a1780b505cd94003dc7ec86880a35ddd6f47ab669cf3
   languageName: node
   linkType: hard
 
-"@pandacss/node@npm:0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/node@npm:0.27.1"
+"@pandacss/node@npm:0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/node@npm:0.27.2"
   dependencies:
-    "@pandacss/config": "npm:0.27.1"
-    "@pandacss/core": "npm:0.27.1"
-    "@pandacss/error": "npm:0.27.1"
-    "@pandacss/extractor": "npm:0.27.1"
-    "@pandacss/generator": "npm:0.27.1"
-    "@pandacss/logger": "npm:0.27.1"
-    "@pandacss/parser": "npm:0.27.1"
-    "@pandacss/shared": "npm:0.27.1"
-    "@pandacss/token-dictionary": "npm:0.27.1"
-    "@pandacss/types": "npm:0.27.1"
+    "@pandacss/config": "npm:0.27.2"
+    "@pandacss/core": "npm:0.27.2"
+    "@pandacss/error": "npm:0.27.2"
+    "@pandacss/extractor": "npm:0.27.2"
+    "@pandacss/generator": "npm:0.27.2"
+    "@pandacss/logger": "npm:0.27.2"
+    "@pandacss/parser": "npm:0.27.2"
+    "@pandacss/shared": "npm:0.27.2"
+    "@pandacss/token-dictionary": "npm:0.27.2"
+    "@pandacss/types": "npm:0.27.2"
     browserslist: "npm:^4.22.2"
     chokidar: "npm:^3.5.3"
     fast-glob: "npm:^3.3.1"
@@ -1543,7 +1647,6 @@ __metadata:
     lodash.merge: "npm:4.6.2"
     look-it-up: "npm:2.1.0"
     outdent: "npm: ^0.8.0"
-    pathe: "npm:^1.1.1"
     perfect-debounce: "npm:^1.0.0"
     pkg-types: "npm:1.0.3"
     pluralize: "npm:8.0.0"
@@ -1553,78 +1656,78 @@ __metadata:
     ts-morph: "npm:19.0.0"
     ts-pattern: "npm:5.0.5"
     tsconfck: "npm:^2.1.2"
-  checksum: 2361459372dca0baca32b5aa6aa24a7e18d11abb8cdff6c4add33da1aabd0fbbebb5593de3a986e0d6632ab6762d745fbcc3dabb4bb211b2189b0c03d34148cd
+  checksum: 753145f9a6a26f2d0f3df04789b20efeb9a84e6ee9599fa5b9f46e0f364a946282e93254234441b4742f281730efef728ead14f10dea390d7b808090a33bee0e
   languageName: node
   linkType: hard
 
-"@pandacss/parser@npm:0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/parser@npm:0.27.1"
+"@pandacss/parser@npm:0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/parser@npm:0.27.2"
   dependencies:
-    "@pandacss/config": "npm:^0.27.1"
-    "@pandacss/core": "npm:^0.27.1"
-    "@pandacss/extractor": "npm:0.27.1"
-    "@pandacss/logger": "npm:0.27.1"
-    "@pandacss/shared": "npm:0.27.1"
-    "@pandacss/types": "npm:0.27.1"
+    "@pandacss/config": "npm:^0.27.2"
+    "@pandacss/core": "npm:^0.27.2"
+    "@pandacss/extractor": "npm:0.27.2"
+    "@pandacss/logger": "npm:0.27.2"
+    "@pandacss/shared": "npm:0.27.2"
+    "@pandacss/types": "npm:0.27.2"
     "@vue/compiler-sfc": "npm:3.3.4"
     magic-string: "npm:0.30.5"
     ts-morph: "npm:19.0.0"
     ts-pattern: "npm:5.0.5"
-  checksum: 97f9dc69bd0e3e2b233f164350e28f7c9670a3f92a0010f25948be5232d8563143d02746cb288d239556f31c1ff173c0ae87ff5e402100c7b3504fd1025605ec
+  checksum: 6ea44b4d86f7e379fdfc3edc266d2245d7427ff955f5b627a38b49c646407c57751310f7863f269e957a7d440967eb186eb85bbc69676aeb4033070654798883
   languageName: node
   linkType: hard
 
-"@pandacss/postcss@npm:0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/postcss@npm:0.27.1"
+"@pandacss/postcss@npm:0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/postcss@npm:0.27.2"
   dependencies:
-    "@pandacss/node": "npm:0.27.1"
+    "@pandacss/node": "npm:0.27.2"
     postcss: "npm:^8.4.31"
-  checksum: 52a3db18a951bb882f66b1030ee1194ab95ae454a26a3d6c59bb11c04edaf9d0bd5fd06c389227fe3d801f3c634842239a44d6640dd0feef220c78f20789b166
+  checksum: 8b519f4d30f4ff5b1ece26d1d5e49a65237ab79f736a2a635d2e24134744b78afb437560a31ab359ed23be81ed9997ff10559e851eb7ed69452e7a44dcfcce5e
   languageName: node
   linkType: hard
 
-"@pandacss/preset-base@npm:0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/preset-base@npm:0.27.1"
+"@pandacss/preset-base@npm:0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/preset-base@npm:0.27.2"
   dependencies:
-    "@pandacss/types": "npm:0.27.1"
-  checksum: 6a4774df314ff57c83910e5869a56c605ca6bb79c6b444014bfde7bcfd41c85a3106743c51859cb43af5c8d0923f17ded82ca91496bb8320717c8d31dbe6033b
+    "@pandacss/types": "npm:0.27.2"
+  checksum: 2d17112f5b5597aae8ffa2a186c3e61c9ac871bbeac42c72011d65aa18b6141c2755a35814fc93c9213707a4bc70ccedfa0d05551e64a0e2e28e45fda3ce92be
   languageName: node
   linkType: hard
 
-"@pandacss/preset-panda@npm:0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/preset-panda@npm:0.27.1"
+"@pandacss/preset-panda@npm:0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/preset-panda@npm:0.27.2"
   dependencies:
-    "@pandacss/types": "npm:0.27.1"
-  checksum: 775ddf1691a677e76efcdae3ff4d0074de4ed28d2604692074eb4dd0b1db66df67a08e50eb3045d136543f61b45628726efbffed8e42ea2ec50dc0397ff22b3c
+    "@pandacss/types": "npm:0.27.2"
+  checksum: 7d68b221a0702ffc229cf3f908fe21e614b8350f86a65bc506d1501e6725ca6209b428ade31c9511baa6ff35e351e742458998b86feed3218c112f9e9ad0e8e8
   languageName: node
   linkType: hard
 
-"@pandacss/shared@npm:0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/shared@npm:0.27.1"
-  checksum: dd44d1198287827c42789fb7a75acf5d6e45ccde18f52119ceb9cbfb7eb969be10fb7c8899328336b12066a04cc8ec4183ed4a98a7ed2a706ec91f3b0fac3af6
+"@pandacss/shared@npm:0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/shared@npm:0.27.2"
+  checksum: a1c2fa1d78e0d61d08d5e8f0c4328d499543b694837b64830a772cddfe30c9bcaa5ab6a8424072633ad76e53b25fb8bffde7187b93d85ab77fe997ee1ab22fc5
   languageName: node
   linkType: hard
 
-"@pandacss/token-dictionary@npm:0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/token-dictionary@npm:0.27.1"
+"@pandacss/token-dictionary@npm:0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/token-dictionary@npm:0.27.2"
   dependencies:
-    "@pandacss/shared": "npm:0.27.1"
-    "@pandacss/types": "npm:0.27.1"
+    "@pandacss/shared": "npm:0.27.2"
+    "@pandacss/types": "npm:0.27.2"
     ts-pattern: "npm:5.0.5"
-  checksum: 7157eacddf19e1413c3e4e5fbf242214c199dbd5e6fc66280ce820dd549c1f3889dd073f2cf8ff7a7863cf8d6c7ebad36b5a31e8126816e57aa299ee9c4c40d1
+  checksum: eeb7ca16e9a6bc65224a6f593a2084f6861d3506245811c3e437d4ab5b8e8fb8aa858e2db5d45726fdc7bc4b4fec51d41dacfcbaaae88291a309e6c1172ff780
   languageName: node
   linkType: hard
 
-"@pandacss/types@npm:0.27.1, @pandacss/types@npm:^0.27.1":
-  version: 0.27.1
-  resolution: "@pandacss/types@npm:0.27.1"
-  checksum: d0aa551f0ffd9cfb0595dfcfcc03ccfad3167f602a84ff4feca3cb460f30848e76a6bafd00192dcccd80e50ae49d301b3710cd2b6057d573101ead913bc89784
+"@pandacss/types@npm:0.27.2, @pandacss/types@npm:^0.27.2":
+  version: 0.27.2
+  resolution: "@pandacss/types@npm:0.27.2"
+  checksum: 60a587fcb3b14ca9045c3eada74f51987bdb1b44bb961f7c91cd30b8470c2ecc333ee2fe05537e286ad612aa838f817097c13a3f337b5b2f821703e3c30d3f3f
   languageName: node
   linkType: hard
 
@@ -1740,15 +1843,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-virtual@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@tanstack/react-virtual@npm:3.0.1"
+"@tanstack/react-virtual@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@tanstack/react-virtual@npm:3.0.2"
   dependencies:
     "@tanstack/virtual-core": "npm:3.0.0"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 2b9464dab8a975734b651211402a4eaf10e4ae6d9570138576891db350cfabe11e444fea8f17ef0b26ef8ede0adc230bec9c8fe859e61ca66147831076b77bb2
+  checksum: 2e0ee88d8b22f391188f920d8b069089338f98a93bcb52f6a23968894592481acdf6fd0954d53960be5d04cf04d7488e2902a80cdb9afe2c4fbc761d3689cada
   languageName: node
   linkType: hard
 
@@ -2076,12 +2179,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.11.3":
-  version: 20.11.3
-  resolution: "@types/node@npm:20.11.3"
+"@types/node@npm:^20.11.5":
+  version: 20.11.5
+  resolution: "@types/node@npm:20.11.5"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10e58b526efc73ac6e6a54466ec9e8f39a6a24aba902abc91cc2f85dbbe2bf1b4c84d941106036275b335a867d664009679136345c491dd642b953217d859ebb
+  checksum: 6d18cec852f5cfbed3ec42b5c01c026e7a3f9da540d6e3d6738d4cee9979fb308cf27b6df7ba40a6553e7bc82e678f0ef53ba6e6ad52e5b86bd97b7783c2a42c
   languageName: node
   linkType: hard
 
@@ -2126,7 +2229,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.2.0":
+"@types/react@npm:*":
   version: 18.2.45
   resolution: "@types/react@npm:18.2.45"
   dependencies:
@@ -2134,6 +2237,17 @@ __metadata:
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 4cc650c47ffb88baac29fb7a74e842e4af4a55f437086ef70250fdc75f0a5f2fcf8adc272d05ab2e00b1de6e14613296881271caee037dadf9130fdeb498c59e
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^18.2.48":
+  version: 18.2.48
+  resolution: "@types/react@npm:18.2.48"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    "@types/scheduler": "npm:*"
+    csstype: "npm:^3.0.2"
+  checksum: 7e89f18ea2928b1638f564b156d692894dcb9352a7e0a807873c97e858abe1f23dbd165a25dd088a991344e973fdeef88ba5724bfb64504b74072cbc9c220c3a
   languageName: node
   linkType: hard
 
@@ -2360,10 +2474,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/speed-insights@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@vercel/speed-insights@npm:1.0.3"
-  checksum: c37450716de4fcc57c42ed59232bb8050be2500003f5e30e4f4cebfedb3a06762586058e0c7de5801aea7d657638c43fed739b0646dc312aa93bda83a6415b14
+"@vercel/speed-insights@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@vercel/speed-insights@npm:1.0.4"
+  checksum: ba313a98b9dfc5eb639c5353a25fae49e75a63b5e4c6a0b90df555d2a79394f2a87e2f72b8c9ba27f5c42d0d87ed90210ca2943fa2712313b8df0c165f0038f4
   languageName: node
   linkType: hard
 
@@ -2451,10 +2565,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/accordion@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/accordion@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 3705dd8f2bd58b9921395de014b1d125ca7e9d18c0d5bdd950c88f4173406d60aaed569a875c0298208db936d91111706713b589d87e51b7bb5ae149f7840424
+  languageName: node
+  linkType: hard
+
 "@zag-js/anatomy@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/anatomy@npm:0.31.1"
   checksum: 42eb0b26d67200384e45165eb6802b3255dbafe3e679d63352f9b103dea44b79636750069b179c38779ce09612498b22e1ca1459a9a8db09732ef038cc32541c
+  languageName: node
+  linkType: hard
+
+"@zag-js/anatomy@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/anatomy@npm:0.32.1"
+  checksum: 8645dce441cd62c0fa27cafcb48b733d98e25c93fba7e26a4d994cdf1b3697b9cd00b3888f1a889bab3dc4cb5d80fa27cf1adb0da12b951dec49905642e60163
   languageName: node
   linkType: hard
 
@@ -2467,12 +2602,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/aria-hidden@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/aria-hidden@npm:0.32.1"
+  dependencies:
+    "@zag-js/dom-query": "npm:0.32.1"
+  checksum: 8ab7051ed7a2f9e5a3186c4a83086abe8bb08f169cc198a459f5e046cacbdd54b0249b7f81426350cc70eb0064427e9fe53ef4b272bbd7a9bee8399aea0aa17f
+  languageName: node
+  linkType: hard
+
 "@zag-js/auto-resize@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/auto-resize@npm:0.31.1"
   dependencies:
     "@zag-js/dom-query": "npm:0.31.1"
   checksum: ee501e3d67bda6002356d87a9af98cea4180d3e16d477fc9e1b3cf786ae36fe1c88001a74edaddae4dd7c106412f75989ea1ce2d3cbea434fa7732d34303cec5
+  languageName: node
+  linkType: hard
+
+"@zag-js/auto-resize@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/auto-resize@npm:0.32.1"
+  dependencies:
+    "@zag-js/dom-query": "npm:0.32.1"
+  checksum: 0c568b3ef585ba2b6ad946349db910b1e217c441c308b35a3d910d51f4316782b8e993c3b913aebecb4c1969df5642f7ef321a1e27645592bbeb7d01909fc4e2
   languageName: node
   linkType: hard
 
@@ -2490,6 +2643,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/avatar@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/avatar@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/mutation-observer": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 89fd5c81a8cc8cfa96780047617a0d4c7dbf39d0c32f12b911f6d9267c3a18c716303ea99393d58ae465b329c4d4a639272e3cda0f925276644f70e15bab6edc
+  languageName: node
+  linkType: hard
+
 "@zag-js/carousel@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/carousel@npm:0.31.1"
@@ -2500,6 +2667,19 @@ __metadata:
     "@zag-js/types": "npm:0.31.1"
     "@zag-js/utils": "npm:0.31.1"
   checksum: b9678ebdc6dde09594b674e8181ebcc102c9ffa340c8f3b16d75268a3578a9c51e25c167cf9dbd19ae9a846a33acdd57f25e156b1e579b4a1b90e0ca4ab0b1eb
+  languageName: node
+  linkType: hard
+
+"@zag-js/carousel@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/carousel@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 5f383473db0e77d667c3175bbcb979353eb992cf81e4c2180d673841580e769a4e59a211f42f7e896f480c77cabd7cb16ec80a29918420be5507fca3a6adb069
   languageName: node
   linkType: hard
 
@@ -2518,10 +2698,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/checkbox@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/checkbox@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/form-utils": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+    "@zag-js/visually-hidden": "npm:0.32.1"
+  checksum: c53bc6d8090d6a3224b80de602af9b22bdf2591cb14231c1e6fadd3cf4a061f1a15b1b8048ee416ebe1bde0156bb0479ba070b0fd10d3a576d5b3f8b395e6215
+  languageName: node
+  linkType: hard
+
 "@zag-js/collection@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/collection@npm:0.31.1"
   checksum: 24c4a01c69d64d116060336cda21c62ced6cd828da583776871c640940f506dd58afaedad7f12f3b74693a87a3e4cc27d3e92b7bd7608e107948fb51a227cca6
+  languageName: node
+  linkType: hard
+
+"@zag-js/collection@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/collection@npm:0.32.1"
+  checksum: 9cb6c19b696f6a085d6389f99904255de1d631d11e0bb4cddd0709d0fd753eef217b4ce23473c863561fe68f089dc0ebe1dc6206a1e3aab0f62adc9afcbedbbe
   languageName: node
   linkType: hard
 
@@ -2546,12 +2748,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/color-picker@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/color-picker@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/color-utils": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dismissable": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/form-utils": "npm:0.32.1"
+    "@zag-js/popper": "npm:0.32.1"
+    "@zag-js/tabbable": "npm:0.32.1"
+    "@zag-js/text-selection": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+    "@zag-js/visually-hidden": "npm:0.32.1"
+  checksum: b7e4d86ff83e510d72f753fd5349193c70e6743fd34cdc04cc7bbdae43f8304a72da0e55b9a811af1d76540f1659ca5da4a0f4982f8b38fb1daa5ef25e22c319
+  languageName: node
+  linkType: hard
+
 "@zag-js/color-utils@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/color-utils@npm:0.31.1"
   dependencies:
     "@zag-js/numeric-range": "npm:0.31.1"
   checksum: 0edf91693d50b74804760bb5aa74703e3c8669d7dc75d0ad01ba550d4c4273156f92deb7bb01765cab23ef19e450c30a0c8b2a14fb78c09d90d3562c3a1f987e
+  languageName: node
+  linkType: hard
+
+"@zag-js/color-utils@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/color-utils@npm:0.32.1"
+  dependencies:
+    "@zag-js/numeric-range": "npm:0.32.1"
+  checksum: 11a56b41909c99d657281e926a62ce08e36d26cb617d6600859d438bc09eed50f7c3bf32237c655f272d802f35b6eb9d9afb45dac71902e100d5459cb2012e47
   languageName: node
   linkType: hard
 
@@ -2574,6 +2806,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/combobox@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/combobox@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/aria-hidden": "npm:0.32.1"
+    "@zag-js/collection": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dismissable": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/mutation-observer": "npm:0.32.1"
+    "@zag-js/popper": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 5ed55ac33902d62f8b7d9a5b57fa3b49b27bbf22fc5a1d9c0a50ddf60fd4ac1b353d92e2bdba7f5df3461f690258e2cb8734d39d3b5edab6bd16919ba99c14e2
+  languageName: node
+  linkType: hard
+
 "@zag-js/core@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/core@npm:0.31.1"
@@ -2581,6 +2832,16 @@ __metadata:
     "@zag-js/store": "npm:0.31.1"
     klona: "npm:2.0.6"
   checksum: 7a0699bf4f992358ba5259efd601856459c47d0b23b23f92acf562b9d9d41efa450ed7884801b1c9ea4f7f9436a3fdc2816623503864eae9a9d1d2c6d1127023
+  languageName: node
+  linkType: hard
+
+"@zag-js/core@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/core@npm:0.32.1"
+  dependencies:
+    "@zag-js/store": "npm:0.32.1"
+    klona: "npm:2.0.6"
+  checksum: 1e3ff6f05e476aa6f8f784f773f26863b5635725a84baf35c3b700775b882ff6d6681e81227f9eba3974ac6a34786185650ce0532406bc9778c164bd48509c16
   languageName: node
   linkType: hard
 
@@ -2605,12 +2866,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/date-picker@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/date-picker@npm:0.32.1"
+  dependencies:
+    "@internationalized/date": "npm:^3.5.1"
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/date-utils": "npm:0.32.1"
+    "@zag-js/dismissable": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/form-utils": "npm:0.32.1"
+    "@zag-js/live-region": "npm:0.32.1"
+    "@zag-js/popper": "npm:0.32.1"
+    "@zag-js/text-selection": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: fd948540bd43d85523f5cc00e95f8dc89e6c5589f793ceaec1e609c4e31d7a878690ae74265e07753e7ed288598e42216073754b467c59a765202e0816ed049a
+  languageName: node
+  linkType: hard
+
 "@zag-js/date-utils@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/date-utils@npm:0.31.1"
   peerDependencies:
     "@internationalized/date": ">=3.0.0"
   checksum: ed13f17e5d04af674e152de930d64e66cc96caf788bbd284671e2f8bf0b653b4214c13c285376d57e9530e13ff1c177e59b4a62047a788592a7b19b5e214bbbb
+  languageName: node
+  linkType: hard
+
+"@zag-js/date-utils@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/date-utils@npm:0.32.1"
+  peerDependencies:
+    "@internationalized/date": ">=3.0.0"
+  checksum: 2f377e88415fcc0e9e19061b7e4723e71581e05e7ac7ee936ec22efb4fc811a2477236c26f0741cb32ee0d9e784600a3fb9d36970851cd57120a3d6164839722
   languageName: node
   linkType: hard
 
@@ -2631,6 +2922,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/dialog@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/dialog@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/aria-hidden": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dismissable": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/remove-scroll": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+    focus-trap: "npm:7.5.4"
+  checksum: 1361a7131a8808c9d3ea163f10bf91c9e2488ac331330e05d89551fbb6b0c86d5f675795d7b7e89633e6090ea86592ddea7d1d0866f4b247e41431b631061230
+  languageName: node
+  linkType: hard
+
 "@zag-js/dismissable@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/dismissable@npm:0.31.1"
@@ -2640,6 +2948,18 @@ __metadata:
     "@zag-js/interact-outside": "npm:0.31.1"
     "@zag-js/utils": "npm:0.31.1"
   checksum: 6e62c9caf61e91232108dcfe455e521a92846adaee25496a7de5b248ab13886f46daf5127b36fc92ec136cce8d183be3a0720e32f1736cc36934cd8fedad2230
+  languageName: node
+  linkType: hard
+
+"@zag-js/dismissable@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/dismissable@npm:0.32.1"
+  dependencies:
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/interact-outside": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: e23a76fc711fab562dd2f9aec4f895fe3e7f8d2bf124546a72424043e8e263952ee39fe48fb9712619be874235093262c08d4bae39cb10ed4a34fa595f4b8949
   languageName: node
   linkType: hard
 
@@ -2653,10 +2973,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/dom-event@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/dom-event@npm:0.32.1"
+  dependencies:
+    "@zag-js/text-selection": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+  checksum: 76604ff09d5bdf74303ebd23cedf3009b257dd12ac9ba3275ef410672b251d1478b605af56d50d755d112b9f34deff7bb01dd17beec21b41a6c0f41c8d5a63b6
+  languageName: node
+  linkType: hard
+
 "@zag-js/dom-query@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/dom-query@npm:0.31.1"
   checksum: a7346f832ec1a005a5c516ef822f32b6a06ebdf95b5aed37630b268767c4f6f2bd59d1cbb8bf80dca51daddc5b13f2c0131e3b37a981f86f1cd13f30c6409f60
+  languageName: node
+  linkType: hard
+
+"@zag-js/dom-query@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/dom-query@npm:0.32.1"
+  checksum: 1d820cc498958058834bdf745644d66556d6bbd91229eafbbaa9c7f639b97b163a78cec3d8111ad469610ebfe27bf844d00c1f4074c2fe61c8d547dd9ca5bd22
   languageName: node
   linkType: hard
 
@@ -2676,6 +3013,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/editable@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/editable@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/form-utils": "npm:0.32.1"
+    "@zag-js/interact-outside": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 832666372a781a8b740bcc9e2afa6a807aef5f0d28648944a1ceb84b9913f3e5db7f519e0dc26ee85b8d5a6f5ada8b7c3104e9841e4846a3b79ca613f287fdb2
+  languageName: node
+  linkType: hard
+
 "@zag-js/element-rect@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/element-rect@npm:0.31.1"
@@ -2683,10 +3036,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/element-rect@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/element-rect@npm:0.32.1"
+  checksum: 0ab9a13b155de5411e52a4787fbd9ce18d821373c3daaf5f7af9a88f015b5a9da2c548d6f448bbd781b21672dac9ddddb9cf3676952565cf361a82d8d6131129
+  languageName: node
+  linkType: hard
+
 "@zag-js/element-size@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/element-size@npm:0.31.1"
   checksum: cb81bad07ab3d8176a81fe24e55e61c88473a93875264133aa0a4c4f790585885fce5bd771c0b8f8970952ef4a5c67e0c03f698fd21db55707298c3ed8f93fed
+  languageName: node
+  linkType: hard
+
+"@zag-js/element-size@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/element-size@npm:0.32.1"
+  checksum: 98ed6402db2e50b58da0d68da70823083005061bec4ce070b1e6d5a684d1fb36c9478cf80704071b6770e796f4b32b70c501bc2b88ca6edda93aee121e39d8ee
   languageName: node
   linkType: hard
 
@@ -2705,10 +3072,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/file-upload@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/file-upload@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/file-utils": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+    "@zag-js/visually-hidden": "npm:0.32.1"
+  checksum: cecc307e51d12e65f523d8e5fbfa3fd8026c6e4ede68a2dc02bca407a814823bc09c83f6d0ca8c2b099e9abbf81e9fb227c0515b4b6619497acd2606600de2fc
+  languageName: node
+  linkType: hard
+
 "@zag-js/file-utils@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/file-utils@npm:0.31.1"
   checksum: 356009f7641ae9eb335e650168a7a1b325e47e3b7dcbdd4cddf7f85b1e5f576555623bfc1741cca03ee61b17b62a64571aa9d07e31754522085008d5b6fb83f4
+  languageName: node
+  linkType: hard
+
+"@zag-js/file-utils@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/file-utils@npm:0.32.1"
+  checksum: ecf06f4cf82ee7868c51002d36a74490ba285e0b2d4f1ad1b193a75366bc96b32dcdf94183257d55b72738962c1bcaf796f0e77cb2aee3083459d74a3d74b956
   languageName: node
   linkType: hard
 
@@ -2718,6 +3107,15 @@ __metadata:
   dependencies:
     "@zag-js/mutation-observer": "npm:0.31.1"
   checksum: d7a88f6031ae775d3464ca8b31c6b60e64a9377279a41ff4a43342a2fa75a4b7e68b21254dcd537439b6dd1d68dd90d434dbe6f5574cc8c8e00ed2cfee99dbc7
+  languageName: node
+  linkType: hard
+
+"@zag-js/form-utils@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/form-utils@npm:0.32.1"
+  dependencies:
+    "@zag-js/mutation-observer": "npm:0.32.1"
+  checksum: 1facfaf38716faa9a6ca5c7d790258a5d2357dd9a9e604ee37dd089cdd5e896c55484c81b4ed464cc32848f4846d610747a6a84773350a270a85c9b209513970
   languageName: node
   linkType: hard
 
@@ -2736,6 +3134,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/hover-card@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/hover-card@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dismissable": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/popper": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 0ca8ec1ffddb605c3fdc1fd0b0509b4defdfd31c3341c5705d634504689f8c82422c0b91e99d178d00999820d0f8fcb2f59886e67a6b931b2388b014e88f8bdf
+  languageName: node
+  linkType: hard
+
 "@zag-js/interact-outside@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/interact-outside@npm:0.31.1"
@@ -2748,12 +3161,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/interact-outside@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/interact-outside@npm:0.32.1"
+  dependencies:
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/tabbable": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 3e4b8b4da5801909e6e46b84c7f4398596516a622cd3ef02ae37ee291f7cd801eb956408bc1e5d8cba0b05465f27b64adc84b34f69b036bdab50eb968aa6bb9f
+  languageName: node
+  linkType: hard
+
 "@zag-js/live-region@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/live-region@npm:0.31.1"
   dependencies:
     "@zag-js/visually-hidden": "npm:0.31.1"
   checksum: f530c849501287bd162e0aa3238ab6985e0ba6483bff83bbdbf4e96ae207e7c9686b6f65dcc69cfe8737dd367db2cc9ae00f8e3c994ca84fe4a328bbe8fe9119
+  languageName: node
+  linkType: hard
+
+"@zag-js/live-region@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/live-region@npm:0.32.1"
+  dependencies:
+    "@zag-js/visually-hidden": "npm:0.32.1"
+  checksum: 1dc8b3cca97d416f3e1108a1ed3ce0546b287178b41cd0a9e701b71ff92042624c9c71167177e5388db1888e0821cf3a578390930f089aa489afbc7c46af89aa
   languageName: node
   linkType: hard
 
@@ -2775,10 +3209,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/menu@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/menu@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dismissable": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/mutation-observer": "npm:0.32.1"
+    "@zag-js/popper": "npm:0.32.1"
+    "@zag-js/rect-utils": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 093ecbb1aa350eb89a51877c3afa29c825ded282e27fbe61057a55c27d74baf8290e0eddb47be9972d6d6697f306540c3913856bd1064dcf306e8b324bb29406
+  languageName: node
+  linkType: hard
+
 "@zag-js/mutation-observer@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/mutation-observer@npm:0.31.1"
   checksum: 3121762ea1165a12145bd82817241b782514b19961fa4a6c1c797cc3f2678a59c0e4c515d6f1e07642487dca566bcd26d715ef2ab9d4fad83a71796cfca5e6cf
+  languageName: node
+  linkType: hard
+
+"@zag-js/mutation-observer@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/mutation-observer@npm:0.32.1"
+  checksum: 0b1f67855f1edf7abf513855458205784d8b3ebde3c5924a13d29816b724486b6836022da26541e133066247c6ab04383a27b01d8f66f8424d6ce08a6563e4b5
   languageName: node
   linkType: hard
 
@@ -2800,6 +3259,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/number-input@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/number-input@npm:0.32.1"
+  dependencies:
+    "@internationalized/number": "npm:^3.5.0"
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/form-utils": "npm:0.32.1"
+    "@zag-js/mutation-observer": "npm:0.32.1"
+    "@zag-js/number-utils": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 3de533e6d9961f8bd55f006a71f1aaab9b765a2b585a4252324e515508a6e96e52ccde125136f46c7f3de3836a229eeff6e03aeed324cdeaf1e72143b5ca9921
+  languageName: node
+  linkType: hard
+
 "@zag-js/number-utils@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/number-utils@npm:0.31.1"
@@ -2807,10 +3284,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/number-utils@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/number-utils@npm:0.32.1"
+  checksum: c46c073a6165c0ba46dfeb42a2118f520fbca320fc5af62bfebbe9732bdce1527fe84206ca63c5685f9d8b5b3a36ac6d00a2b48e2b11591d43a9f8a31ff121d5
+  languageName: node
+  linkType: hard
+
 "@zag-js/numeric-range@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/numeric-range@npm:0.31.1"
   checksum: 120b13c91c78c8123d2b378ce453304aa32094f49b316a9b151d9ddbcc4685669fe742f6ed567ad0d35af35337060a3a9ecca8e495b9892292fdfd8e57beec44
+  languageName: node
+  linkType: hard
+
+"@zag-js/numeric-range@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/numeric-range@npm:0.32.1"
+  checksum: ede891ea8a874d40cfafb377cd704d4d47232d0f89facacfe1a1493d6b48aa14ae5f5efc6cc5ae5e105072a7ac58d7ba2fd975a152ba9f30170590509b123456
   languageName: node
   linkType: hard
 
@@ -2827,6 +3318,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/pagination@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/pagination@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: a9930099cec2ce97abad5a89b762f4aa644fff87b0e7a33f5154005f9c80390a8fcff4a04f553011efa42914b658153ac752c1f7a2e3ca55a745eab6a627d7cd
+  languageName: node
+  linkType: hard
+
 "@zag-js/pin-input@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/pin-input@npm:0.31.1"
@@ -2840,6 +3344,22 @@ __metadata:
     "@zag-js/utils": "npm:0.31.1"
     "@zag-js/visually-hidden": "npm:0.31.1"
   checksum: d1530d81f15645c78aa0ac40ede477fef47442c12652017fab38882e9ac1ce32cde31fc06ac369bd95a86ebd763f5b1f9d60a4281708ca7ec90c9e9d2bb87e8a
+  languageName: node
+  linkType: hard
+
+"@zag-js/pin-input@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/pin-input@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/form-utils": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+    "@zag-js/visually-hidden": "npm:0.32.1"
+  checksum: d98d8a91fe101be0b7587d8dfe79689a9f7bf8118ab8509ff4ec16c98c73f826e79249276aae01feb1f6cbc2fe1cac8183285c1fb8c40a429d7faaa5e2854ba3
   languageName: node
   linkType: hard
 
@@ -2862,6 +3382,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/popover@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/popover@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/aria-hidden": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dismissable": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/popper": "npm:0.32.1"
+    "@zag-js/remove-scroll": "npm:0.32.1"
+    "@zag-js/tabbable": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+    focus-trap: "npm:7.5.4"
+  checksum: 704671a5dc3ca33bce5cf202f309418df82cf60ea738fd43518e3df9f78edd2ebac5778c56d6b8fdcc3a97f527cd572f83e192e0da59fba4bf7b49e95606a3ed
+  languageName: node
+  linkType: hard
+
 "@zag-js/popper@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/popper@npm:0.31.1"
@@ -2874,6 +3413,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/popper@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/popper@npm:0.32.1"
+  dependencies:
+    "@floating-ui/dom": "npm:1.5.4"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/element-rect": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: fb341e31ed9dcdc37efc06d1766c4ad6e81d85083220ea976c8df66b3057975e4368a9227084af82af0ee8c769057e6b709ca304d5387b0fb2663c2c2e4d1344
+  languageName: node
+  linkType: hard
+
 "@zag-js/presence@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/presence@npm:0.31.1"
@@ -2881,6 +3432,29 @@ __metadata:
     "@zag-js/core": "npm:0.31.1"
     "@zag-js/types": "npm:0.31.1"
   checksum: 8b21617aafb754663c13533747ddbdd8e98c3ae3a26e488dbf841d27f22dc2920519faf51a237a402087b9f8bfb3c31938b9526324b11d88ffb391a354d40540
+  languageName: node
+  linkType: hard
+
+"@zag-js/presence@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/presence@npm:0.32.1"
+  dependencies:
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+  checksum: 9e29ea192fc810ac987087b928d1c36c2d5303a1d8a53495e35e9b01ac5e48cd90e9809e1765b9e076e02cb71a845820dc8d0791738853736143e03d82b83403
+  languageName: node
+  linkType: hard
+
+"@zag-js/progress@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/progress@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 84654ed26102b343bea37631396d0b170c2aecfb3ebcf1b581f7e83eaac14a47efe88739279936b92c00aff3f6e4a54482e673d5b0185dbabb0adece054ea11d
   languageName: node
   linkType: hard
 
@@ -2900,6 +3474,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/radio-group@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/radio-group@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/element-rect": "npm:0.32.1"
+    "@zag-js/form-utils": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+    "@zag-js/visually-hidden": "npm:0.32.1"
+  checksum: f3a9ec70ed1e6b0351ca4ff2cfb52b1148add7c042827e29b34383edfd978c02e8f0ee7985f745d14f536fd596c7dbf0c549ecf0d48a34341f9d6684d46791be
+  languageName: node
+  linkType: hard
+
 "@zag-js/rating-group@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/rating-group@npm:0.31.1"
@@ -2915,18 +3505,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zag-js/react@npm:0.31.1":
-  version: 0.31.1
-  resolution: "@zag-js/react@npm:0.31.1"
+"@zag-js/rating-group@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/rating-group@npm:0.32.1"
   dependencies:
-    "@zag-js/core": "npm:0.31.1"
-    "@zag-js/store": "npm:0.31.1"
-    "@zag-js/types": "npm:0.31.1"
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/form-utils": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 74b95d740b743f1934070acc6a45014bc8fd2aa7b4b762b188cda150cec4886b97794a68962a883853f88a989de51e1d7dbb49911d6b47c2504305984f2cfa19
+  languageName: node
+  linkType: hard
+
+"@zag-js/react@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/react@npm:0.32.1"
+  dependencies:
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/store": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
     proxy-compare: "npm:2.5.1"
   peerDependencies:
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
-  checksum: 7580f839aebf02bb30a1ba89d07c76587ee5a16345dca9b26d0f1a36353350e46088a2922a0db9bbbd19c2cc18f78dd6d9a16106381d2a255d509acb2384059d
+  checksum: d4d85989784ea7527c8c9f4824c6ae7e83ac8cc8d879570144981930a3b3147c8bcd4ffa1ef12583d8dd85cc8da3de11db8595fc967ee74f7329552e72d430d4
   languageName: node
   linkType: hard
 
@@ -2937,12 +3542,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/rect-utils@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/rect-utils@npm:0.32.1"
+  checksum: f438603b8bbff1e77952ee12f235ef22e1b5019a30372aedb0dd20c3d4e7471e91e638c75ab0d8f1293a4bf37151fdb33ad0153e43b310df5100cb8c1f791613
+  languageName: node
+  linkType: hard
+
 "@zag-js/remove-scroll@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/remove-scroll@npm:0.31.1"
   dependencies:
     "@zag-js/dom-query": "npm:0.31.1"
   checksum: c2082c9e62162c6122568bda858063adae93647edf663fd7b88d243300b9b8533396ca0d9c389a5ef5f76f1eac162f8576e4663cc79f0feccd710b6df27d8937
+  languageName: node
+  linkType: hard
+
+"@zag-js/remove-scroll@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/remove-scroll@npm:0.32.1"
+  dependencies:
+    "@zag-js/dom-query": "npm:0.32.1"
+  checksum: 9db315c06563b28b25e3f8e07ca02e7b4bc56f91aa631625ff5dc8c196f671ad9c7d8abe3dc5db1a6439d23cc6c1c02c43550a10b96affb40bf47bc5f578feb5
   languageName: node
   linkType: hard
 
@@ -2967,6 +3588,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/select@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/select@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/collection": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dismissable": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/form-utils": "npm:0.32.1"
+    "@zag-js/mutation-observer": "npm:0.32.1"
+    "@zag-js/popper": "npm:0.32.1"
+    "@zag-js/tabbable": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+    "@zag-js/visually-hidden": "npm:0.32.1"
+  checksum: f5d48abf14a22ba50a7cde05a1405a1a99fba5ccf405cf0bc9d9f229476e21506605e4ea6a4b519b971bcea562a6dbce8e1f9a43762701d6cf7e9cf48df04b3d
+  languageName: node
+  linkType: hard
+
 "@zag-js/slider@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/slider@npm:0.31.1"
@@ -2981,6 +3623,23 @@ __metadata:
     "@zag-js/types": "npm:0.31.1"
     "@zag-js/utils": "npm:0.31.1"
   checksum: a5f55b3c7ca6fb362d65f3aaa4451b44f0df5a60aa00f06a67204190b3e1ca81c554b8703bff3c778e6a7046455588f8c0dc678f9aa119fd859865eacf6e911f
+  languageName: node
+  linkType: hard
+
+"@zag-js/slider@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/slider@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/element-size": "npm:0.32.1"
+    "@zag-js/form-utils": "npm:0.32.1"
+    "@zag-js/numeric-range": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: c9d21eb01bd872211785eb71e9899f3d400c6a879366243b969cc68388be365643e2dd89a78081defe246e781dc57bf7afa365e4c072576c8e80186926077b60
   languageName: node
   linkType: hard
 
@@ -2999,12 +3658,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/splitter@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/splitter@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/number-utils": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 84cc77e7f845491f0fb117cc4701e4fa75716170e23ac645f7bc246f467523e6400e52fa9a2fe160f5434c60ec8801701b76359e522de1a0e07be1512b3b4c14
+  languageName: node
+  linkType: hard
+
 "@zag-js/store@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/store@npm:0.31.1"
   dependencies:
     proxy-compare: "npm:2.5.1"
   checksum: d3666000792739a91cf4b35483bbb7f93ab484acb2719ab9f78d071a014bcb7c6469ba4cca61a216f99d2ed1b20972da3176c7ba9bbc0d80c6f435f8221608da
+  languageName: node
+  linkType: hard
+
+"@zag-js/store@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/store@npm:0.32.1"
+  dependencies:
+    proxy-compare: "npm:2.5.1"
+  checksum: c63c29b55eaf510f5aca3d27cf8d6f724524cef4570ee7f95f8a6ddeaaf7259738be70104a8888c0b1094328e9e8403c4c14a6f18a951462be988f447cb129ec
   languageName: node
   linkType: hard
 
@@ -3023,12 +3706,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/switch@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/switch@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/form-utils": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+    "@zag-js/visually-hidden": "npm:0.32.1"
+  checksum: 59c3465256dba8872ad9bd88b54d3e6b5692bfddefd38f1522a633ded16e551c7edf6c01b7762f25ebee842a4067c9ae0969dbbd20bc4d14961e6ae7224be0e2
+  languageName: node
+  linkType: hard
+
 "@zag-js/tabbable@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/tabbable@npm:0.31.1"
   dependencies:
     "@zag-js/dom-query": "npm:0.31.1"
   checksum: f3caafa4fa96e4b33e348178c3cf9fd2d3b6c5d40ccdb4ca7e67e0b8448fcaf390ab886c5f6ebf5b045337f8dc213754638220092dd15d1e78a9a6c7cded5d0f
+  languageName: node
+  linkType: hard
+
+"@zag-js/tabbable@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/tabbable@npm:0.32.1"
+  dependencies:
+    "@zag-js/dom-query": "npm:0.32.1"
+  checksum: 82ba50e7c52435ee0f85837d900a1d179c6498726d14138297d2001e44f80ff920b888c6a99c52378a3d88c60cb95e8ad394b80f394e0e6cc6663aeb503b0818
   languageName: node
   linkType: hard
 
@@ -3045,6 +3752,22 @@ __metadata:
     "@zag-js/types": "npm:0.31.1"
     "@zag-js/utils": "npm:0.31.1"
   checksum: dc0671f983aaea5af6b61046556b9d90a4ea221545f50edfd675d2b987c5629bcf77db07945e33f52d21941ab8b255a73af1360ce212c933b8107e0284188cbd
+  languageName: node
+  linkType: hard
+
+"@zag-js/tabs@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/tabs@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/element-rect": "npm:0.32.1"
+    "@zag-js/tabbable": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 4222de0cf543a18f0676fd027e3b7ba5be8f8e4947041ca9ab328e28b99623818afe82756d4102cf66be5edc7eeba44b4e8c128bc406caf168fb64cc9e6b9abf
   languageName: node
   linkType: hard
 
@@ -3066,12 +3789,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/tags-input@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/tags-input@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/auto-resize": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/form-utils": "npm:0.32.1"
+    "@zag-js/interact-outside": "npm:0.32.1"
+    "@zag-js/live-region": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 9c3aa8734895bc2d2b0db11e9e37b84e9cc803b6a9b9e1db331e18d8b3aac3df2db77889159fb90ca285da9fdbb1ec0d3433109ae7cfd2435c32468e84ab9a4b
+  languageName: node
+  linkType: hard
+
 "@zag-js/text-selection@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/text-selection@npm:0.31.1"
   dependencies:
     "@zag-js/dom-query": "npm:0.31.1"
   checksum: 069ba31a0d5af43c68db89a590e65952056d643ad9380114b9edca9faa737c9d575ffc4d79be6de01cf34327284202d11c6b74799fa1f9f0784976335c28534a
+  languageName: node
+  linkType: hard
+
+"@zag-js/text-selection@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/text-selection@npm:0.32.1"
+  dependencies:
+    "@zag-js/dom-query": "npm:0.32.1"
+  checksum: c5d702b0df5c5cf44f90f706d3fca60a1a8591cb16290280950471735d541b534b077ca2dd1119dfdeae32141fbd06d7d91d43db568ab5d74c894c31fb13ed97
   languageName: node
   linkType: hard
 
@@ -3089,6 +3839,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/toast@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/toast@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 814be487440a2be8b7dc811cfeb4e08d0daa3d87ee5a125cb71812a9e5d5b7a0b80698663c234e06b6d81aea2fe4fda6fea2e7ce4ee7265869b70290c6f8facf
+  languageName: node
+  linkType: hard
+
 "@zag-js/toggle-group@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/toggle-group@npm:0.31.1"
@@ -3100,6 +3864,20 @@ __metadata:
     "@zag-js/types": "npm:0.31.1"
     "@zag-js/utils": "npm:0.31.1"
   checksum: 440cbc2e192401eea71b8e1436fcc3b8d7f913bd09797181fca8d67cb90f1be069c14a884a5dec9622e2029de6f6dc973985d302d21df4062bc5da81f04be854
+  languageName: node
+  linkType: hard
+
+"@zag-js/toggle-group@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/toggle-group@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 2f39d049f0cee6c0953204bec0f3be464919dccea455a50eb484bc7bf15a1261d7b50392932c96cd6389f21aca15b74c542502f7772dcb8d9cc4557cef7707b7
   languageName: node
   linkType: hard
 
@@ -3118,12 +3896,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/tooltip@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/tooltip@npm:0.32.1"
+  dependencies:
+    "@zag-js/anatomy": "npm:0.32.1"
+    "@zag-js/core": "npm:0.32.1"
+    "@zag-js/dom-event": "npm:0.32.1"
+    "@zag-js/dom-query": "npm:0.32.1"
+    "@zag-js/popper": "npm:0.32.1"
+    "@zag-js/types": "npm:0.32.1"
+    "@zag-js/utils": "npm:0.32.1"
+  checksum: 005112e782c166c40d77b055620eec0940dabf9d8dd59b7c2b7ef7dc96041a075dfa44a7fd620e72e1acc96fd1cf65aa7aa753e407930bf16bf783f902e5a139
+  languageName: node
+  linkType: hard
+
 "@zag-js/types@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/types@npm:0.31.1"
   dependencies:
     csstype: "npm:3.1.2"
   checksum: afcb9c2c0fccdec1971af535903f3e9c049ea76efd0b34fe82373e573f86702413dfa98142ad4c2dc2ee3dd3be7fecada62bfd9858bafcfd883fc64f68b551e9
+  languageName: node
+  linkType: hard
+
+"@zag-js/types@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/types@npm:0.32.1"
+  dependencies:
+    csstype: "npm:3.1.3"
+  checksum: 13e6ba93d64019fc46ff378ff190b8ab8059c7434186bbfea92a38010c1cf6f3428fc68d3c04e785bf7fd658c05574e9be3b1fa5f77c74dd6c06d7a36e6d9c15
   languageName: node
   linkType: hard
 
@@ -3134,10 +3936,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zag-js/utils@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/utils@npm:0.32.1"
+  checksum: 612a6c3bb4e8c9a8d702163ddd6e98b859338cd9706212a692d8da244c9d83a4bbc6df7df5efee885c56e87f037439e6a4bda3fbb29ec2534f8ba22803b2b4f1
+  languageName: node
+  linkType: hard
+
 "@zag-js/visually-hidden@npm:0.31.1":
   version: 0.31.1
   resolution: "@zag-js/visually-hidden@npm:0.31.1"
   checksum: 5726d7f02b376c8f07fee6e60cef35963c2df0022d58a9410502509267fca0d0d7085de60d15104f13aac2f996a5fee68e071905f3c931d8d1020cace3eab9c9
+  languageName: node
+  linkType: hard
+
+"@zag-js/visually-hidden@npm:0.32.1":
+  version: 0.32.1
+  resolution: "@zag-js/visually-hidden@npm:0.32.1"
+  checksum: b2be10b6aae245dfef808501e335fbbdfb1e8f623c887a93c33a985191e77db1fbffa00cb3d5baba83d84c03e4dfbea50bd48c64f9d7a49ba568eaf7dd68807b
   languageName: node
   linkType: hard
 
@@ -3862,7 +4678,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.0.2":
+"csstype@npm:3.1.3, csstype@npm:^3.0.2":
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 80c089d6f7e0c5b2bd83cf0539ab41474198579584fa10d86d0cafe0642202343cbc119e076a0b1aece191989477081415d66c9fefbf3c957fc2fc4b7009f248
@@ -4018,11 +4834,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:^0.20.12":
-  version: 0.20.12
-  resolution: "drizzle-kit@npm:0.20.12"
+"drizzle-kit@npm:^0.20.13":
+  version: 0.20.13
+  resolution: "drizzle-kit@npm:0.20.13"
   dependencies:
-    "@drizzle-team/studio": "npm:^0.0.37"
+    "@drizzle-team/studio": "npm:^0.0.39"
     "@esbuild-kit/esm-loader": "npm:^2.5.5"
     camelcase: "npm:^7.0.1"
     chalk: "npm:^5.2.0"
@@ -4038,7 +4854,7 @@ __metadata:
     zod: "npm:^3.20.2"
   bin:
     drizzle-kit: bin.cjs
-  checksum: 04ab5e55f01720cc1900866fa10c24eddd7586e4e82e7bf130e379eb2e9d111cb1565bf54442572d85bcac2f58df27fb08cd484d69e2f55d61d80b54df967467
+  checksum: 33cf597cf1817fe26452e330b0acc3d1210f28b95aacd21b602ff2ca93ca4576f4601d5c73d5e0b6008cef133cf5a185158691a898b3c932f6afeeb3fcc67723
   languageName: node
   linkType: hard
 
@@ -5685,30 +6501,30 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "inkhorn@workspace:."
   dependencies:
-    "@ark-ui/react": "npm:^1.2.1"
-    "@auth/core": "npm:^0.20.0"
+    "@ark-ui/react": "npm:^1.3.0"
+    "@auth/core": "npm:^0.21.0"
     "@auth/drizzle-adapter": "npm:^0.3.14"
     "@ianvs/prettier-plugin-sort-imports": "npm:^4.1.1"
     "@next/bundle-analyzer": "npm:14.0.5-canary.40"
-    "@pandacss/dev": "npm:^0.27.1"
-    "@pandacss/types": "npm:^0.27.1"
+    "@pandacss/dev": "npm:^0.27.2"
+    "@pandacss/types": "npm:^0.27.2"
     "@park-ui/panda-preset": "npm:^0.28.0"
-    "@tanstack/react-virtual": "npm:^3.0.1"
+    "@tanstack/react-virtual": "npm:^3.0.2"
     "@tiptap/core": "npm:^2.1.16"
     "@tiptap/pm": "npm:^2.1.16"
     "@tiptap/react": "npm:^2.1.16"
     "@tiptap/starter-kit": "npm:^2.1.16"
-    "@types/node": "npm:^20.11.3"
+    "@types/node": "npm:^20.11.5"
     "@types/pg": "npm:^8.10.9"
-    "@types/react": "npm:^18.2.0"
+    "@types/react": "npm:^18.2.48"
     "@types/react-dom": "npm:^18.2.18"
     "@typescript-eslint/eslint-plugin": "npm:^6.19.0"
     "@typescript-eslint/parser": "npm:^6.19.0"
     "@typescript-eslint/utils": "npm:^6.19.0"
     "@vercel/analytics": "npm:^1.1.1"
-    "@vercel/speed-insights": "npm:^1.0.3"
+    "@vercel/speed-insights": "npm:^1.0.4"
     dotenv: "npm:^16.3.1"
-    drizzle-kit: "npm:^0.20.12"
+    drizzle-kit: "npm:^0.20.13"
     drizzle-orm: "npm:^0.29.3"
     drizzle-valibot: "npm:^0.1.1"
     eslint: "npm:^8.56.0"
@@ -5717,19 +6533,19 @@ __metadata:
     eslint-plugin-drizzle: "npm:^0.2.3"
     husky: "npm:^8.0.3"
     lint-staged: "npm:^15.2.0"
-    lucide-react: "npm:^0.309.0"
+    lucide-react: "npm:^0.312.0"
     next: "npm:14.0.5-canary.40"
     next-auth: "npm:^5.0.0-beta.4"
     pg: "npm:^8.11.3"
     postcss: "npm:^8.4.33"
-    prettier: "npm:^3.2.2"
+    prettier: "npm:^3.2.4"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     server-only: "npm:^0.0.1"
     sqids: "npm:^0.3.0"
     tsx: "npm:^4.7.0"
     typescript: "npm:^5.3.3"
-    valibot: "npm:^0.25.0"
+    valibot: "npm:^0.26.0"
   dependenciesMeta:
     "@ianvs/prettier-plugin-sort-imports@4.1.1":
       unplugged: true
@@ -6582,12 +7398,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^0.309.0":
-  version: 0.309.0
-  resolution: "lucide-react@npm:0.309.0"
+"lucide-react@npm:^0.312.0":
+  version: 0.312.0
+  resolution: "lucide-react@npm:0.312.0"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0
-  checksum: 3253675fa2225f742c3f66423445551fa4b973108951fd161d41c494ff60d388cc2d36ed3f76c4677a988bf9f1e127ce40d4a957f38bf355300906f29e67523b
+  checksum: 491b3403f51a1740c8cb0a558c4151c28eb175fc386099dbf9eaa63a314bb941ecb5cf6434b233ef6708e2af51ebaf8362987cc59958584990c1d1b5f34d4237
   languageName: node
   linkType: hard
 
@@ -7387,13 +8203,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pathe@npm:1.1.2":
-  version: 1.1.2
-  resolution: "pathe@npm:1.1.2"
-  checksum: 64ee0a4e587fb0f208d9777a6c56e4f9050039268faaaaecd50e959ef01bf847b7872785c36483fa5cdcdbdfdb31fef2ff222684d4fc21c330ab60395c681897
-  languageName: node
-  linkType: hard
-
 "pathe@npm:^1.1.0, pathe@npm:^1.1.1":
   version: 1.1.1
   resolution: "pathe@npm:1.1.1"
@@ -7798,12 +8607,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "prettier@npm:3.2.2"
+"prettier@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "prettier@npm:3.2.4"
   bin:
     prettier: bin/prettier.cjs
-  checksum: e84d0d2a4ce2b88ee1636904effbdf68b59da63d9f887128f2ed5382206454185432e7c0a9578bc4308bc25d099cfef47fd0b9c211066777854e23e65e34044d
+  checksum: 88dfeb78ac6096522c9a5b81f1413d875f568420d9bb6a5e5103527912519b993f2bcdcac311fcff5718d5869671d44e4f85827d3626f3a6ce32b9abc65d88e0
   languageName: node
   linkType: hard
 
@@ -9082,10 +9891,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"valibot@npm:^0.25.0":
-  version: 0.25.0
-  resolution: "valibot@npm:0.25.0"
-  checksum: 89edf8a048a287d586748965888f64d98855883c81752afa0ff7f2454f0bfee2b095af4ec5eddb3ff0462dbfae68b363e0657e9a2b9dca7f3ce69a9e7a468c5d
+"valibot@npm:^0.26.0":
+  version: 0.26.0
+  resolution: "valibot@npm:0.26.0"
+  checksum: d4854c7ccaa6194c5172e001a98c0116b7cf3f58607d83472b38431e0203e80dd960cfc36e3a0650eeb7aec6036b4c27ad4d363f24a0541495e71b35c331b3e3
   languageName: node
   linkType: hard
 

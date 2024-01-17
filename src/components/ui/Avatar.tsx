@@ -1,23 +1,39 @@
 "use client";
 
-import { Avatar as ArkAvatar } from "@ark-ui/react/avatar";
+import { forwardRef } from "react";
+import { Avatar as ArkAvatar, type AvatarProps as ArkAvatarProps } from "@ark-ui/react/avatar";
+import { User } from "lucide-react";
 
-import { createStyleContext } from "@/lib/styled";
-import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
-import { avatar } from "@/lib/styled/recipes";
+import { css, cx } from "@/lib/styled/css";
+import { avatar, type AvatarVariantProps } from "@/lib/styled/recipes";
+import type { Assign, JsxStyleProps } from "@/lib/styled/types";
 
-const { withProvider, withContext } = createStyleContext(avatar);
+export interface AvatarProps extends Assign<JsxStyleProps, ArkAvatarProps>, AvatarVariantProps {
+  name?: string;
+  src?: string | null;
+}
 
-const Avatar = withProvider(styled(ArkAvatar.Root), "root");
-const AvatarFallback = withContext(styled(ArkAvatar.Fallback), "fallback");
-const AvatarImage = withContext(styled(ArkAvatar.Image), "image");
+export const Avatar = forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
+  const [variantProps, avatarProps] = avatar.splitVariantProps(props);
+  const { name, src, ...rootProps } = avatarProps;
+  const styles = avatar(variantProps);
 
-const Root = Avatar;
-const Fallback = AvatarFallback;
-const Image = AvatarImage;
+  return (
+    <ArkAvatar.Root ref={ref} className={cx(styles.root, css(rootProps))} {...rootProps}>
+      <ArkAvatar.Fallback className={styles.fallback}>
+        {getInitials(name) || <User />}
+      </ArkAvatar.Fallback>
+      {src && <ArkAvatar.Image className={styles.image} src={src} alt={name} />}
+    </ArkAvatar.Root>
+  );
+});
 
-export { Avatar, AvatarFallback, AvatarImage, Fallback, Image, Root };
+Avatar.displayName = "Avatar";
 
-export interface AvatarProps extends HTMLStyledProps<typeof Avatar> {}
-export interface AvatarFallbackProps extends HTMLStyledProps<typeof AvatarFallback> {}
-export interface AvatarImageProps extends HTMLStyledProps<typeof AvatarImage> {}
+const getInitials = (name = "") =>
+  name
+    .split(" ")
+    .map((part) => part[0])
+    .splice(0, 2)
+    .join("")
+    .toUpperCase();

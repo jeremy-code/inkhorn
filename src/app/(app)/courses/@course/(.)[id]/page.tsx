@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { FormButton } from "@/components/form";
+import { Page } from "@/components/layout";
 import { BackButton, Icon } from "@/components/misc";
 import { Badge, Card, Heading, Text } from "@/components/ui";
 import { Flex, HStack, VStack } from "@/lib/styled/jsx";
@@ -32,13 +33,12 @@ const CoursePage = async ({ params }: CoursePageProps) => {
   if (userId !== currentUserId) notFound();
 
   return (
-    <Flex w="full" h="full" flexDir="column">
-      <HStack h="16" p="4" borderBottom="muted" justify="space-between">
+    <Page minW="lg">
+      <Page.Heading>
         <HStack>
           <BackButton />
           <Heading>{name}</Heading>
         </HStack>
-
         <FormButton
           colorPalette="red"
           variant="outline"
@@ -50,8 +50,7 @@ const CoursePage = async ({ params }: CoursePageProps) => {
           <Icon name="Trash" />
           Delete
         </FormButton>
-      </HStack>
-
+      </Page.Heading>
       <VStack p={4} alignItems="normal">
         <Card.Title>{name}</Card.Title>
         <Text fontSize="sm" color="fg.muted">
@@ -62,7 +61,7 @@ const CoursePage = async ({ params }: CoursePageProps) => {
           {formatTime(startTime)} - {formatTime(endTime)}
         </Text>
       </VStack>
-    </Flex>
+    </Page>
   );
 };
 

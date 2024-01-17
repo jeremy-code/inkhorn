@@ -33,7 +33,8 @@ const navLink = cva({
 
 export const NavLink = ({ children, href, ...props }: LinkProps) => {
   const [cssProps, rest] = splitCssProps(props);
-  const isActive = usePathname() === href;
+  // /courses/1/2/3 -> /courses
+  const isActive = usePathname().startsWith(href.toString());
 
   return (
     <Link {...rest} href={href} className={cx(navLink({ active: isActive }), css(cssProps))}>

@@ -3,21 +3,8 @@ import React, { type ReactNode } from "react";
 import { FormButton } from "@/components/form";
 import { Icon } from "@/components/misc";
 import { Avatar, Button, IconButton, Link, Popover, Text } from "@/components/ui";
-import { User } from "@/interfaces/database";
 import { Box, Divider, HStack, Stack } from "@/lib/styled/jsx";
 import { getUser, signOutAction } from "@/actions";
-
-const ProfileAvatar = ({ image }: User) => (
-  <Avatar.Root>
-    {image ? (
-      <Avatar.Image src={image} alt="avatar" />
-    ) : (
-      <Avatar.Fallback p={2} color="gray.8">
-        <Icon name="User" />
-      </Avatar.Fallback>
-    )}
-  </Avatar.Root>
-);
 
 export const ProfileInfo = async () => {
   const user = await getUser();
@@ -48,7 +35,7 @@ const ProfilePopover = async () => {
         <Stack gap={1}>
           <Popover.Title mb={2}>
             <HStack>
-              <ProfileAvatar {...user} />
+              <Avatar src={user.image} name={user.name!} />
               <ProfileInfo />
             </HStack>
           </Popover.Title>
@@ -86,7 +73,7 @@ export const ProfileSelector = async ({ children }: { children?: ReactNode }) =>
           cursor="pointer"
           bg={{ base: "bg.subtle", _hover: "bg.muted" }}
         >
-          <ProfileAvatar {...user} />
+          <Avatar src={user.image} name={user.name!} />
           {children}
         </HStack>
       </Popover.Trigger>
