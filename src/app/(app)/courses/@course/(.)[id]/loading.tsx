@@ -1,10 +1,13 @@
 import { Card, Spinner } from "@/components/ui";
+import { Box, Stack } from "@/lib/styled/jsx";
 
 const Loading = () => {
   return (
-    <Card.Root animation="drawer-in-right" h="full" w="full" minW="lg" m={2}>
-      <Spinner m="auto" />
-    </Card.Root>
+    <Box w="full" h="full" maxW="100%" overflow="hidden">
+      <Stack animation="drawer-in-right" h="full" w="full" minW="lg">
+        <Spinner m="auto" />
+      </Stack>
+    </Box>
   );
 };
 

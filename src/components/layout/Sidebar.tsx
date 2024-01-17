@@ -19,6 +19,7 @@ const sidebar = sva({
       flexDir: "column",
       justifyContent: "space-between",
       transition: "all",
+      zIndex: "banner",
     },
     trigger: {
       pos: "absolute",
@@ -63,11 +64,22 @@ export const Sidebar = ({ children, ...rest }: ComponentProps<typeof Root>) => {
   const [open, setOpen] = useState(true);
 
   return (
-    <Root open={open} {...rest}>
-      <Trigger onClick={() => setOpen(!open)} className={iconButton({ variant: "ghost" })}>
-        {open ? <PanelLeftClose /> : <PanelLeftOpen />}
-      </Trigger>
-      {children}
-    </Root>
+    <>
+      <Root open={open} {...rest}>
+        <Trigger onClick={() => setOpen(!open)} className={iconButton({ variant: "ghost" })}>
+          {open ? <PanelLeftClose /> : <PanelLeftOpen />}
+        </Trigger>
+        {children}
+      </Root>
+      {/* Filler item to prevent Trigger overlapping with other items due to being absolutely positioned */}
+      <Box
+        display={open ? "none" : "block"}
+        // Width is 39px since the trigger is 40px wide and absolutely positioned (so on top of border of 1px width)
+        w="[39px]"
+        h="16"
+        borderBottom="muted"
+        flexShrink="0"
+      />
+    </>
   );
 };

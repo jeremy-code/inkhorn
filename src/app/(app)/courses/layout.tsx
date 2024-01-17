@@ -26,11 +26,11 @@ const CoursesLayout = ({ children, course }: { children: ReactNode; course: Reac
       ]}
       overflow="visible!"
     >
-      <Splitter.Panel id="courses" border="none" overflow="visible!">
+      <Splitter.Panel id="courses" overflow="visible!" borderRight="muted!" border="none">
         {children}
       </Splitter.Panel>
-      <Splitter.ResizeTrigger id="courses:course" mx="2" />
-      <Splitter.Panel id="course" border="none" overflow="visible!">
+      <Splitter.ResizeTrigger id="courses:course" />
+      <Splitter.Panel id="course" overflow="visible!" borderLeft="muted!" border="none">
         {course}
       </Splitter.Panel>
     </Splitter.Root>

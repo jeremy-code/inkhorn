@@ -2,6 +2,7 @@
 export * from "./Spinner";
 export * from "./Spacer";
 export * from "./ToastComponent";
+export * from "./HorizontalList";
 
 // Park UI components
 // see https://park-ui.com/

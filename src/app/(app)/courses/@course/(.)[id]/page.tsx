@@ -1,8 +1,9 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 import { FormButton } from "@/components/form";
-import { Badge, Card, Text } from "@/components/ui";
-import { Divider, HStack } from "@/lib/styled/jsx";
+import { Icon } from "@/components/misc";
+import { Badge, Card, Heading, IconButton, Text } from "@/components/ui";
+import { Flex, HStack, VStack } from "@/lib/styled/jsx";
 import { formatTime } from "@/utils/common";
 import { decodeId } from "@/utils/sqid";
 import { deleteCourse, getCourse } from "@/actions/course";
@@ -17,36 +18,47 @@ const CoursePage = async ({ params }: { params: { id: string } }) => {
   if (userId !== currentUserId) notFound();
 
   return (
-    <Card.Root h="full" w="full" minW="lg" m={2}>
-      <Card.Header>
+    <Flex w="full" h="full" flexDir="column">
+      <HStack h="16" p="4" borderBottom="muted" justify="space-between">
+        <Heading>{name}</Heading>
+
         <HStack>
-          <Card.Title>{name} </Card.Title>
-          <Text fontSize="sm" color="fg.muted">
-            {subject}
-          </Text>
+          <FormButton
+            colorPalette="red"
+            variant="outline"
+            action={async () => {
+              "use server";
+              await deleteCourse(id);
+            }}
+          >
+            <Icon name="Trash" />
+            Delete
+          </FormButton>
+
+          <form
+            action={async () => {
+              "use server";
+              redirect("/courses");
+            }}
+          >
+            <IconButton variant="ghost" type="submit">
+              <Icon name="X" />
+            </IconButton>
+          </form>
         </HStack>
+      </HStack>
+
+      <VStack p={4} alignItems="normal">
+        <Card.Title>{name}</Card.Title>
+        <Text fontSize="sm" color="fg.muted">
+          {subject}
+        </Text>
         <HStack>{daysOfTheWeek?.map((day) => <Badge key={day}>{day}</Badge>)}</HStack>
-      </Card.Header>
-      <Card.Body>
-        {startTime && endTime && (
-          <Text fontSize="sm" color="fg.muted">
-            {formatTime(startTime)} - {formatTime(endTime)}
-          </Text>
-        )}
-      </Card.Body>
-      <Divider my={3} />
-      <Card.Footer>
-        <FormButton
-          colorPalette="red"
-          action={async () => {
-            "use server";
-            await deleteCourse(id);
-          }}
-        >
-          Delete
-        </FormButton>
-      </Card.Footer>
-    </Card.Root>
+        <Text fontSize="sm" color="fg.muted">
+          {formatTime(startTime)} - {formatTime(endTime)}
+        </Text>
+      </VStack>
+    </Flex>
   );
 };
 

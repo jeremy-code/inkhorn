@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useState, type ReactNode } from "react";
-import { X } from "lucide-react";
+import { Plus, X } from "lucide-react";
 
 import { Form, SubmitButton } from "@/components/form";
 import { Button, Dialog, IconButton } from "@/components/ui";
@@ -9,7 +9,6 @@ import type { StatefulFormAction } from "@/interfaces/actions";
 import { Stack } from "@/lib/styled/jsx";
 
 type PromptProps = {
-  label: string;
   title: string;
   description?: string;
   children?: ReactNode;
@@ -20,13 +19,12 @@ type PromptProps = {
  * A wrapper around the Dialog component that handles form submission and error handling. For all
  * errors, a toast notification is shown.
  *
- * @param label The label of the button that opens the dialog
  * @param title The title of the dialog
  * @param description The description of the dialog
  * @param children The form elements
  * @param action The form action (with state)
  */
-export const Prompt = ({ label, title, description, children, action, ...props }: PromptProps) => {
+export const Prompt = ({ title, description, children, action, ...props }: PromptProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const onSubmitSuccess = useCallback(() => {
@@ -44,7 +42,9 @@ export const Prompt = ({ label, title, description, children, action, ...props }
       {...props}
     >
       <Dialog.Trigger asChild>
-        <Button py={2}>{label}</Button>
+        <IconButton variant="ghost">
+          <Plus />
+        </IconButton>
       </Dialog.Trigger>
       <Dialog.Backdrop />
       <Dialog.Positioner>

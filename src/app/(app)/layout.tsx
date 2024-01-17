@@ -11,7 +11,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
         <Sidebar>
           <SidebarContent />
         </Sidebar>
-        <styled.main w="full" h="full" p={8}>
+        <styled.main w="full" h="full">
           {children}
         </styled.main>
       </Flex>
