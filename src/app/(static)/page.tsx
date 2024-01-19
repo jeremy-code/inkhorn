@@ -36,7 +36,7 @@ const Home = async () => {
           height="400"
           alt="hero image"
           priority
-          className={css({ mx: "auto", hideBelow: "md" })}
+          className={css({ mx: "auto", w: "auto", hideBelow: "md" })}
         />
       </Grid>
       {/* Gradient underneath hero */}

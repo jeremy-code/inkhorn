@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DateTime, Interval } from "luxon";
 
@@ -6,6 +7,19 @@ import { HStack } from "@/lib/styled/jsx";
 import { decodeId } from "@/utils/sqid";
 import { getCourse } from "@/actions/course";
 import { getUser } from "@/actions/user";
+
+type CoursePageProps = {
+  params: {
+    id: string;
+  };
+};
+
+export async function generateMetadata({ params }: CoursePageProps): Promise<Metadata> {
+  const { name } = await getCourse(decodeId(params.id));
+  return {
+    title: name,
+  };
+}
 
 const CoursePage = async ({ params }: { params: { id: string } }) => {
   const { name, daysOfTheWeek, userId, subject, startTime, endTime } = await getCourse(

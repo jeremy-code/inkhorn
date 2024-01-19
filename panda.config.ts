@@ -79,7 +79,9 @@ export default defineConfig({
   },
   utilities: {
     extend: {
-      linkDecor: {
+      linkDecoration: {
+        className: "linkDecoration",
+        shorthand: "linkDecor",
         values: { type: "boolean" },
         transform: (value: boolean) => (value ? {} : { textDecoration: "none" }),
       },
