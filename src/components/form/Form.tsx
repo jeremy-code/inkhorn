@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, type FormHTMLAttributes, type ReactNode } from "react";
 import { createToaster } from "@ark-ui/react/toast";
 import { useFormState } from "react-dom";

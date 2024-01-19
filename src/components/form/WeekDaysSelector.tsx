@@ -2,7 +2,7 @@
 
 import { Checkbox } from "@/components/ui";
 import { HStack, styled, type HstackProps } from "@/lib/styled/jsx";
-import { DAY_PREFIX, daysOfTheWeek } from "@/utils/constants";
+import { daysOfTheWeek } from "@/utils/constants";
 
 export const WeekDaysSelector = (props: HstackProps) => {
   return (
@@ -10,7 +10,8 @@ export const WeekDaysSelector = (props: HstackProps) => {
       {daysOfTheWeek.map((day, i) => (
         <WeekDayCheckbox
           label={day.abbr}
-          name={`${DAY_PREFIX}-${day.value}`}
+          name="daysOfTheWeek"
+          value={day.value}
           key={`${i}-${day.value}`}
         />
       ))}

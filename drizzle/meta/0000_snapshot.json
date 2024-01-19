@@ -1,5 +1,5 @@
 {
-  "id": "49ca2c26-4039-4a45-b8f1-38a7a663f7e8",
+  "id": "cc24a4da-e295-4a94-b946-199de59a1593",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -81,7 +81,6 @@
           "name": "account_userId_user_id_fk",
           "tableFrom": "account",
           "tableTo": "user",
-          "schemaTo": "public",
           "columnsFrom": [
             "userId"
           ],
@@ -145,15 +144,15 @@
         },
         "startTime": {
           "name": "startTime",
-          "type": "timestamp",
+          "type": "time",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "endTime": {
           "name": "endTime",
-          "type": "timestamp",
+          "type": "time",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "instructorId": {
           "name": "instructorId",
@@ -218,7 +217,6 @@
           "name": "session_userId_user_id_fk",
           "tableFrom": "session",
           "tableTo": "user",
-          "schemaTo": "public",
           "columnsFrom": [
             "userId"
           ],

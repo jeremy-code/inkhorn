@@ -35,6 +35,7 @@ export default defineConfig({
           pulse: { value: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite" },
         },
         borders: {
+          default: { value: "1px solid {colors.border.default}" },
           muted: { value: "1px solid {colors.border.muted}" },
         },
         colors: {

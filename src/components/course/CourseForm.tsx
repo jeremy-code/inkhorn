@@ -1,4 +1,4 @@
-import { AsyncAutocomplete, TimeAutocomplete, WeekDaysSelector } from "@/components/form";
+import { AsyncAutocomplete, TimeField, WeekDaysSelector } from "@/components/form";
 import { Input, Label } from "@/components/ui";
 import { HStack, Stack, StackProps } from "@/lib/styled/jsx";
 import { fetchSubjects } from "@/actions/subject";
@@ -26,8 +26,8 @@ export const CourseForm = (props: StackProps) => {
       <WeekDaysSelector />
 
       <HStack mt={2}>
-        <TimeAutocomplete label="From" w="32" name="startTime" />
-        <TimeAutocomplete label="To" w="32" name="endTime" />
+        <TimeField options={{ label: "From" }} w="fit-content" name="startTime" />
+        <TimeField options={{ label: "To" }} w="fit-content" name="endTime" />
       </HStack>
     </Stack>
   );

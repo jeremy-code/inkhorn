@@ -1,6 +1,6 @@
 import type { AdapterAccount } from "@auth/core/adapters";
 import { relations } from "drizzle-orm";
-import { integer, pgTable, primaryKey, serial, text, timestamp } from "drizzle-orm/pg-core";
+import { integer, pgTable, primaryKey, serial, text, time, timestamp } from "drizzle-orm/pg-core";
 
 import { days } from "@/utils/constants";
 
@@ -12,9 +12,7 @@ export const users = pgTable("user", {
   image: text("image"),
 });
 
-export const usersRelations = relations(users, ({ many }) => ({
-  courses: many(courses),
-}));
+export const usersRelations = relations(users, ({ many }) => ({ courses: many(courses) }));
 
 export const courses = pgTable("course", {
   id: serial("id").primaryKey(),
@@ -23,8 +21,8 @@ export const courses = pgTable("course", {
   userId: text("userId").notNull(),
   courseCode: text("courseCode"),
   subject: text("subject"),
-  startTime: timestamp("startTime"),
-  endTime: timestamp("endTime"),
+  startTime: time("startTime").notNull(),
+  endTime: time("endTime").notNull(),
   instructorId: text("instructorId"),
 });
 

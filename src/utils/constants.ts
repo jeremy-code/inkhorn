@@ -16,8 +16,6 @@ export const daysOfTheWeek = days.map((day) => ({
   value: day,
 }));
 
-export const DAY_PREFIX = "day-of-the-week";
-
 export const NAV_ITEMS = [
   {
     label: "Dashboard",

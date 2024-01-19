@@ -7,7 +7,7 @@ import { flatten, safeParse } from "valibot";
 
 import type { StatefulFormAction } from "@/interfaces/actions";
 import { courses, db, insertCourseSchema, type InsertCourse } from "@/lib/db";
-import { parseCourse } from "@/utils/course";
+import { parseFormData } from "@/utils/common";
 import { getUser } from "@/actions/user";
 
 // Return the course with the given id
@@ -44,7 +44,7 @@ export const createCourse: StatefulFormAction<InsertCourse | null> = async (_sta
   const user = await getUser();
   if (!user?.id) return { status: "error", error: { user: ["Not authorized"] }, data: null };
 
-  const response = safeParse(insertCourseSchema, { ...parseCourse(formData), userId: user.id });
+  const response = safeParse(insertCourseSchema, { ...parseFormData(formData), userId: user.id });
 
   if (!response.success)
     return { status: "error", error: flatten(response.issues).nested, data: null };

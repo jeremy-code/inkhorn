@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { DateTime, Interval } from "luxon";
 
 import { FormButton } from "@/components/form";
 import { Page } from "@/components/layout";
 import { BackButton, Icon } from "@/components/misc";
 import { Badge, Card, Heading, Text } from "@/components/ui";
-import { Flex, HStack, VStack } from "@/lib/styled/jsx";
-import { formatTime } from "@/utils/common";
+import { HStack, VStack } from "@/lib/styled/jsx";
 import { decodeId } from "@/utils/sqid";
 import { deleteCourse, getCourse } from "@/actions/course";
 import { getUser } from "@/actions/user";
@@ -28,6 +28,7 @@ const CoursePage = async ({ params }: CoursePageProps) => {
   const { id, userId, name, daysOfTheWeek, subject, startTime, endTime } = await getCourse(
     decodeId(params.id)
   );
+  const interval = Interval.fromISO(`${startTime}/${endTime}`);
   const { id: currentUserId } = await getUser();
 
   if (userId !== currentUserId) notFound();
@@ -58,7 +59,7 @@ const CoursePage = async ({ params }: CoursePageProps) => {
         </Text>
         <HStack>{daysOfTheWeek?.map((day) => <Badge key={day}>{day}</Badge>)}</HStack>
         <Text fontSize="sm" color="fg.muted">
-          {formatTime(startTime)} - {formatTime(endTime)}
+          {interval.toLocaleString(DateTime.TIME_SIMPLE)}
         </Text>
       </VStack>
     </Page>

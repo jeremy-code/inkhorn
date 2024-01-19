@@ -1,6 +1,7 @@
-import { Badge, Card, HorizontalList, Link, Text } from "@/components/ui";
+import { DateTime, Interval } from "luxon";
+
+import { Badge, Card, HorizontalList, Link } from "@/components/ui";
 import type { Course as CourseProps } from "@/interfaces/database";
-import { formatTime } from "@/utils/common";
 import { encodeId } from "@/utils/sqid";
 
 export const Course = async ({
@@ -11,6 +12,8 @@ export const Course = async ({
   startTime,
   endTime,
 }: CourseProps) => {
+  const interval = Interval.fromISO(`${startTime}/${endTime}`);
+
   return (
     <Link href={`/courses/${encodeId(id)}`} linkDecor={false} w="full">
       <Card.Root w="full" minW="xs" boxShadow="none" _hover={{ bg: "bg.subtle" }}>
@@ -21,7 +24,7 @@ export const Course = async ({
         <Card.Body display="block">
           <HorizontalList.Root fontSize="sm" color="fg.muted">
             <HorizontalList.Item>
-              {formatTime(startTime)} - {formatTime(endTime)}
+              {interval.toLocaleString(DateTime.TIME_SIMPLE)}
             </HorizontalList.Item>
             <HorizontalList.Item>
               {daysOfTheWeek?.map((day) => day[0].toUpperCase())}
