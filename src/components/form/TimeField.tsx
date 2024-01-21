@@ -29,16 +29,7 @@ const timeField = sva({
       },
     },
     input: {
-      pos: "absolute",
-      h: "1px",
-      w: "1px",
-      m: "-1px",
-      p: 0,
-      border: 0,
-      clipPath: "rect(0 0 0 0)",
-      overflow: "hidden",
-      whiteSpace: "nowrap",
-      wordWrap: "normal",
+      srOnly: true,
     },
   },
 });
@@ -71,7 +62,6 @@ export const TimeField = styled(({ options, className, ...rest }: UnstyledTimeFi
       </div>
       <input
         className={classes.input}
-        aria-hidden
         readOnly
         type="text"
         value={state.timeValue?.toString() ?? ""}

@@ -17,7 +17,7 @@ export const usersRelations = relations(users, ({ many }) => ({ courses: many(co
 export const courses = pgTable("course", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
-  daysOfTheWeek: text("daysOfTheWeek", { enum: days }).array(),
+  daysOfTheWeek: text("daysOfTheWeek", { enum: days }).array().notNull(),
   userId: text("userId").notNull(),
   courseCode: text("courseCode"),
   subject: text("subject"),

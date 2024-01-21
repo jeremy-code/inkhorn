@@ -5,8 +5,7 @@ import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
 const footer = cva({
   base: {
     display: "flex",
-    alignContent: "center",
-    justifyContent: "center",
+    placeContent: "center",
     p: 4,
     borderTop: "muted",
     gap: 1,

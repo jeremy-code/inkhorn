@@ -30,3 +30,7 @@ export function debounce<T extends (...args: any[]) => any>(
     if (callNow) func.apply(context, args);
   };
 }
+
+export function getPercentage(part: number, whole: number, fixed = 2) {
+  return `${((part * 100) / whole).toFixed(fixed)}%`;
+}

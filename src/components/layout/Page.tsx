@@ -14,14 +14,7 @@ export const Page = ({ children, ...rest }: PageProps) => {
 
 const PageHeading = ({ children, ...rest }: PageProps) => {
   return (
-    <Flex
-      h="16"
-      p="4"
-      borderBottom="muted"
-      justify="space-between"
-      align="center"
-      {...rest}
-    >
+    <Flex h="16" p="4" borderBottom="muted" justify="space-between" align="center" {...rest}>
       {children}
     </Flex>
   );
