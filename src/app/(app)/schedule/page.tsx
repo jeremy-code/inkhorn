@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Info } from "luxon";
 
 import { Calendar } from "@/components/calendar";
 import { Page } from "@/components/layout";
@@ -11,17 +10,14 @@ export const metadata: Metadata = { title: "schedule" };
 
 const SchedulePage = async () => {
   const courses = await getCourses();
-  const events = courses.map(({ startTime, endTime, ...rest }) => ({
-    ...rest,
-    interval: getInterval(startTime, endTime),
-  }));
+  const events = courses.map((c) => ({ ...c, interval: getInterval(c.startTime, c.endTime) }));
 
   return (
     <Page>
       <Page.Heading>
         <Heading fontWeight="normal">Schedule</Heading>
       </Page.Heading>
-      <Calendar events={events} />
+      <Calendar m="4" events={events} />
     </Page>
   );
 };

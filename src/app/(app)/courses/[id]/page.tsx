@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { DateTime, Info } from "luxon";
+import { Info } from "luxon";
 
 import { Badge, Heading, Text } from "@/components/ui";
 import { HStack } from "@/lib/styled/jsx";
 import { decodeId } from "@/utils/sqid";
-import { getInterval } from "@/utils/time";
+import { getInterval, TIME_SIMPLE } from "@/utils/time";
 import { getCourse } from "@/actions/course";
 import { getUser } from "@/actions/user";
 
-type CoursePageProps = {
-  params: {
-    id: string;
-  };
-};
+type CoursePageProps = { params: { id: string } };
 
 export const generateMetadata = async ({ params }: CoursePageProps): Promise<Metadata> => ({
   title: (await getCourse(decodeId(params.id))).name,
@@ -40,7 +36,7 @@ const CoursePage = async ({ params }: CoursePageProps) => {
       </HStack>
       {startTime && endTime && (
         <Text fontSize="sm" color="fg.muted">
-          {getInterval(startTime, endTime).toLocaleString(DateTime.TIME_SIMPLE)}
+          {getInterval(startTime, endTime).toLocaleString(TIME_SIMPLE)}
         </Text>
       )}
     </>

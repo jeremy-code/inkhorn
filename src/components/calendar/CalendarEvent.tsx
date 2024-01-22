@@ -15,7 +15,7 @@ export const CalendarEvent = ({ name, interval, weekday, startHour }: CalendarEv
   const row = interval.start?.hour! - startHour + 2;
 
   return (
-    <GridItem style={{ gridArea: `${row} / ${weekday + 1} / span ${duration}` }}>
+    <GridItem style={{ gridArea: `${row} / ${weekday} / span ${duration}` }}>
       <Flex
         justify="center"
         bg="fg.subtle"

@@ -1,9 +1,7 @@
-import { DateTime, Info } from "luxon";
-
 import { Badge, Card, HorizontalList, Link } from "@/components/ui";
 import type { Course as CourseProps } from "@/interfaces/database";
 import { encodeId } from "@/utils/sqid";
-import { getInterval } from "@/utils/time";
+import { getInterval, getWeekday, TIME_SIMPLE } from "@/utils/time";
 
 export const Course = async ({ id, name, weekdays, subject, startTime, endTime }: CourseProps) => {
   return (
@@ -16,10 +14,10 @@ export const Course = async ({ id, name, weekdays, subject, startTime, endTime }
         <Card.Body display="block">
           <HorizontalList.Root fontSize="sm" color="fg.muted">
             <HorizontalList.Item>
-              {getInterval(startTime, endTime).toLocaleString(DateTime.TIME_SIMPLE)}
+              {getInterval(startTime, endTime).toLocaleString(TIME_SIMPLE)}
             </HorizontalList.Item>
             <HorizontalList.Item>
-              {weekdays?.map((day) => Info.weekdays("narrow")[day - 1])}
+              {weekdays?.map((day) => getWeekday(day, "narrow"))}
             </HorizontalList.Item>
           </HorizontalList.Root>
         </Card.Body>

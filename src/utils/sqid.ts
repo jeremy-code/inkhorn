@@ -1,4 +1,4 @@
-"server-only";
+import "server-only";
 
 // keeping it in its own module so it can be "server-only"
 // and alphabet will not be exposed to the client

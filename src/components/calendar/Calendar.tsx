@@ -1,22 +1,21 @@
 import React, { type CSSProperties } from "react";
-import { Info } from "luxon";
+import { DateTime, Info } from "luxon";
 
 import { CalendarEvent } from "@/components/calendar";
 import { Text } from "@/components/ui";
-import { Grid, GridItem } from "@/lib/styled/jsx";
-import { getTimeFromTimeRange, getTimeRange } from "@/utils/time";
+import { Grid, GridItem, type GridProps } from "@/lib/styled/jsx";
+import { getTimeRange, TIME_NARROW } from "@/utils/time";
 import type { Event } from "@/interfaces";
 
 type CalendarProps = {
   events: Event[];
-};
+} & GridProps;
 
-export const Calendar = ({ events }: CalendarProps) => {
-  const intervals = events.map((event) => event.interval);
-  const timeRange = getTimeRange(...intervals);
+export const Calendar = ({ events, ...rest }: CalendarProps) => {
+  const timeRange = getTimeRange(events.map((event) => event.interval));
 
   return (
-    <Grid m={4} grid="'. header' 'time calendar' / max-content auto" gap="0">
+    <Grid grid="'. header' 'time calendar' / max-content auto" gap="0" {...rest}>
       <Grid gridArea="header" columns={7} gap="1px">
         {Info.weekdays("short").map((day) => (
           <GridItem key={day} textAlign="center">
@@ -62,7 +61,7 @@ export const Calendar = ({ events }: CalendarProps) => {
               <CalendarEvent
                 key={`${day}-${event.interval.toISO()}`}
                 weekday={day}
-                startHour={getTimeFromTimeRange(timeRange[0]).hour}
+                startHour={DateTime.fromFormat(timeRange[0], TIME_NARROW).hour}
                 {...event}
               />
             ))
