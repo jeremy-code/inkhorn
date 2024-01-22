@@ -1,5 +1,5 @@
 {
-  "id": "cc24a4da-e295-4a94-b946-199de59a1593",
+  "id": "d893f5f5-32fc-4653-a746-187941ba89b7",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -118,11 +118,11 @@
           "primaryKey": false,
           "notNull": true
         },
-        "daysOfTheWeek": {
-          "name": "daysOfTheWeek",
-          "type": "text[]",
+        "weekdays": {
+          "name": "weekdays",
+          "type": "smallint[]",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "userId": {
           "name": "userId",

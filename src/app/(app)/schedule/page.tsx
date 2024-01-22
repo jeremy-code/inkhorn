@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Interval } from "luxon";
+import { Info } from "luxon";
 
 import { Calendar } from "@/components/calendar";
 import { Page } from "@/components/layout";
 import { Heading } from "@/components/ui";
+import { getInterval } from "@/utils/time";
 import { getCourses } from "@/actions/course";
 
 export const metadata: Metadata = { title: "schedule" };
 
 const SchedulePage = async () => {
   const courses = await getCourses();
-  const events = courses.map(({ name, startTime, endTime, daysOfTheWeek }) => {
-    const interval = Interval.fromISO(`${startTime}/${endTime}`);
-    return { name, interval, weekdays: daysOfTheWeek };
-  });
+  const events = courses.map(({ startTime, endTime, ...rest }) => ({
+    ...rest,
+    interval: getInterval(startTime, endTime),
+  }));
 
   return (
     <Page>

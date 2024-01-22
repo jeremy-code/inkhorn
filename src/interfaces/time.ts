@@ -1,9 +1,7 @@
-import type { Interval } from "luxon";
-
-import { days } from "@/utils/constants";
+import type { Interval, WeekdayNumbers } from "luxon";
 
 export type Event = {
   name: string;
   interval: Interval;
-  weekdays: Array<(typeof days)[number]>;
+  weekdays: WeekdayNumbers[];
 };

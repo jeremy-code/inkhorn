@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS "account" (
 CREATE TABLE IF NOT EXISTS "course" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"name" text NOT NULL,
-	"daysOfTheWeek" text[],
+	"weekdays" smallint[] NOT NULL,
 	"userId" text NOT NULL,
 	"courseCode" text,
 	"subject" text,

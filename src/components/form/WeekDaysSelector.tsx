@@ -1,18 +1,20 @@
 "use client";
 
+import { Info } from "luxon";
+
 import { Checkbox } from "@/components/ui";
 import { HStack, styled, type HstackProps } from "@/lib/styled/jsx";
-import { daysOfTheWeek } from "@/utils/constants";
 
 export const WeekDaysSelector = (props: HstackProps) => {
   return (
     <HStack gap={1} {...props}>
-      {daysOfTheWeek.map((day, i) => (
+      {Info.weekdays("narrow").map((day, i) => (
         <WeekDayCheckbox
-          label={day.abbr}
-          name="daysOfTheWeek"
-          value={day.value}
-          key={`${i}-${day.value}`}
+          key={`${i}-${day}`}
+          label={day}
+          name="weekdays"
+          // value is 1-indexed to match ISO week date (values 1-7)
+          value={(i + 1).toString()}
         />
       ))}
     </HStack>

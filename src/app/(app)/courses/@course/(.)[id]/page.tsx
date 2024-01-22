@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { DateTime, Interval } from "luxon";
+import { DateTime, Info, Interval } from "luxon";
 
 import { FormButton } from "@/components/form";
 import { Page } from "@/components/layout";
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: CoursePageProps): Promise<Met
 }
 
 const CoursePage = async ({ params }: CoursePageProps) => {
-  const { id, userId, name, daysOfTheWeek, subject, startTime, endTime } = await getCourse(
+  const { id, userId, name, weekdays, subject, startTime, endTime } = await getCourse(
     decodeId(params.id)
   );
   const interval = Interval.fromISO(`${startTime}/${endTime}`);
@@ -57,7 +57,9 @@ const CoursePage = async ({ params }: CoursePageProps) => {
         <Text fontSize="sm" color="fg.muted">
           {subject}
         </Text>
-        <HStack>{daysOfTheWeek?.map((day) => <Badge key={day}>{day}</Badge>)}</HStack>
+        <HStack>
+          {weekdays?.map((day) => <Badge key={day}>{Info.weekdays()[day - 1]}</Badge>)}
+        </HStack>
         <Text fontSize="sm" color="fg.muted">
           {interval.toLocaleString(DateTime.TIME_SIMPLE)}
         </Text>

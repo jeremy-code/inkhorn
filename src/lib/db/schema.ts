@@ -1,8 +1,16 @@
 import type { AdapterAccount } from "@auth/core/adapters";
 import { relations } from "drizzle-orm";
-import { integer, pgTable, primaryKey, serial, text, time, timestamp } from "drizzle-orm/pg-core";
-
-import { days } from "@/utils/constants";
+import {
+  integer,
+  pgTable,
+  primaryKey,
+  serial,
+  smallint,
+  text,
+  time,
+  timestamp,
+} from "drizzle-orm/pg-core";
+import type { WeekdayNumbers } from "luxon";
 
 export const users = pgTable("user", {
   id: text("id").primaryKey(),
@@ -17,7 +25,7 @@ export const usersRelations = relations(users, ({ many }) => ({ courses: many(co
 export const courses = pgTable("course", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
-  daysOfTheWeek: text("daysOfTheWeek", { enum: days }).array().notNull(),
+  weekdays: smallint("weekdays").array().$type<WeekdayNumbers[]>().notNull(),
   userId: text("userId").notNull(),
   courseCode: text("courseCode"),
   subject: text("subject"),

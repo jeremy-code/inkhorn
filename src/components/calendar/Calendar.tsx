@@ -1,9 +1,9 @@
 import React, { type CSSProperties } from "react";
+import { Info } from "luxon";
 
 import { CalendarEvent } from "@/components/calendar";
 import { Text } from "@/components/ui";
 import { Grid, GridItem } from "@/lib/styled/jsx";
-import { days } from "@/utils/constants";
 import { getTimeFromTimeRange, getTimeRange } from "@/utils/time";
 import type { Event } from "@/interfaces";
 
@@ -18,9 +18,9 @@ export const Calendar = ({ events }: CalendarProps) => {
   return (
     <Grid m={4} grid="'. header' 'time calendar' / max-content auto" gap="0">
       <Grid gridArea="header" columns={7} gap="1px">
-        {days.map((day) => (
+        {Info.weekdays("short").map((day) => (
           <GridItem key={day} textAlign="center">
-            {day.slice(0, 3)}
+            {day}
           </GridItem>
         ))}
       </Grid>
@@ -72,7 +72,7 @@ export const Calendar = ({ events }: CalendarProps) => {
         {/* Decorative elements, creates borders between cells */}
         {/* Using subgrid here to allow grid to auto place elements while overlapping */}
         <Grid grid="subgrid/subgrid" gridArea="1/1/-1/-1" gap="1px">
-          {days.map((day) =>
+          {Info.weekdays().map((day) =>
             timeRange.map((time) => <GridItem key={`${day}-${time}`} bg="bg.default" />)
           )}
         </Grid>

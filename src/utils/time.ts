@@ -1,5 +1,8 @@
 import { DateTime, Interval } from "luxon";
 
+// Given two ISO strings, return an Interval
+export const getInterval = (start: string, end: string) => Interval.fromISO(`${start}/${end}`);
+
 export const mergeIntervals = (...intervals: Interval[]) => {
   const merged = Interval.merge(intervals);
 
