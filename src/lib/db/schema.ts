@@ -36,8 +36,8 @@ export const courses = pgTable("course", {
 
 export const subjects = pgTable("subject", {
   id: serial("id").primaryKey(),
-  abbr: text("abbr").notNull(),
   name: text("name").notNull(),
+  code: text("code").notNull(),
 });
 
 export const instructors = pgTable("instructor", {
@@ -46,14 +46,8 @@ export const instructors = pgTable("instructor", {
 });
 
 export const coursesRelations = relations(courses, ({ one }) => ({
-  user: one(users, {
-    fields: [courses.userId],
-    references: [users.id],
-  }),
-  instructor: one(instructors, {
-    fields: [courses.instructorId],
-    references: [instructors.id],
-  }),
+  user: one(users, { fields: [courses.userId], references: [users.id] }),
+  instructor: one(instructors, { fields: [courses.instructorId], references: [instructors.id] }),
 }));
 
 export const accounts = pgTable(
@@ -93,7 +87,5 @@ export const verificationTokens = pgTable(
     token: text("token").notNull(),
     expires: timestamp("expires", { mode: "date" }).notNull(),
   },
-  (vt) => ({
-    compoundKey: primaryKey({ columns: [vt.identifier, vt.token] }),
-  })
+  (vt) => ({ compoundKey: primaryKey({ columns: [vt.identifier, vt.token] }) })
 );

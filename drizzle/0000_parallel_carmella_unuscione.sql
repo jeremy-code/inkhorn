@@ -38,8 +38,8 @@ CREATE TABLE IF NOT EXISTS "session" (
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "subject" (
 	"id" serial PRIMARY KEY NOT NULL,
-	"abbr" text NOT NULL,
-	"name" text NOT NULL
+	"name" text NOT NULL,
+	"code" text NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "user" (

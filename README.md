@@ -19,6 +19,9 @@ nvm use
 # Run the development server locally
 yarn dev
 
+# Run any scripts
+yarn tsx scripts/<script>.ts
+
 # Lint and format code
 yarn lint
 yarn format
