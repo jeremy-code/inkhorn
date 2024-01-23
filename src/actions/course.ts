@@ -36,7 +36,7 @@ export const getCourses = unstable_cache(
 
     return await db.query.courses.findMany({ where: (c, { eq }) => eq(c.userId, user.id) });
   },
-  ["courses"],
+  undefined,
   { tags: ["courses"] }
 );
 
@@ -44,14 +44,16 @@ export const createCourse: StatefulFormAction<InsertCourse | null> = async (_sta
   const user = await getUser();
   if (!user?.id) return { status: "error", error: { user: ["Not authorized"] }, data: null };
 
-  const response = safeParse(insertCourseSchema, { ...parseFormData(formData), userId: user.id });
+  const { success, output, issues } = safeParse(insertCourseSchema, {
+    ...parseFormData(formData),
+    userId: user.id,
+  });
 
-  if (!response.success)
-    return { status: "error", error: flatten(response.issues).nested, data: null };
+  if (!success) return { status: "error", error: flatten(issues).nested, data: null };
 
-  await db.insert(courses).values(response.output);
+  await db.insert(courses).values(output);
 
   revalidateTag("courses");
 
-  return { status: "ok", data: response.output };
+  return { status: "ok", data: output };
 };
