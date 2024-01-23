@@ -1,4 +1,4 @@
-import { Card, Spinner } from "@/components/ui";
+import { Spinner } from "@/components/ui";
 import { Box, Stack } from "@/lib/styled/jsx";
 
 const Loading = () => {

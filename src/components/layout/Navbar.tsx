@@ -31,7 +31,7 @@ export const Navbar = styled(({ children, ...props }: HTMLStyledProps<"header">)
   return (
     <styled.header {...props}>
       <Link href="/" fontWeight="medium" fontSize="lg" display="flex" linkDecor={false}>
-        <Image src={logo} alt="inkhorn logo" width={16} height={16} priority />
+        <Image src={logo} alt="inkhorn logo" height={16} priority style={{ width: "auto" }} />
         inkhorn
       </Link>
       {children}

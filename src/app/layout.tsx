@@ -1,3 +1,4 @@
+import React, { type ReactNode } from "react";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en" className={outfit.variable}>
       <body>

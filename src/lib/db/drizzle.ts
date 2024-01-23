@@ -9,10 +9,10 @@ const DB_URL = process.env.DB_URL as string;
 
 const drizzleSingleton = () => drizzle(new Pool({ connectionString: DB_URL }), { schema });
 
-declare global {
-  var db: undefined | NodePgDatabase<typeof schema>;
-}
+declare let global: typeof globalThis & {
+  db: NodePgDatabase<typeof schema> | undefined;
+};
 
-export const db = globalThis.db ?? drizzleSingleton();
+export const db = global.db ?? drizzleSingleton();
 
-if (process.env.NODE_ENV !== "production") globalThis.db = db;
+if (process.env.NODE_ENV !== "production") global.db = db;

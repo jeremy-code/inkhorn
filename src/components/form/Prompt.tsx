@@ -8,11 +8,11 @@ import { Button, Dialog, IconButton } from "@/components/ui";
 import type { StatefulFormAction } from "@/interfaces/actions";
 import { Stack } from "@/lib/styled/jsx";
 
-type PromptProps = {
+type PromptProps<T> = {
   title: string;
   description?: string;
   children?: ReactNode;
-  action: StatefulFormAction<any>;
+  action: StatefulFormAction<T>;
 } & Dialog.DialogProps;
 
 /**
@@ -24,7 +24,7 @@ type PromptProps = {
  * @param children The form elements
  * @param action The form action (with state)
  */
-export const Prompt = ({ title, description, children, action, ...props }: PromptProps) => {
+export const Prompt = <T,>({ title, description, children, action, ...props }: PromptProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const onSubmitSuccess = useCallback(() => {

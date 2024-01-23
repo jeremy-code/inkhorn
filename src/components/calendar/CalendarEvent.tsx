@@ -12,7 +12,9 @@ type CalendarEventProps = {
 
 export const CalendarEvent = ({ name, interval, weekday, startHour }: CalendarEventProps) => {
   const duration = Math.ceil(interval.length("hour"));
-  const row = interval.start?.hour! - startHour + 2;
+  if (!interval.start?.isValid) return;
+
+  const row = interval.start.hour - startHour + 2;
 
   return (
     <GridItem style={{ gridArea: `${row} / ${weekday} / span ${duration}` }}>

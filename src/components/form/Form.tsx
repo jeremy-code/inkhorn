@@ -7,9 +7,9 @@ import { useFormState } from "react-dom";
 import { ToastComponent } from "@/components/ui";
 import type { StatefulFormAction } from "@/interfaces/actions";
 
-type FormProps = {
+type FormProps<T> = {
   children?: ReactNode;
-  action: StatefulFormAction<any>;
+  action: StatefulFormAction<T>;
   onSubmitSuccess?: () => void;
 } & Omit<FormHTMLAttributes<HTMLFormElement>, "action">;
 
@@ -22,7 +22,7 @@ type FormProps = {
  * @param onSubmitSuccess A callback that is called when the form is successfully submitted
  *                        (i.e. state.status === "ok")
  */
-export const Form = ({ children, action, onSubmitSuccess, ...rest }: FormProps) => {
+export const Form = <T,>({ children, action, onSubmitSuccess, ...rest }: FormProps<T>) => {
   const [state, formAction] = useFormState(action, null);
   const [Toaster, toast] = createToaster({ placement: "top-end", render: ToastComponent });
 

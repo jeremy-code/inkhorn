@@ -13,6 +13,7 @@ import {
 type GenericProps = Record<string, unknown>;
 type StyleRecipe = {
   (props?: GenericProps): Record<string, string>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   splitVariantProps: (props: GenericProps) => any;
 };
 type StyleSlot<R extends StyleRecipe> = keyof ReturnType<R>;
@@ -46,7 +47,6 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
         </StyleContext.Provider>
       );
     });
-
     StyledComponent.displayName = `Styled(${Component.valueOf()})`;
     return StyledComponent as unknown as ComponentVariants<T, R>;
   };

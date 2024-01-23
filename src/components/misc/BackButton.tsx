@@ -3,13 +3,13 @@
 import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
-import { IconButton } from "@/components/ui";
+import { IconButton, type IconButtonProps } from "@/components/ui";
 
-export const BackButton = () => {
+export const BackButton = (props: IconButtonProps) => {
   const router = useRouter();
 
   return (
-    <IconButton variant="ghost" onClick={() => router.back()}>
+    <IconButton {...props} variant="ghost" onClick={() => router.back()}>
       <ArrowLeft />
     </IconButton>
   );

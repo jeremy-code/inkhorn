@@ -19,7 +19,7 @@ export const SidebarContent = () => {
       {/* logo */}
       <header className={flex({ h: 16, p: 4, justify: "center", borderBottom: "muted" })}>
         <Link href="/dashboard" fontWeight="medium" fontSize="lg" linkDecor={false}>
-          <Image src={logo} alt="inkhorn logo" width={16} height={16} priority />
+          <Image src={logo} alt="inkhorn logo" height={16} style={{ width: "auto" }} priority />
           <SidebarAddon>inkhorn</SidebarAddon>
         </Link>
         {/* Filler item for Sidebar Trigger */}
