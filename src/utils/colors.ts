@@ -10,18 +10,13 @@ export function rgbToYIQ({ r, g, b }: RGB): number {
 
 export function hexToRgb(hex: string): RGB {
   const bigint = parseInt(hex.slice(1), 16);
-  const r = (bigint >> 16) & 255;
-  const g = (bigint >> 8) & 255;
-  const b = bigint & 255;
 
-  return { r, g, b };
+  return {
+    r: (bigint >> 16) & 255,
+    g: (bigint >> 8) & 255,
+    b: bigint & 255,
+  };
 }
 
 export const rgbToHex = ({ r, g, b }: RGB) =>
-  "#" +
-  [r, g, b]
-    .map((x) => {
-      const hex = x.toString(16);
-      return hex.length === 1 ? "0" + hex : hex;
-    })
-    .join("");
+  `#${[r, g, b].map((x) => x.toString(16).padStart(2, "0")).join("")}`;

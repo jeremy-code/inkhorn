@@ -1,5 +1,5 @@
 {
-  "id": "a75d72ec-e37a-4657-9f44-2be823a991a1",
+  "id": "92da63c4-dc0f-4b92-b626-88ab31d219e2",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -159,6 +159,12 @@
           "type": "text",
           "primaryKey": false,
           "notNull": false
+        },
+        "color": {
+          "name": "color",
+          "type": "char(7)",
+          "primaryKey": false,
+          "notNull": true
         }
       },
       "indexes": {},

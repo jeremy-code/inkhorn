@@ -22,7 +22,8 @@ CREATE TABLE IF NOT EXISTS "course" (
 	"subject" text,
 	"startTime" time NOT NULL,
 	"endTime" time NOT NULL,
-	"instructorId" text
+	"instructorId" text,
+	"color" char(7) NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "instructor" (
