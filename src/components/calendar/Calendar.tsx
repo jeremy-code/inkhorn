@@ -1,10 +1,10 @@
 import React, { type CSSProperties } from "react";
-import { DateTime, Info, type WeekdayNumbers } from "luxon";
+import { DateTime, Info } from "luxon";
 
 import { CalendarEvent } from "@/components/calendar";
 import { Text } from "@/components/ui";
 import { Grid, GridItem, type GridProps } from "@/lib/styled/jsx";
-import { getTimeRange, TIME_NARROW } from "@/utils/time";
+import { getTimeRange, getWeekdaysIndex, sortWeekdays, TIME_NARROW } from "@/utils/time";
 import type { Event } from "@/interfaces";
 
 type CalendarProps = {
@@ -17,7 +17,7 @@ export const Calendar = ({ events, ...rest }: CalendarProps) => {
   return (
     <Grid grid="'. header' 'time calendar' / max-content auto" gap="0" {...rest}>
       <Grid gridArea="header" columns={7} gap="1px">
-        {Info.weekdays("short").map((day) => (
+        {sortWeekdays(Info.weekdays("short")).map((day) => (
           <GridItem key={day} textAlign="center">
             {day}
           </GridItem>
@@ -71,15 +71,12 @@ export const Calendar = ({ events, ...rest }: CalendarProps) => {
         {/* Decorative elements, creates borders between cells */}
         {/* Using subgrid here to allow grid to auto place elements while overlapping */}
         <Grid grid="subgrid/subgrid" gridArea="1/1/-1/-1" gap="1px" gridAutoFlow="column">
-          {Info.weekdays().map((day, index) =>
+          {sortWeekdays(getWeekdaysIndex()).map((day) =>
             timeRange.map((time) => (
               <GridItem
                 key={`${day}-${time}`}
-                bgColor={
-                  Info.getWeekendWeekdays().includes((index + 1) as WeekdayNumbers)
-                    ? "bg.muted"
-                    : "bg.default"
-                }
+                // weekends have muted background
+                bgColor={Info.getWeekendWeekdays().includes(day) ? "bg.muted" : "bg.default"}
               />
             ))
           )}

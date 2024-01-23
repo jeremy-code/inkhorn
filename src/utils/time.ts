@@ -1,8 +1,4 @@
-import "server-only";
-
-// server-only since luxon is a large library that the client should not have
-
-import { DateTime, Info, Interval } from "luxon";
+import { DateTime, Info, InfoUnitOptions, Interval, WeekdayNumbers } from "luxon";
 
 export const { TIME_SIMPLE } = DateTime;
 export const TIME_NARROW = "h a";
@@ -14,6 +10,18 @@ export const getInterval = (start: string, end: string) => Interval.fromISO(`${s
 // is own function, since the isoIndex and array index may get confusing
 export const getWeekday = (isoIndex: number, ...rest: Parameters<typeof Info.weekdays>) =>
   Info.weekdays(...rest)[isoIndex - 1];
+
+// Given an array of either weekday numbers or weekday names (sorted by ISO index 1-7 or Mon - Sun),
+// return a new array such that the array is sorted by the start of the week (Sunday in the US).
+export const sortWeekdays = <T extends string | WeekdayNumbers>(weekdays: T[]) => {
+  const start = Info.getStartOfWeek();
+
+  return [...weekdays.slice(start - 1), ...weekdays.slice(0, start - 1)];
+};
+
+// Return an array of the weekday indices, starting with Monday (1) and ending with Sunday (7)
+export const getWeekdaysIndex = (opts?: InfoUnitOptions) =>
+  Info.weekdays(undefined, opts).map((_, i) => (i + 1) as WeekdayNumbers);
 
 /**
  * Given an array of intervals, return an array of hours from the start to the end

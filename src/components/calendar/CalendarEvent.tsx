@@ -1,4 +1,4 @@
-import type { WeekdayNumbers } from "luxon";
+import { Info, type WeekdayNumbers } from "luxon";
 
 import { Text } from "@/components/ui";
 import type { Event } from "@/interfaces/time";
@@ -20,13 +20,16 @@ export const CalendarEvent = ({
 }: CalendarEventProps) => {
   const duration = Math.ceil(interval.length("hour"));
   if (!interval.start?.isValid) return;
+  const startOfWeek = Info.getStartOfWeek();
 
+  // offset by the start of the week
+  const col = ((weekday - startOfWeek + 7) % 7) + 1;
   const row = interval.start.hour - startHour + 2;
   const offset = interval.start.minute / 60;
 
   return (
     // weekday and gridArea are 1-indexed
-    <GridItem style={{ gridArea: `${row} / ${weekday} / span ${duration}` }}>
+    <GridItem style={{ gridArea: `${row} / ${col} / span ${duration}` }}>
       <Flex
         pos="relative"
         justify="center"
