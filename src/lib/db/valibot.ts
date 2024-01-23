@@ -2,6 +2,7 @@ import { createInsertSchema } from "drizzle-valibot";
 import type { WeekdayNumbers } from "luxon";
 import {
   array,
+  hexColor,
   isoTimeSecond,
   maxLength,
   maxValue,
@@ -28,6 +29,7 @@ export const insertCourseSchema = createInsertSchema(courses, {
   ),
   startTime: string([isoTimeSecond()]),
   endTime: string([isoTimeSecond()]),
+  color: string([hexColor()]),
 });
 
 export type InsertCourse = Output<typeof insertCourseSchema>;

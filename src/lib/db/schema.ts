@@ -1,6 +1,7 @@
 import type { AdapterAccount } from "@auth/core/adapters";
 import { relations } from "drizzle-orm";
 import {
+  char,
   integer,
   pgTable,
   primaryKey,
@@ -32,6 +33,7 @@ export const courses = pgTable("course", {
   startTime: time("startTime").notNull(),
   endTime: time("endTime").notNull(),
   instructorId: text("instructorId"),
+  color: char("color", { length: 7 }).notNull(),
 });
 
 export const subjects = pgTable("subject", {

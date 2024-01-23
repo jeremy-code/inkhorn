@@ -1,5 +1,5 @@
 import React, { type CSSProperties } from "react";
-import { DateTime, Info } from "luxon";
+import { DateTime, Info, type WeekdayNumbers } from "luxon";
 
 import { CalendarEvent } from "@/components/calendar";
 import { Text } from "@/components/ui";
@@ -59,7 +59,7 @@ export const Calendar = ({ events, ...rest }: CalendarProps) => {
           {events.map((event) =>
             event.weekdays.map((day) => (
               <CalendarEvent
-                key={`${day}-${event.interval.toISO()}`}
+                key={`${day}-${event.interval}`}
                 weekday={day}
                 startHour={DateTime.fromFormat(timeRange[0], TIME_NARROW).hour}
                 {...event}
@@ -70,9 +70,18 @@ export const Calendar = ({ events, ...rest }: CalendarProps) => {
 
         {/* Decorative elements, creates borders between cells */}
         {/* Using subgrid here to allow grid to auto place elements while overlapping */}
-        <Grid grid="subgrid/subgrid" gridArea="1/1/-1/-1" gap="1px">
-          {Info.weekdays().map((day) =>
-            timeRange.map((time) => <GridItem key={`${day}-${time}`} bg="bg.default" />)
+        <Grid grid="subgrid/subgrid" gridArea="1/1/-1/-1" gap="1px" gridAutoFlow="column">
+          {Info.weekdays().map((day, index) =>
+            timeRange.map((time) => (
+              <GridItem
+                key={`${day}-${time}`}
+                bgColor={
+                  Info.getWeekendWeekdays().includes((index + 1) as WeekdayNumbers)
+                    ? "bg.muted"
+                    : "bg.default"
+                }
+              />
+            ))
           )}
         </Grid>
       </Grid>

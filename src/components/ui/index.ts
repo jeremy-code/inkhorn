@@ -19,6 +19,7 @@ export * from "./Text";
 // Contextful Park UI components
 export * as Card from "./Card";
 export * as Checkbox from "./Checkbox";
+export * as ColorPicker from "./ColorPicker";
 export * as Combobox from "./Combobox";
 export * as Dialog from "./Dialog";
 export * as Menu from "./Menu";

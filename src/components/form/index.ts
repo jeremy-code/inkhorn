@@ -7,3 +7,4 @@ export * from "./Autocomplete";
 export * from "./AsyncAutocomplete";
 export * from "./TimeField";
 export * from "./DateSegment";
+export * from "./ColorPickerInput";

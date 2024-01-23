@@ -4,4 +4,5 @@ export type Event = {
   name: string;
   interval: Interval;
   weekdays: WeekdayNumbers[];
+  color: string;
 };
