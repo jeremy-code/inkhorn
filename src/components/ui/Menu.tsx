@@ -1,3 +1,5 @@
+"use client";
+
 import type { ComponentProps } from "react";
 import { Menu as ArkMenu } from "@ark-ui/react/menu";
 

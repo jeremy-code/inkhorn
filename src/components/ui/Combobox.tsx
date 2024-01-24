@@ -1,3 +1,5 @@
+"use client";
+
 import type { ComponentProps } from "react";
 import { Combobox as ArkCombobox } from "@ark-ui/react/combobox";
 
