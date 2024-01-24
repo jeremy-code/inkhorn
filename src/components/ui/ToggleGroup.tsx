@@ -1,9 +1,10 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import { ToggleGroup as ArkToggleGroup } from "@ark-ui/react/toggle-group";
 
 import { createStyleContext } from "@/lib/styled";
-import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { styled } from "@/lib/styled/jsx";
 import { toggleGroup } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(toggleGroup);
@@ -13,5 +14,5 @@ const Item = withContext(styled(ArkToggleGroup.Item), "item");
 
 export { Item, Root };
 
-export type ToggleGroupProps = HTMLStyledProps<typeof Root>;
-export type ToggleGroupItemProps = HTMLStyledProps<typeof Item>;
+export type ToggleGroupProps = ComponentProps<typeof Root>;
+export type ToggleGroupItemProps = ComponentProps<typeof Item>;

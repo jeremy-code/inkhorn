@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import { Autocomplete, AutocompleteProps, Item } from "@/components/form";
+import { Autocomplete, Item, type AutocompleteProps } from "@/components/form";
 import { debounce } from "@/utils/common";
 
 const LOADING_ITEM: Item = { label: "Loading...", value: "", disabled: true };

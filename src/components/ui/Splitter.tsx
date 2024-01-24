@@ -1,9 +1,10 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import { Splitter as ArkSplitter } from "@ark-ui/react/splitter";
 
 import { createStyleContext } from "@/lib/styled";
-import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { styled } from "@/lib/styled/jsx";
 import { splitter } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(splitter);
@@ -14,6 +15,6 @@ const ResizeTrigger = withContext(styled(ArkSplitter.ResizeTrigger), "resizeTrig
 
 export { Panel, ResizeTrigger, Root };
 
-export type SplitterProps = HTMLStyledProps<typeof Root>;
-export type SplitterPanelProps = HTMLStyledProps<typeof Panel>;
-export type SplitterResizeTriggerProps = HTMLStyledProps<typeof ResizeTrigger>;
+export type SplitterProps = ComponentProps<typeof Root>;
+export type SplitterPanelProps = ComponentProps<typeof Panel>;
+export type SplitterResizeTriggerProps = ComponentProps<typeof ResizeTrigger>;

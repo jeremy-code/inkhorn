@@ -2,7 +2,7 @@ import React, { type ReactNode } from "react";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 
-import { Analytics } from "@/components/misc";
+import { Analytics, Environment } from "@/components/misc";
 
 import "./globals.css";
 
@@ -37,7 +37,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en" className={outfit.variable}>
       <body>
-        {children}
+        <Environment>{children}</Environment>
         <Analytics />
       </body>
     </html>

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useDateSegment } from "@react-aria/datepicker";
-import { type DateFieldState, type DateSegment as Segment } from "@react-stately/datepicker";
+import type { DateFieldState, DateSegment as Segment } from "@react-stately/datepicker";
 
 import { cva } from "@/lib/styled/css";
 

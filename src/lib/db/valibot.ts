@@ -23,7 +23,7 @@ export const insertCourseSchema = createInsertSchema(courses, {
     transform(string([minLength(1)]), (v) => parseInt(v), [
       minValue(1),
       maxValue(7),
-      // directly setting schema tpe as minValue and maxValue can be used on arrays/dates/etc
+      // directly setting schema type as minValue and maxValue can be used on arrays/dates/etc
     ]) as SchemaWithTransform<StringSchema, WeekdayNumbers>,
     [minLength(1), maxLength(7)]
   ),

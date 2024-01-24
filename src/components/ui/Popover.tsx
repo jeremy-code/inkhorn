@@ -1,9 +1,10 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import { Popover as ArkPopover } from "@ark-ui/react/popover";
 
 import { createStyleContext } from "@/lib/styled";
-import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { styled } from "@/lib/styled/jsx";
 import { popover } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(popover);
@@ -34,14 +35,14 @@ export {
   Trigger,
 };
 
-export type PopoverProps = HTMLStyledProps<typeof Root>;
-export type PopoverAnchorProps = HTMLStyledProps<typeof Anchor>;
-export type PopoverArrowProps = HTMLStyledProps<typeof Arrow>;
-export type PopoverArrowTipProps = HTMLStyledProps<typeof ArrowTip>;
-export type PopoverCloseTriggerProps = HTMLStyledProps<typeof CloseTrigger>;
-export type PopoverContentProps = HTMLStyledProps<typeof Content>;
-export type PopoverDescriptionProps = HTMLStyledProps<typeof Description>;
-export type PopoverIndicatorProps = HTMLStyledProps<typeof Indicator>;
-export type PopoverPositionerProps = HTMLStyledProps<typeof Positioner>;
-export type PopoverTitleProps = HTMLStyledProps<typeof Title>;
-export type PopoverTriggerProps = HTMLStyledProps<typeof Trigger>;
+export type PopoverProps = ComponentProps<typeof Root>;
+export type PopoverAnchorProps = ComponentProps<typeof Anchor>;
+export type PopoverArrowProps = ComponentProps<typeof Arrow>;
+export type PopoverArrowTipProps = ComponentProps<typeof ArrowTip>;
+export type PopoverCloseTriggerProps = ComponentProps<typeof CloseTrigger>;
+export type PopoverContentProps = ComponentProps<typeof Content>;
+export type PopoverDescriptionProps = ComponentProps<typeof Description>;
+export type PopoverIndicatorProps = ComponentProps<typeof Indicator>;
+export type PopoverPositionerProps = ComponentProps<typeof Positioner>;
+export type PopoverTitleProps = ComponentProps<typeof Title>;
+export type PopoverTriggerProps = ComponentProps<typeof Trigger>;

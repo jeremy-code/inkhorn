@@ -1,9 +1,10 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import { Dialog as ArkDialog } from "@ark-ui/react/dialog";
 
 import { createStyleContext } from "@/lib/styled";
-import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { styled } from "@/lib/styled/jsx";
 import { dialog } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(dialog);
@@ -19,11 +20,11 @@ const Trigger = withContext(styled(ArkDialog.Trigger), "trigger");
 
 export { Backdrop, CloseTrigger, Content, Description, Positioner, Root, Title, Trigger };
 
-export type DialogProps = HTMLStyledProps<typeof Root>;
-export type DialogBackdropProps = HTMLStyledProps<typeof Backdrop>;
-export type DialogCloseTriggerProps = HTMLStyledProps<typeof CloseTrigger>;
-export type DialogContentProps = HTMLStyledProps<typeof Content>;
-export type DialogDescriptionProps = HTMLStyledProps<typeof Description>;
-export type DialogPositionerProps = HTMLStyledProps<typeof Positioner>;
-export type DialogTitleProps = HTMLStyledProps<typeof Title>;
-export type DialogTriggerProps = HTMLStyledProps<typeof Trigger>;
+export type DialogProps = ComponentProps<typeof Root>;
+export type DialogBackdropProps = ComponentProps<typeof Backdrop>;
+export type DialogCloseTriggerProps = ComponentProps<typeof CloseTrigger>;
+export type DialogContentProps = ComponentProps<typeof Content>;
+export type DialogDescriptionProps = ComponentProps<typeof Description>;
+export type DialogPositionerProps = ComponentProps<typeof Positioner>;
+export type DialogTitleProps = ComponentProps<typeof Title>;
+export type DialogTriggerProps = ComponentProps<typeof Trigger>;

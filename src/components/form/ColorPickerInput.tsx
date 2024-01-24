@@ -1,31 +1,30 @@
 "use client";
 
-import React, { type ComponentProps } from "react";
 import { Pipette } from "lucide-react";
 
-import { ColorPicker, IconButton, Input, Label, Text } from "@/components/ui";
+import { ColorPicker, IconButton, Input, Label, Text, type InputProps } from "@/components/ui";
 import { HStack, Stack } from "@/lib/styled/jsx";
+import { token } from "@/lib/styled/tokens";
 
+// token() currently returns variable name, not value
+// waiting for panda css to fix this bug
 const presets = [
-  "hsl(10, 81%, 59%)",
-  "hsl(60, 81%, 59%)",
-  "hsl(100, 81%, 59%)",
-  "hsl(175, 81%, 59%)",
-  "hsl(190, 81%, 59%)",
-  "hsl(205, 81%, 59%)",
-  "hsl(220, 81%, 59%)",
-  "hsl(250, 81%, 59%)",
-  "hsl(280, 81%, 59%)",
-  "hsl(350, 81%, 59%)",
+  token("colors.primary.3"),
+  "#e5484d",
+  "#de51a8",
+  "#6e56cf",
+  "#5b5bd6",
+  "#12a594",
+  "#f76b15",
 ];
 
 type ColorPickerInputProps = {
   label: string;
-} & ComponentProps<typeof Input>;
+} & InputProps;
 
 export const ColorPickerInput = ({ label, ...rest }: ColorPickerInputProps) => {
   return (
-    <ColorPicker.Root>
+    <ColorPicker.Root defaultValue={token("colors.primary.3")}>
       {(api) => (
         <>
           <ColorPicker.Label asChild>

@@ -32,6 +32,8 @@ export const Prompt = <T,>({ title, description, children, action, ...props }: P
   }, []);
 
   return (
+    // there is a bug that when submitting twice, Dialog won't close. I suspect it is an issue with the library, and will wait to see if it is fixed, as isOpen
+    // is correctly set, and onSubmitSuccess is fired. Setting present to false also closes it correctly, though without the right focus
     <Dialog.Root
       open={isOpen}
       onOpenChange={(e) => setIsOpen(e.open)}

@@ -12,12 +12,6 @@ export type Item = {
   disabled?: boolean;
 };
 
-export type AutocompleteProps = {
-  items: Item[];
-  label: string;
-  placeholder?: string;
-} & Combobox.ComboboxProps;
-
 const AutocompleteItem = ({ item }: { item: Item }) => (
   <Combobox.Item item={item}>
     <Combobox.ItemText lineClamp="1">{item.label}</Combobox.ItemText>
@@ -26,6 +20,12 @@ const AutocompleteItem = ({ item }: { item: Item }) => (
     </Combobox.ItemIndicator>
   </Combobox.Item>
 );
+
+export type AutocompleteProps = {
+  items: Item[];
+  label: string;
+  placeholder?: string;
+} & Combobox.ComboboxProps;
 
 export const Autocomplete = ({ items, label, placeholder, ...rest }: AutocompleteProps) => {
   const [isOpen, setIsOpen] = useState(false);

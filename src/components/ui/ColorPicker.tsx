@@ -9,71 +9,38 @@ import { colorPicker } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(colorPicker);
 
-const ColorPicker = withProvider(styled(ArkColorPicker.Root), "root");
-const ColorPickerArea = withContext(styled(ArkColorPicker.Area), "area");
-const ColorPickerAreaBackground = withContext(
-  styled(ArkColorPicker.AreaBackground),
-  "areaBackground"
-);
-const ColorPickerAreaThumb = withContext(styled(ArkColorPicker.AreaThumb), "areaThumb");
-const ColorPickerChannelInput = withContext(styled(ArkColorPicker.ChannelInput), "channelInput");
-const ColorPickerChannelSlider = withContext(styled(ArkColorPicker.ChannelSlider), "channelSlider");
-const ColorPickerChannelSliderThumb = withContext(
+const Root = withProvider(styled(ArkColorPicker.Root), "root");
+const Area = withContext(styled(ArkColorPicker.Area), "area");
+const AreaBackground = withContext(styled(ArkColorPicker.AreaBackground), "areaBackground");
+const AreaThumb = withContext(styled(ArkColorPicker.AreaThumb), "areaThumb");
+const ChannelInput = withContext(styled(ArkColorPicker.ChannelInput), "channelInput");
+const ChannelSlider = withContext(styled(ArkColorPicker.ChannelSlider), "channelSlider");
+const ChannelSliderThumb = withContext(
   styled(ArkColorPicker.ChannelSliderThumb),
   "channelSliderThumb"
 );
-const ColorPickerChannelSliderTrack = withContext(
+const ChannelSliderTrack = withContext(
   styled(ArkColorPicker.ChannelSliderTrack),
   "channelSliderTrack"
 );
-const ColorPickerContent = withContext(styled(ArkColorPicker.Content), "content");
-const ColorPickerControl = withContext(styled(ArkColorPicker.Control), "control");
-const ColorPickerEyeDropperTrigger = withContext(
+const Content = withContext(styled(ArkColorPicker.Content), "content");
+const Control = withContext(styled(ArkColorPicker.Control), "control");
+const EyeDropperTrigger = withContext(
   styled(ArkColorPicker.EyeDropperTrigger),
   "eyeDropperTrigger"
 );
-const ColorPickerFormatSelect = withContext(styled(ArkColorPicker.FormatSelect), "formatSelect");
-const ColorPickerFormatTrigger = withContext(styled(ArkColorPicker.FormatTrigger), "formatTrigger");
-const ColorPickerLabel = withContext(styled(ArkColorPicker.Label), "label");
-const ColorPickerPositioner = withContext(styled(ArkColorPicker.Positioner), "positioner");
-const ColorPickerSwatch = withContext(styled(ArkColorPicker.Swatch), "swatch");
-const ColorPickerSwatchGroup = withContext(styled(ArkColorPicker.SwatchGroup), "swatchGroup");
-const ColorPickerSwatchIndicator = withContext(
-  styled(ArkColorPicker.SwatchIndicator),
-  "swatchIndicator"
-);
-const ColorPickerSwatchTrigger = withContext(styled(ArkColorPicker.SwatchTrigger), "swatchTrigger");
-const ColorPickerTransparencyGrid = withContext(
-  styled(ArkColorPicker.TransparencyGrid),
-  "transparencyGrid"
-);
-const ColorPickerTrigger = withContext(styled(ArkColorPicker.Trigger), "trigger");
-const ColorPickerValueText = withContext(styled(ArkColorPicker.ValueText), "valueText");
-const ColorPickerView = withContext(styled(ArkColorPicker.View), "view");
-
-const Root = ColorPicker;
-const Area = ColorPickerArea;
-const AreaBackground = ColorPickerAreaBackground;
-const AreaThumb = ColorPickerAreaThumb;
-const ChannelInput = ColorPickerChannelInput;
-const ChannelSlider = ColorPickerChannelSlider;
-const ChannelSliderThumb = ColorPickerChannelSliderThumb;
-const ChannelSliderTrack = ColorPickerChannelSliderTrack;
-const Content = ColorPickerContent;
-const Control = ColorPickerControl;
-const EyeDropperTrigger = ColorPickerEyeDropperTrigger;
-const FormatSelect = ColorPickerFormatSelect;
-const FormatTrigger = ColorPickerFormatTrigger;
-const Label = ColorPickerLabel;
-const Positioner = ColorPickerPositioner;
-const Swatch = ColorPickerSwatch;
-const SwatchGroup = ColorPickerSwatchGroup;
-const SwatchIndicator = ColorPickerSwatchIndicator;
-const SwatchTrigger = ColorPickerSwatchTrigger;
-const TransparencyGrid = ColorPickerTransparencyGrid;
-const Trigger = ColorPickerTrigger;
-const ValueText = ColorPickerValueText;
-const View = ColorPickerView;
+const FormatSelect = withContext(styled(ArkColorPicker.FormatSelect), "formatSelect");
+const FormatTrigger = withContext(styled(ArkColorPicker.FormatTrigger), "formatTrigger");
+const Label = withContext(styled(ArkColorPicker.Label), "label");
+const Positioner = withContext(styled(ArkColorPicker.Positioner), "positioner");
+const Swatch = withContext(styled(ArkColorPicker.Swatch), "swatch");
+const SwatchGroup = withContext(styled(ArkColorPicker.SwatchGroup), "swatchGroup");
+const SwatchIndicator = withContext(styled(ArkColorPicker.SwatchIndicator), "swatchIndicator");
+const SwatchTrigger = withContext(styled(ArkColorPicker.SwatchTrigger), "swatchTrigger");
+const TransparencyGrid = withContext(styled(ArkColorPicker.TransparencyGrid), "transparencyGrid");
+const Trigger = withContext(styled(ArkColorPicker.Trigger), "trigger");
+const ValueText = withContext(styled(ArkColorPicker.ValueText), "valueText");
+const View = withContext(styled(ArkColorPicker.View), "view");
 
 export {
   Area,
@@ -83,29 +50,6 @@ export {
   ChannelSlider,
   ChannelSliderThumb,
   ChannelSliderTrack,
-  ColorPicker,
-  ColorPickerArea,
-  ColorPickerAreaBackground,
-  ColorPickerAreaThumb,
-  ColorPickerChannelInput,
-  ColorPickerChannelSlider,
-  ColorPickerChannelSliderThumb,
-  ColorPickerChannelSliderTrack,
-  ColorPickerContent,
-  ColorPickerControl,
-  ColorPickerEyeDropperTrigger,
-  ColorPickerFormatSelect,
-  ColorPickerFormatTrigger,
-  ColorPickerLabel,
-  ColorPickerPositioner,
-  ColorPickerSwatch,
-  ColorPickerSwatchGroup,
-  ColorPickerSwatchIndicator,
-  ColorPickerSwatchTrigger,
-  ColorPickerTransparencyGrid,
-  ColorPickerTrigger,
-  ColorPickerValueText,
-  ColorPickerView,
   Content,
   Control,
   EyeDropperTrigger,
@@ -124,38 +68,26 @@ export {
   View,
 };
 
-export interface ColorPickerProps extends ComponentProps<typeof ColorPicker> {}
-export interface ColorPickerAreaProps extends ComponentProps<typeof ColorPickerArea> {}
-export interface ColorPickerAreaBackgroundProps
-  extends ComponentProps<typeof ColorPickerAreaBackground> {}
-export interface ColorPickerAreaThumbProps extends ComponentProps<typeof ColorPickerAreaThumb> {}
-export interface ColorPickerChannelInputProps
-  extends ComponentProps<typeof ColorPickerChannelInput> {}
-export interface ColorPickerChannelSliderProps
-  extends ComponentProps<typeof ColorPickerChannelSlider> {}
-export interface ColorPickerChannelSliderThumbProps
-  extends ComponentProps<typeof ColorPickerChannelSliderThumb> {}
-export interface ColorPickerChannelSliderTrackProps
-  extends ComponentProps<typeof ColorPickerChannelSliderTrack> {}
-export interface ColorPickerContentProps extends ComponentProps<typeof ColorPickerContent> {}
-export interface ColorPickerControlProps extends ComponentProps<typeof ColorPickerControl> {}
-export interface ColorPickerEyeDropperTriggerProps
-  extends ComponentProps<typeof ColorPickerEyeDropperTrigger> {}
-export interface ColorPickerFormatSelectProps
-  extends ComponentProps<typeof ColorPickerFormatSelect> {}
-export interface ColorPickerFormatTriggerProps
-  extends ComponentProps<typeof ColorPickerFormatTrigger> {}
-export interface ColorPickerLabelProps extends ComponentProps<typeof ColorPickerLabel> {}
-export interface ColorPickerPositionerProps extends ComponentProps<typeof ColorPickerPositioner> {}
-export interface ColorPickerSwatchProps extends ComponentProps<typeof ColorPickerSwatch> {}
-export interface ColorPickerSwatchGroupProps
-  extends ComponentProps<typeof ColorPickerSwatchGroup> {}
-export interface ColorPickerSwatchIndicatorProps
-  extends ComponentProps<typeof ColorPickerSwatchIndicator> {}
-export interface ColorPickerSwatchTriggerProps
-  extends ComponentProps<typeof ColorPickerSwatchTrigger> {}
-export interface ColorPickerTransparencyGridProps
-  extends ComponentProps<typeof ColorPickerTransparencyGrid> {}
-export interface ColorPickerTriggerProps extends ComponentProps<typeof ColorPickerTrigger> {}
-export interface ColorPickerValueTextProps extends ComponentProps<typeof ColorPickerValueText> {}
-export interface ColorPickerViewProps extends ComponentProps<typeof ColorPickerView> {}
+export type ColorPickerProps = ComponentProps<typeof Root>;
+export type ColorPickerAreaProps = ComponentProps<typeof Area>;
+export type ColorPickerAreaBackgroundProps = ComponentProps<typeof AreaBackground>;
+export type ColorPickerAreaThumbProps = ComponentProps<typeof AreaThumb>;
+export type ColorPickerChannelInputProps = ComponentProps<typeof ChannelInput>;
+export type ColorPickerChannelSliderProps = ComponentProps<typeof ChannelSlider>;
+export type ColorPickerChannelSliderThumbProps = ComponentProps<typeof ChannelSliderThumb>;
+export type ColorPickerChannelSliderTrackProps = ComponentProps<typeof ChannelSliderTrack>;
+export type ColorPickerContentProps = ComponentProps<typeof Content>;
+export type ColorPickerControlProps = ComponentProps<typeof Control>;
+export type ColorPickerEyeDropperTriggerProps = ComponentProps<typeof EyeDropperTrigger>;
+export type ColorPickerFormatSelectProps = ComponentProps<typeof FormatSelect>;
+export type ColorPickerFormatTriggerProps = ComponentProps<typeof FormatTrigger>;
+export type ColorPickerLabelProps = ComponentProps<typeof Label>;
+export type ColorPickerPositionerProps = ComponentProps<typeof Positioner>;
+export type ColorPickerSwatchProps = ComponentProps<typeof Swatch>;
+export type ColorPickerSwatchGroupProps = ComponentProps<typeof SwatchGroup>;
+export type ColorPickerSwatchIndicatorProps = ComponentProps<typeof SwatchIndicator>;
+export type ColorPickerSwatchTriggerProps = ComponentProps<typeof SwatchTrigger>;
+export type ColorPickerTransparencyGridProps = ComponentProps<typeof TransparencyGrid>;
+export type ColorPickerTriggerProps = ComponentProps<typeof Trigger>;
+export type ColorPickerValueTextProps = ComponentProps<typeof ValueText>;
+export type ColorPickerViewProps = ComponentProps<typeof View>;

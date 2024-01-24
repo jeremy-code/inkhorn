@@ -6,15 +6,20 @@ export * from "./HorizontalList";
 
 // Park UI components
 // see https://park-ui.com/
+
+// Typography
+export * from "./Heading";
+export * from "./Link";
+export * from "./Text";
+
+// Component
 export * from "./Avatar";
 export * from "./Badge";
 export * from "./Button";
-export * from "./Heading";
 export * from "./IconButton";
 export * from "./Input";
 export * from "./Label";
-export * from "./Link";
-export * from "./Text";
+export * from "./Progress";
 
 // Contextful Park UI components
 export * as Card from "./Card";

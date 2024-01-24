@@ -1,9 +1,10 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import { Checkbox as ArkCheckbox } from "@ark-ui/react/checkbox";
 
 import { createStyleContext } from "@/lib/styled";
-import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { styled } from "@/lib/styled/jsx";
 import { checkbox } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(checkbox);
@@ -15,7 +16,7 @@ const Label = withContext(styled(ArkCheckbox.Label), "label");
 
 export { Control, Indicator, Label, Root };
 
-export type CheckboxProps = HTMLStyledProps<typeof Root>;
-export type CheckboxControlProps = HTMLStyledProps<typeof Control>;
-export type CheckboxIndicatorProps = HTMLStyledProps<typeof Indicator>;
-export type CheckboxLabelProps = HTMLStyledProps<typeof Label>;
+export type CheckboxProps = ComponentProps<typeof Root>;
+export type CheckboxControlProps = ComponentProps<typeof Control>;
+export type CheckboxIndicatorProps = ComponentProps<typeof Indicator>;
+export type CheckboxLabelProps = ComponentProps<typeof Label>;

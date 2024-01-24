@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 
-import { Link, LinkProps } from "@/components/ui";
+import { Link, type LinkProps } from "@/components/ui";
 import { css, cva, cx } from "@/lib/styled/css";
 import { splitCssProps } from "@/lib/styled/jsx";
 

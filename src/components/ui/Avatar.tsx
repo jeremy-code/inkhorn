@@ -8,10 +8,11 @@ import { css, cx } from "@/lib/styled/css";
 import { avatar, type AvatarVariantProps } from "@/lib/styled/recipes";
 import type { Assign, JsxStyleProps } from "@/lib/styled/types";
 
-export interface AvatarProps extends Assign<JsxStyleProps, ArkAvatarProps>, AvatarVariantProps {
+export type AvatarProps = {
   name?: string;
   src?: string | null;
-}
+} & Assign<JsxStyleProps, ArkAvatarProps> &
+  AvatarVariantProps;
 
 export const Avatar = forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
   const [variantProps, avatarProps] = avatar.splitVariantProps(props);

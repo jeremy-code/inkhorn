@@ -1,7 +1,8 @@
+import type { ComponentProps } from "react";
 import { Combobox as ArkCombobox } from "@ark-ui/react/combobox";
 
 import { createStyleContext } from "@/lib/styled";
-import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
+import { styled } from "@/lib/styled/jsx";
 import { combobox } from "@/lib/styled/recipes";
 
 const { withProvider, withContext } = createStyleContext(combobox);
@@ -36,16 +37,16 @@ export {
   Trigger,
 };
 
-export type ComboboxProps = HTMLStyledProps<typeof Root>;
-export type ComboboxClearTriggerProps = HTMLStyledProps<typeof ClearTrigger>;
-export type ComboboxContentProps = HTMLStyledProps<typeof Content>;
-export type ComboboxControlProps = HTMLStyledProps<typeof Control>;
-export type ComboboxInputProps = HTMLStyledProps<typeof Input>;
-export type ComboboxItemProps = HTMLStyledProps<typeof Item>;
-export type ComboboxItemGroupProps = HTMLStyledProps<typeof ItemGroup>;
-export type ComboboxItemGroupLabelProps = HTMLStyledProps<typeof ItemGroupLabel>;
-export type ComboboxItemIndicatorProps = HTMLStyledProps<typeof ItemIndicator>;
-export type ComboboxItemTextProps = HTMLStyledProps<typeof ItemText>;
-export type ComboboxLabelProps = HTMLStyledProps<typeof Label>;
-export type ComboboxPositionerProps = HTMLStyledProps<typeof Positioner>;
-export type ComboboxTriggerProps = HTMLStyledProps<typeof Trigger>;
+export type ComboboxProps = ComponentProps<typeof Root>;
+export type ComboboxClearTriggerProps = ComponentProps<typeof ClearTrigger>;
+export type ComboboxContentProps = ComponentProps<typeof Content>;
+export type ComboboxControlProps = ComponentProps<typeof Control>;
+export type ComboboxInputProps = ComponentProps<typeof Input>;
+export type ComboboxItemProps = ComponentProps<typeof Item>;
+export type ComboboxItemGroupProps = ComponentProps<typeof ItemGroup>;
+export type ComboboxItemGroupLabelProps = ComponentProps<typeof ItemGroupLabel>;
+export type ComboboxItemIndicatorProps = ComponentProps<typeof ItemIndicator>;
+export type ComboboxItemTextProps = ComponentProps<typeof ItemText>;
+export type ComboboxLabelProps = ComponentProps<typeof Label>;
+export type ComboboxPositionerProps = ComponentProps<typeof Positioner>;
+export type ComboboxTriggerProps = ComponentProps<typeof Trigger>;
