@@ -2,7 +2,7 @@ import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
 import { createPreset } from "@park-ui/panda-preset";
 
 const globalCss = defineGlobalStyles({
-  "html, body": { h: "100%" },
+  "html, body": { h: "full" },
   body: { display: "flex", flexDir: "column" },
   "body > div, body > main": { flex: "initial" },
   "header, footer": { flexShrink: 0 },
@@ -24,11 +24,7 @@ export default defineConfig({
         spin: { to: { transform: "rotate(360deg)" } },
         pulse: { "50%": { opacity: 0.5 } },
       },
-      semanticTokens: {
-        colors: {
-          bg: { canvas: { value: "{colors.white}" } },
-        },
-      },
+      semanticTokens: { colors: { bg: { canvas: { value: "{colors.white}" } } } },
       tokens: {
         animations: {
           spin: { value: "spin 1s linear infinite" },
@@ -37,6 +33,9 @@ export default defineConfig({
         borders: {
           default: { value: "1px solid {colors.border.default}" },
           muted: { value: "1px solid {colors.border.muted}" },
+          subtle: { value: "1px solid {colors.border.subtle}" },
+          disabled: { value: "1px solid {colors.border.disabled}" },
+          outlined: { value: "1px solid {colors.border.outline}" },
         },
         colors: {
           primary: {
@@ -90,11 +89,7 @@ export default defineConfig({
       },
     },
   },
-  staticCss: {
-    recipes: {
-      // autogenerate sizes "md" and "lg" for buttons
-      button: [{ size: ["md", "lg"], responsive: true }],
-    },
-  },
+  // autogenerate sizes "md" and "lg" for buttons
+  staticCss: { recipes: { button: [{ size: ["md", "lg"], responsive: true }] } },
   jsxFramework: "react",
 });

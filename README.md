@@ -7,6 +7,7 @@
 ```bash
 git clone https://github.com/jeremy-code/inkhorn.git
 cd inkhorn
+corepack enable
 yarn
 ```
 
