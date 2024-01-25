@@ -5,31 +5,36 @@ import {
   hexColor,
   isoTimeSecond,
   maxLength,
-  maxValue,
   minLength,
-  minValue,
   string,
   transform,
   type Output,
-  type SchemaWithTransform,
-  type StringSchema,
 } from "valibot";
 
 import { courses } from "./schema";
 
+// type predicate to check if a number is a weekday number
+const isWeekdayNumber = (num: number): num is WeekdayNumbers => num >= 1 && num <= 7;
+
 export const insertCourseSchema = createInsertSchema(courses, {
   name: string([minLength(1), maxLength(100)]),
-  weekdays: array(
-    transform(string([minLength(1)]), (v) => parseInt(v), [
-      minValue(1),
-      maxValue(7),
-      // directly setting schema type as minValue and maxValue can be used on arrays/dates/etc
-    ]) as SchemaWithTransform<StringSchema, WeekdayNumbers>,
-    [minLength(1), maxLength(7)]
-  ),
   startTime: string([isoTimeSecond()]),
   endTime: string([isoTimeSecond()]),
   color: string([hexColor()]),
+  weekdays: array(
+    transform(
+      // transforms string to integer
+      transform(string([minLength(1)]), (v) => parseInt(v)),
+      // asserts that the integer is a weekday number
+      (v) => {
+        if (!isWeekdayNumber(v)) {
+          throw new Error("Invalid weekday number");
+        }
+        return v;
+      }
+    ),
+    [(minLength(1), maxLength(7))]
+  ),
 });
 
 export type InsertCourse = Output<typeof insertCourseSchema>;
