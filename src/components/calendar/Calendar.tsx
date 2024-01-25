@@ -1,7 +1,7 @@
 import React, { type CSSProperties } from "react";
 import { DateTime, Info } from "luxon";
 
-import { CalendarEvent } from "@/components/calendar";
+import { CalendarEvent, CurrentTime } from "@/components/calendar";
 import { Text } from "@/components/ui";
 import { Grid, GridItem, type GridProps } from "@/lib/styled/jsx";
 import { getTimeRange, getWeekdaysIndex, sortWeekdays, TIME_NARROW } from "@/utils/time";
@@ -13,6 +13,8 @@ type CalendarProps = {
 
 export const Calendar = ({ events, ...rest }: CalendarProps) => {
   const timeRange = getTimeRange(events.map((event) => event.interval));
+  const startHour = DateTime.fromFormat(timeRange[0], TIME_NARROW).hour;
+  const endHour = DateTime.fromFormat(timeRange.at(-1)!, TIME_NARROW).hour;
 
   return (
     <Grid grid="'. header' 'time calendar' / max-content auto" gap="0" {...rest}>
@@ -55,13 +57,17 @@ export const Calendar = ({ events, ...rest }: CalendarProps) => {
         grid="repeat(var(--rows), token(sizes.12)) / repeat(7, 1fr)"
         style={{ "--rows": timeRange.length } as CSSProperties}
       >
+        {/* Current time indicator */}
+        <CurrentTime startHour={startHour} endHour={endHour} />
+
+        {/* Events */}
         <Grid grid="subgrid/subgrid" gridArea="1/1/-1/-1" gap="1px" zIndex="1">
           {events.map((event) =>
             event.weekdays.map((day) => (
               <CalendarEvent
                 key={`${day}-${event.interval}`}
                 weekday={day}
-                startHour={DateTime.fromFormat(timeRange[0], TIME_NARROW).hour}
+                startHour={startHour}
                 {...event}
               />
             ))

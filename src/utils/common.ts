@@ -29,6 +29,6 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
   };
 }
 
-export function getPercentage(part: number, whole: number, fixed = 2) {
+export function getPercentage(part: number, whole = 1, fixed = 2) {
   return `${((part * 100) / whole).toFixed(fixed)}%`;
 }
