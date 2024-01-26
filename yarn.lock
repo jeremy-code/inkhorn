@@ -128,9 +128,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@auth/core@npm:0.22.0, @auth/core@npm:^0.22.0":
-  version: 0.22.0
-  resolution: "@auth/core@npm:0.22.0"
+"@auth/core@npm:0.23.0, @auth/core@npm:^0.23.0":
+  version: 0.23.0
+  resolution: "@auth/core@npm:0.23.0"
   dependencies:
     "@panva/hkdf": "npm:^1.1.1"
     "@types/cookie": "npm:0.6.0"
@@ -144,16 +144,16 @@ __metadata:
   peerDependenciesMeta:
     nodemailer:
       optional: true
-  checksum: 6186e4e3682e6ad80268d3bdee9dd6cab85b54a9ed5f1cf76647aa407f6d4db49a4ae70903d3de047d143643ed8eaedf1cd71fa45e25cbc8c27b843abc7613c8
+  checksum: 70e998fabaaa8ecb710272f40a5bec0874e47f5b105a36d6be36547ec08dfbec8fb330c6ca91559bfe24575bed9a4ab5eee3bac0a038e3f3a13d9d6cb8b10b6e
   languageName: node
   linkType: hard
 
-"@auth/drizzle-adapter@npm:^0.3.16":
-  version: 0.3.16
-  resolution: "@auth/drizzle-adapter@npm:0.3.16"
+"@auth/drizzle-adapter@npm:^0.3.17":
+  version: 0.3.17
+  resolution: "@auth/drizzle-adapter@npm:0.3.17"
   dependencies:
-    "@auth/core": "npm:0.22.0"
-  checksum: b9c005880423ab2e2b338179b4e637515f4a883ce71e7f41cbe95d582f9e2d89361f25363e1a78199e2c3ea9cddc0717af6fd662d32c5b797b4dcfd0a3af8df4
+    "@auth/core": "npm:0.23.0"
+  checksum: becafb828f74f925865f483e1b6508e8aa2c610e4448068ab1a3cf71349813701ca40250e34be219cb1d8e33794a5adc99cca0330e2f706fb1147329476c2fd4
   languageName: node
   linkType: hard
 
@@ -1738,9 +1738,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@park-ui/panda-preset@npm:^0.30.1":
-  version: 0.30.1
-  resolution: "@park-ui/panda-preset@npm:0.30.1"
+"@park-ui/panda-preset@npm:^0.31.0":
+  version: 0.31.0
+  resolution: "@park-ui/panda-preset@npm:0.31.0"
   dependencies:
     "@ark-ui/anatomy": "npm:1.3.0"
     "@radix-ui/colors": "npm:3.0.0"
@@ -1749,7 +1749,7 @@ __metadata:
   peerDependencies:
     "@pandacss/dev": ">0.22.0"
     "@pandacss/types": ">0.22.0"
-  checksum: a934e069e3b7cfef1c4b3f671ba0a6c1a6f4c1605323885631deb694c60580306baaf930fcc3af51015a9e749169e6430f878ba43ae47d5a2dab52626be65e83
+  checksum: bdfa0b788c2a74c379873ea2eec5d19d2ea29415882fedf7a103296ea745d492c9c4e4acc1a33c1fea15044232aa4e445f6af454f70a605ee9ad4773f9ba21ad
   languageName: node
   linkType: hard
 
@@ -2472,12 +2472,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.11.6":
-  version: 20.11.6
-  resolution: "@types/node@npm:20.11.6"
+"@types/node@npm:^20.11.7":
+  version: 20.11.7
+  resolution: "@types/node@npm:20.11.7"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 922bc1e78076bb79fd168902c80321b54487181e3be3386e183fc535d102d91c8902da25148eaec841410fab7fb872fd4a93ec9ac9299cedf0ebcbf16b442aa1
+  checksum: ba4b41542b64f21a881a277189e761c553d00af0b1c02f2d8a47ebe8bc29a00ed21b45adf0bf9af2cf8ea6c92a443853d4f7b690081ceaecc150719cc574e9ea
   languageName: node
   linkType: hard
 
@@ -2495,14 +2495,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/pg@npm:^8.10.9":
-  version: 8.10.9
-  resolution: "@types/pg@npm:8.10.9"
+"@types/pg@npm:^8.11.0":
+  version: 8.11.0
+  resolution: "@types/pg@npm:8.11.0"
   dependencies:
     "@types/node": "npm:*"
     pg-protocol: "npm:*"
     pg-types: "npm:^4.0.1"
-  checksum: 6b3bec7230d09da6459636a66dfd6fb538378e466ffff0a0bcd07d67aa4ddce49c73afc7442f53adec92a49dbf9e71d8d847e0075750d7545331735dfd92d22c
+  checksum: df2c2ac11fa5e8863a98aadce9a9168af5cfc38a226a228d8b1be513ef48d33ceb9bfaa64ef685a87e0611a4f8d94f2e0736bb2812fa00ed264f76679b86945d
   languageName: node
   linkType: hard
 
@@ -2767,9 +2767,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/speed-insights@npm:^1.0.7":
-  version: 1.0.7
-  resolution: "@vercel/speed-insights@npm:1.0.7"
+"@vercel/speed-insights@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "@vercel/speed-insights@npm:1.0.8"
   peerDependencies:
     "@sveltejs/kit": ^1 || ^2
     next: ">= 13"
@@ -2790,7 +2790,7 @@ __metadata:
       optional: true
     vue-router:
       optional: true
-  checksum: 3780e2a5aeb911aed825a90937a63f6f851682cc2eccc87922e592c6e0167a7165f279b3a39550ac6d4c890b2faed51dd2fb6545b675614d0802480161fb9121
+  checksum: c3de1cddea6cb56180586351b821edc00764c6aa7e070d7ed5b0d4713144cc31778277f87f7e7faa5219ef12af2c6ffae6a87d6a65e9b0af53af2df1b17d1d3d
   languageName: node
   linkType: hard
 
@@ -6362,12 +6362,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^8.0.3":
-  version: 8.0.3
-  resolution: "husky@npm:8.0.3"
+"husky@npm:^9.0.6":
+  version: 9.0.6
+  resolution: "husky@npm:9.0.6"
   bin:
-    husky: lib/bin.js
-  checksum: 6722591771c657b91a1abb082e07f6547eca79144d678e586828ae806499d90dce2a6aee08b66183fd8b085f19d20e0990a2ad396961746b4c8bd5bdb619d668
+    husky: bin.js
+  checksum: 1ef034899dcdc35e5bf5436e1e02f8a7177dbb8a10dd91b77456d7fe110c204d8d4a7d53180e0651b87e35f39d7e0e95a53b4b7c334f68aefbc0d93bce4b54f8
   languageName: node
   linkType: hard
 
@@ -6440,13 +6440,13 @@ __metadata:
   resolution: "inkhorn@workspace:."
   dependencies:
     "@ark-ui/react": "npm:^1.3.0"
-    "@auth/core": "npm:^0.22.0"
-    "@auth/drizzle-adapter": "npm:^0.3.16"
+    "@auth/core": "npm:^0.23.0"
+    "@auth/drizzle-adapter": "npm:^0.3.17"
     "@ianvs/prettier-plugin-sort-imports": "npm:^4.1.1"
     "@next/bundle-analyzer": "npm:canary"
     "@pandacss/dev": "npm:^0.28.0"
     "@pandacss/types": "npm:^0.28.0"
-    "@park-ui/panda-preset": "npm:^0.30.1"
+    "@park-ui/panda-preset": "npm:^0.31.0"
     "@react-aria/datepicker": "npm:^3.9.1"
     "@react-aria/i18n": "npm:^3.10.0"
     "@react-stately/datepicker": "npm:^3.9.1"
@@ -6456,15 +6456,15 @@ __metadata:
     "@tiptap/react": "npm:^2.1.16"
     "@tiptap/starter-kit": "npm:^2.1.16"
     "@types/luxon": "npm:^3.4.2"
-    "@types/node": "npm:^20.11.6"
-    "@types/pg": "npm:^8.10.9"
+    "@types/node": "npm:^20.11.7"
+    "@types/pg": "npm:^8.11.0"
     "@types/react": "npm:^18.2.48"
     "@types/react-dom": "npm:^18.2.18"
     "@typescript-eslint/eslint-plugin": "npm:^6.19.1"
     "@typescript-eslint/parser": "npm:^6.19.1"
     "@typescript-eslint/utils": "npm:^6.19.1"
     "@vercel/analytics": "npm:^1.1.2"
-    "@vercel/speed-insights": "npm:^1.0.7"
+    "@vercel/speed-insights": "npm:^1.0.8"
     cheerio: "npm:^1.0.0-rc.12"
     cross-env: "npm:^7.0.3"
     dotenv: "npm:^16.4.1"
@@ -6474,9 +6474,9 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-next: "npm:14.1.0"
     eslint-plugin-drizzle: "npm:^0.2.3"
-    husky: "npm:^8.0.3"
+    husky: "npm:^9.0.6"
     lint-staged: "npm:^15.2.0"
-    lucide-react: "npm:^0.314.0"
+    lucide-react: "npm:^0.316.0"
     luxon: "npm:^3.4.4"
     next: "npm:canary"
     next-auth: "npm:beta"
@@ -7361,12 +7361,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^0.314.0":
-  version: 0.314.0
-  resolution: "lucide-react@npm:0.314.0"
+"lucide-react@npm:^0.316.0":
+  version: 0.316.0
+  resolution: "lucide-react@npm:0.316.0"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0
-  checksum: b7994d4a11167ca590e9ee2be1d8c9d4e22f860a4d40ff8a24cbb0b4b71f7b60c834c9ffeca72a746d21be9f47ce69d560ba0b0975ee51a35cd0d7e7b4a54365
+  checksum: e1f90af4c62042a99fba873422e9e1538afc48e81d242ffd1cbc2b9d6e0257f153201370f8ae8c08ec6b95214c78c17a6c1b7e8f6cb3bce8f1dae9509f866b6f
   languageName: node
   linkType: hard
 

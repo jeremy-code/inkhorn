@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/eslintrc",
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/strict",
     "next/core-web-vitals",
     "plugin:drizzle/recommended"
   ],
@@ -10,7 +10,7 @@
   "plugins": ["@typescript-eslint", "drizzle"],
   "overrides": [
     {
-      "files": ["*.js", "*.jsx", "*.cjs", "*.mjs"],
+      "files": ["**/*.js", "**/*.jsx", "**/*.cjs", "**/*.mjs"],
       "extends": ["plugin:@typescript-eslint/disable-type-checked"]
     }
   ],

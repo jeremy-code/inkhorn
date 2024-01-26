@@ -11,7 +11,7 @@ import { subjects } from "@/lib/db/schema";
 const UCSD_SUBJECTS_URL =
   "https://blink.ucsd.edu/instructors/courses/schedule-of-classes/subject-codes.html";
 
-const db = drizzle(new Pool({ connectionString: process.env.DB_URL! }));
+const db = drizzle(new Pool({ connectionString: process.env.DB_URL as string }));
 
 function parseSubjects($: CheerioAPI) {
   return $("table tbody tr")

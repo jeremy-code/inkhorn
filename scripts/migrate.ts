@@ -4,7 +4,7 @@ import { drizzle } from "drizzle-orm/node-postgres";
 import { migrate } from "drizzle-orm/node-postgres/migrator";
 import { Pool } from "pg";
 
-const db = drizzle(new Pool({ connectionString: process.env.DB_URL! }), { logger: true });
+const db = drizzle(new Pool({ connectionString: process.env.DB_URL as string }), { logger: true });
 
 async function main() {
   try {

@@ -35,7 +35,7 @@ const ProfilePopover = async () => {
         <Stack gap={1}>
           <Popover.Title mb={2}>
             <HStack>
-              <Avatar src={user.image} name={user.name!} />
+              <Avatar src={user.image} name={user.name ?? "Unknown"} />
               <ProfileInfo />
             </HStack>
           </Popover.Title>
@@ -73,7 +73,7 @@ export const ProfileSelector = async ({ children }: { children?: ReactNode }) =>
           cursor="pointer"
           bg={{ base: "bg.subtle", _hover: "bg.muted" }}
         >
-          <Avatar src={user.image} name={user.name!} />
+          <Avatar src={user.image} name={user.name ?? "Unknown"} />
           {children}
         </HStack>
       </Popover.Trigger>

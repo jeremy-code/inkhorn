@@ -10,11 +10,11 @@ import { db } from "@/lib/db/drizzle";
 export const getUser = cache(async (): Promise<User> => {
   const session = await auth();
 
-  if (!session || !session.user) notFound();
+  if (!session || !session.user || !session.user.id) notFound();
 
-  const user = await db.query.users.findFirst({
-    where: (u, { eq }) => eq(u.id, session.user!.id!),
-  });
+  const userId = session.user.id;
+
+  const user = await db.query.users.findFirst({ where: (u, { eq }) => eq(u.id, userId) });
   if (!user) notFound();
 
   return user;

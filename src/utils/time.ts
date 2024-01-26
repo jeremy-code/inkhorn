@@ -35,8 +35,11 @@ export const getTimeRange = (intervals: Interval[]) => {
   // merge overlapping intervals, and combine the first and last interval to
   // get the full range
   const merged = Interval.merge(intervals);
-  const combinedInterval = merged[0].union(merged.at(-1)!);
+  const [first, last] = [merged.at(0), merged.at(-1)];
 
+  if (!first || !last) throw new Error("Invalid interval");
+
+  const combinedInterval = first.union(last);
   if (!combinedInterval.isValid) throw new Error("Invalid interval");
 
   // pad by an hour on each side
