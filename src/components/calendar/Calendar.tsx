@@ -1,5 +1,5 @@
 import React, { type CSSProperties } from "react";
-import { DateTime, Info } from "luxon";
+import { Info } from "luxon";
 
 import { CalendarEvent, CurrentTime } from "@/components/calendar";
 import { Text } from "@/components/ui";
@@ -13,8 +13,10 @@ type CalendarProps = {
 
 export const Calendar = ({ events, ...rest }: CalendarProps) => {
   const timeRange = getTimeRange(events.map((event) => event.interval));
-  const startHour = DateTime.fromFormat(timeRange[0], TIME_NARROW).hour;
-  const endHour = DateTime.fromFormat(timeRange.at(-1)!, TIME_NARROW).hour;
+  const [start, end] = [timeRange[0], timeRange.at(-1)];
+
+  // end is undefined, or start or end times are invalid
+  if (!end || !start.isValid || !end.isValid) return null;
 
   return (
     <Grid grid="'. header' 'time calendar' / max-content auto" gap="0" {...rest}>
@@ -29,7 +31,7 @@ export const Calendar = ({ events, ...rest }: CalendarProps) => {
       <Grid gridArea="time" gap="1px">
         {timeRange.map((time) => (
           <Grid
-            key={time}
+            key={time.toString()}
             pos="relative"
             placeContent="end"
             _before={{
@@ -42,7 +44,7 @@ export const Calendar = ({ events, ...rest }: CalendarProps) => {
             }}
           >
             <Text translate="auto" y="50%" mr="4" fontWeight="normal" fontSize="sm">
-              {time}
+              {time.toFormat(TIME_NARROW)}
             </Text>
           </Grid>
         ))}
@@ -58,7 +60,7 @@ export const Calendar = ({ events, ...rest }: CalendarProps) => {
         style={{ "--rows": timeRange.length } as CSSProperties}
       >
         {/* Current time indicator */}
-        <CurrentTime startHour={startHour} endHour={endHour} />
+        <CurrentTime startHour={start.hour} endHour={end.hour} />
 
         {/* Events */}
         <Grid grid="subgrid/subgrid" gridArea="1/1/-1/-1" gap="1px" zIndex="1">
@@ -67,7 +69,7 @@ export const Calendar = ({ events, ...rest }: CalendarProps) => {
               <CalendarEvent
                 key={`${day}-${event.interval}`}
                 weekday={day}
-                startHour={startHour}
+                startHour={start.hour}
                 {...event}
               />
             ))

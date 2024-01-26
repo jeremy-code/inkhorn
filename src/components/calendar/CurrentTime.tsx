@@ -1,32 +1,48 @@
-import { DateTime, Info } from "luxon";
+"use client";
+
+import React, { useEffect, useState, type CSSProperties } from "react";
+import { DateTime, type HourNumbers } from "luxon";
 
 import { Box, GridItem } from "@/lib/styled/jsx";
 import { getPercentage } from "@/utils/common";
-
-// in the future, would like to convert to client component so top can be calculated on the client
-// and updated every minute
+import { getWeekdayOffset } from "@/utils/time";
 
 type CurrentTimeProps = {
-  startHour: number;
-  endHour: number;
+  startHour: HourNumbers;
+  endHour: HourNumbers;
 };
 
 export const CurrentTime = ({ startHour, endHour }: CurrentTimeProps) => {
-  const curr = DateTime.now();
+  const [curr, setCurr] = useState(DateTime.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurr(DateTime.now());
+      // update every minute
+    }, 60 * 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   // time indicator would not be visible since it is outside of the calendar
   if (startHour > curr.hour || endHour < curr.hour) return null;
 
-  const startOfWeek = Info.getStartOfWeek();
-
-  const col = ((curr.weekday - startOfWeek + 7) % 7) + 1;
-  const row = curr.hour - startHour + 2;
   const offset = curr.minute / 60;
 
   // z-index so above any events
   // visibility hidden so user can interact with events
   return (
-    <GridItem visibility="hidden" zIndex="2" style={{ gridArea: `${row} / ${col}` }}>
+    <GridItem
+      visibility="hidden"
+      zIndex="2"
+      gridArea="var(--row) / var(--col)"
+      style={
+        {
+          "--row": curr.hour - startHour + 2,
+          "--col": getWeekdayOffset(curr.weekday),
+        } as CSSProperties
+      }
+    >
       <Box
         pos="relative"
         css={{
@@ -35,7 +51,7 @@ export const CurrentTime = ({ startHour, endHour }: CurrentTimeProps) => {
             visibility: "visible",
             pos: "absolute",
             bg: "red",
-            inset: "auto 0 -1px",
+            inset: "auto 0 0",
           },
         }}
         _before={{
@@ -45,6 +61,7 @@ export const CurrentTime = ({ startHour, endHour }: CurrentTimeProps) => {
           translate: "-50% 50%",
         }}
         _after={{ h: "1px" }}
+        will-change="top"
         style={{ top: getPercentage(offset) }}
       />
     </GridItem>
