@@ -1594,6 +1594,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pandacss/eslint-plugin@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@pandacss/eslint-plugin@npm:0.0.4"
+  dependencies:
+    "@pandacss/config": "npm:^0.28.0"
+    "@pandacss/generator": "npm:^0.28.0"
+    "@pandacss/node": "npm:^0.28.0"
+    "@pandacss/shared": "npm:^0.28.0"
+    "@typescript-eslint/utils": "npm:^6.19.1"
+    hookable: "npm:^5.5.3"
+    synckit: "npm:^0.9.0"
+  peerDependencies:
+    eslint: "*"
+  checksum: 36e15f5f2e75c6d605b7b956a80f5cdedde3671ffd35d3c5bca16b669cc28c3307c4f2dda411aafc8a04af53ffe7bcaffd0b52e75967b0182e3c34477ebc352d
+  languageName: node
+  linkType: hard
+
 "@pandacss/extractor@npm:0.28.0":
   version: 0.28.0
   resolution: "@pandacss/extractor@npm:0.28.0"
@@ -1604,7 +1621,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pandacss/generator@npm:0.28.0":
+"@pandacss/generator@npm:0.28.0, @pandacss/generator@npm:^0.28.0":
   version: 0.28.0
   resolution: "@pandacss/generator@npm:0.28.0"
   dependencies:
@@ -1640,7 +1657,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pandacss/node@npm:0.28.0":
+"@pandacss/node@npm:0.28.0, @pandacss/node@npm:^0.28.0":
   version: 0.28.0
   resolution: "@pandacss/node@npm:0.28.0"
   dependencies:
@@ -1725,7 +1742,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pandacss/shared@npm:0.28.0":
+"@pandacss/shared@npm:0.28.0, @pandacss/shared@npm:^0.28.0":
   version: 0.28.0
   resolution: "@pandacss/shared@npm:0.28.0"
   checksum: 73a37938412c686441c9a92aff83c6c605afba480228acb7c5dcdf51aafdb33581c23fdbb53742c96f77e1ede1f81224da621d39bdc9076f3a9640fa78acd7da
@@ -1776,6 +1793,13 @@ __metadata:
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
   checksum: 5bd7576bb1b38a47a7fc7b51ac9f38748e772beebc56200450c4a817d712232b8f1d3ef70532c80840243c657d491cf6a6be1e3a214cff907645819fdc34aadd
+  languageName: node
+  linkType: hard
+
+"@pkgr/core@npm:^0.1.0":
+  version: 0.1.1
+  resolution: "@pkgr/core@npm:0.1.1"
+  checksum: 3f7536bc7f57320ab2cf96f8973664bef624710c403357429fbf680a5c3b4843c1dbd389bb43daa6b1f6f1f007bb082f5abcb76bb2b5dc9f421647743b71d3d8
   languageName: node
   linkType: hard
 
@@ -6301,7 +6325,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hookable@npm:5.5.3":
+"hookable@npm:5.5.3, hookable@npm:^5.5.3":
   version: 5.5.3
   resolution: "hookable@npm:5.5.3"
   checksum: 275f4cc84d27f8d48c5a5cd5685b6c0fea9291be9deea5bff0cfa72856ed566abde1dcd8cb1da0f9a70b4da3d7ec0d60dc3554c4edbba647058cc38816eced3d
@@ -6474,6 +6498,7 @@ __metadata:
     "@ianvs/prettier-plugin-sort-imports": "npm:^4.1.1"
     "@next/bundle-analyzer": "npm:canary"
     "@pandacss/dev": "npm:^0.28.0"
+    "@pandacss/eslint-plugin": "npm:^0.0.4"
     "@pandacss/types": "npm:^0.28.0"
     "@park-ui/panda-preset": "npm:^0.31.0"
     "@react-aria/datepicker": "npm:^3.9.1"
@@ -9759,6 +9784,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"synckit@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "synckit@npm:0.9.0"
+  dependencies:
+    "@pkgr/core": "npm:^0.1.0"
+    tslib: "npm:^2.6.2"
+  checksum: b5c1e7c03fefe3d36a9ab4e71dd21859cb32be4138712c31a893382a568fd00efc59ede8f521dd7e53d43a2fea92bdf717e987ea9ed6ad94f97ef28d71d0ba2f
+  languageName: node
+  linkType: hard
+
 "tabbable@npm:^6.2.0":
   version: 6.2.0
   resolution: "tabbable@npm:6.2.0"
@@ -9926,7 +9961,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.0":
+"tslib@npm:^2.4.0, tslib@npm:^2.6.2":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb

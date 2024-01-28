@@ -68,6 +68,7 @@
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@pandacss/dev": "^0.28.0",
+    "@pandacss/eslint-plugin": "^0.0.4",
     "@pandacss/types": "^0.28.0",
     "@park-ui/panda-preset": "^0.31.0",
     "@types/luxon": "^3.4.2",

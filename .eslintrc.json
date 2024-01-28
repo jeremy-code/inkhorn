@@ -4,12 +4,14 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/strict",
     "next/core-web-vitals",
+    "plugin:@pandacss/recommended",
     "plugin:drizzle/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "tsdoc", "drizzle"],
+  "plugins": ["@typescript-eslint", "tsdoc", "@pandacss", "drizzle"],
   "rules": {
-    "tsdoc/syntax": "warn"
+    "tsdoc/syntax": "warn",
+    "@pandacss/no-dynamic-styling": "off"
   },
   "overrides": [
     {
