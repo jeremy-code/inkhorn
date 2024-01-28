@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useEffect, useState, type CSSProperties } from "react";
-import { DateTime, type HourNumbers } from "luxon";
+import React, { useState } from "react";
+import { useLocale } from "@react-aria/i18n";
+import { DateTime, Info, type HourNumbers } from "luxon";
 
 import { Box, GridItem } from "@/lib/styled/jsx";
 import { getPercentage } from "@/utils/common";
-import { getWeekdayOffset } from "@/utils/time";
+import { useInterval } from "@/hooks";
 
 type CurrentTimeProps = {
   startHour: HourNumbers;
@@ -13,35 +14,27 @@ type CurrentTimeProps = {
 };
 
 export const CurrentTime = ({ startHour, endHour }: CurrentTimeProps) => {
-  const [curr, setCurr] = useState(DateTime.now());
+  const { locale } = useLocale();
+  const [curr, setCurr] = useState(DateTime.now().setLocale(locale));
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurr(DateTime.now());
-      // update every minute
-    }, 60 * 1000);
+  // update every minute
+  useInterval(() => setCurr(DateTime.now().setLocale(locale)), 60 * 1000);
 
-    return () => clearInterval(interval);
-  }, []);
+  if (!Info.features().localeWeek) return null;
 
   // time indicator would not be visible since it is outside of the calendar
   if (startHour > curr.hour || endHour < curr.hour) return null;
 
-  const offset = curr.minute / 60;
-
-  // z-index so above any events
-  // visibility hidden so user can interact with events
   return (
     <GridItem
+      // visibility is hidden to prevent empty space overlapping with events
+      // z-index is set to 1 to prevent the indicator from being covered by events
       visibility="hidden"
-      zIndex="2"
-      gridArea="var(--row) / var(--col)"
-      style={
-        {
-          "--row": curr.hour - startHour + 2,
-          "--col": getWeekdayOffset(curr.weekday),
-        } as CSSProperties
-      }
+      zIndex="1"
+      style={{
+        gridRow: curr.hour - startHour + 2,
+        gridColumn: curr.localWeekday,
+      }}
     >
       <Box
         pos="relative"
@@ -50,19 +43,20 @@ export const CurrentTime = ({ startHour, endHour }: CurrentTimeProps) => {
             content: '""',
             visibility: "visible",
             pos: "absolute",
-            bg: "red",
+            // left, right, bottom are set to 0, or full width, bottom aligned
             inset: "auto 0 0",
+            bg: "red",
           },
         }}
         _before={{
           h: "3",
           w: "3",
           rounded: "full",
+          // move left and down to be centered at left bottom corner
           translate: "-50% 50%",
         }}
         _after={{ h: "1px" }}
-        will-change="top"
-        style={{ top: getPercentage(offset) }}
+        style={{ top: getPercentage(curr.minute / 60) }}
       />
     </GridItem>
   );

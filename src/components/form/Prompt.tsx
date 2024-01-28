@@ -19,10 +19,10 @@ type PromptProps<T> = {
  * A wrapper around the Dialog component that handles form submission and error handling. For all
  * errors, a toast notification is shown.
  *
- * @param title The title of the dialog
- * @param description The description of the dialog
- * @param children The form elements
- * @param action The form action (with state)
+ * @param title - The title of the dialog
+ * @param description - The description of the dialog
+ * @param children - The form elements
+ * @param action - The form action (with state)
  */
 export const Prompt = <T,>({ title, description, children, action, ...props }: PromptProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);

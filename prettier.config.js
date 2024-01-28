@@ -11,7 +11,7 @@ module.exports = {
     "^(next/(.*)$)|^(next$)",
     "<THIRD_PARTY_MODULES>",
     "",
-    "^@/(components|lib|utils|interfaces)/(.*)$",
+    "^@/(components|hooks|interfaces|lib|utils)/(.*)$",
     "^@/(.*)$",
     "^[./]",
   ],

@@ -1,4 +1,14 @@
-import { DateTime, Info, InfoUnitOptions, Interval, type WeekdayNumbers } from "luxon";
+import {
+  DateTime,
+  DateTimeJSOptions,
+  Info,
+  Interval,
+  type IntervalMaybeValid,
+  type WeekdayNumbers,
+} from "luxon";
+
+// ISO 8601 weekday numbers, starting with Monday (1) and ending with Sunday (7)
+export const WEEKDAY_NUMBERS: WeekdayNumbers[] = [1, 2, 3, 4, 5, 6, 7];
 
 export const { TIME_SIMPLE } = DateTime;
 export const TIME_NARROW = "h a";
@@ -6,48 +16,69 @@ export const TIME_NARROW = "h a";
 // Given two ISO strings, return an Interval
 export const getInterval = (start: string, end: string) => Interval.fromISO(`${start}/${end}`);
 
-// indexed by 1-7, starting with Monday, based on ISO 8601
-// is own function, since the isoIndex and array index may get confusing
+// Given an ISO weekday number, return the corresponding weekday name
 export const getWeekday = (isoIndex: WeekdayNumbers, ...rest: Parameters<typeof Info.weekdays>) =>
   Info.weekdays(...rest)[isoIndex - 1];
 
-// Given an array of either weekday numbers or weekday names (sorted by ISO index 1-7 or Mon - Sun),
-// return a new array such that the array is sorted by the start of the week (Sunday in the US).
-export const sortWeekdays = <T extends string | WeekdayNumbers>(weekdays: T[]) => {
-  const start = Info.getStartOfWeek();
+/**
+ * Reorders an array of weekdays so that it starts from the weekday specified by the start of the week in the given locale.
+ *
+ * @example
+ * ```
+ * // Returns [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
+ * reorderWeekdaysByStart([Mon, Tue, Wed, Thu, Fri, Sat, Sun], "en-US")
+ * ```
+ *
+ * @typeParam T - The type of the weekday array
+ * @param weekdays - The array of weekdays to reorder (e.g. [Mon, Tue, Wed, Thu, Fri, Sat, Sun] or [1, 2, 3, 4, 5, 6, 7])
+ * @param input - Optional locale input to determine the start of the week
+ * @returns The reordered array of weekdays
+ */
+export const reorderWeekdaysByStart = <T extends string | WeekdayNumbers>(
+  weekdays: T[],
+  input?: Info.LocaleInput
+): T[] => {
+  if (!weekdays.length) return weekdays;
+  if (weekdays.length !== 7) throw new Error("Invalid array length");
 
+  const start = Info.getStartOfWeek(input);
   return [...weekdays.slice(start - 1), ...weekdays.slice(0, start - 1)];
 };
 
-// Return an array of the weekday indices, starting with Monday (1) and ending with Sunday (7)
-export const getWeekdaysIndex = (opts?: InfoUnitOptions) =>
-  Info.weekdays(undefined, opts).map((_, i) => (i + 1) as WeekdayNumbers);
-
-// Given an ISO weekday index, return the weekday index where start of week is 1, and end of week is 7
-export const getWeekdayOffset = (isoIndex: WeekdayNumbers) =>
-  ((isoIndex - Info.getStartOfWeek() + 7) % 7) + 1;
+/**
+ * Converts an ISO weekday number where Monday is 1 and Sunday is 7 to a weekday number where the
+ * start of the week is 1 and the end of the week is 7.
+ *
+ * @example
+ * ```
+ * // Returns 2, since Monday (1) is the 2nd day of the week in the en-US locale
+ * getWeekdayOffset(1, { locale: "en-US" })
+ * ```
+ *
+ * @param isoIndex - The ISO weekday index (1 for Monday, 7 for Sunday).
+ * @param input - Optional locale input to determine the start of the week.
+ * @returns The adjusted weekday index based on the custom start of the week.
+ */
+export const getWeekdayOffset = (isoIndex: WeekdayNumbers, input?: Info.LocaleInput) =>
+  ((isoIndex - Info.getStartOfWeek(input) + 7) % 7) + 1;
 
 /**
- * Given an array of intervals, return an array of DateTime objects from the start to
- * the end of the intervals, padded by an hour on each side.
+ * Returns an array of DateTime objects spaced one hour apart, starting at the start of
+ * the given intervals and ending at the rounded-up end hour of the given intervals.
+ *
+ * @param intervals - The intervals to get the time range of
+ * @returns An array of DateTime objects spaced one hour apart
+ * @throws If the merged interval is invalid
  */
-export const getTimeRange = (intervals: Interval[]) => {
-  // merge overlapping intervals, and combine the first and last interval to
-  // get the full range
-  const merged = Interval.merge(intervals);
-  const [first, last] = [merged.at(0), merged.at(-1)];
+export const hoursFromIntervals = (intervals: IntervalMaybeValid[], opts?: DateTimeJSOptions) => {
+  const merged = intervals.reduce((merged, current) => merged.union(current));
+  if (!merged.isValid) throw new Error("Invalid interval");
 
-  if (!first || !last) throw new Error("Invalid interval");
+  const duration = Math.ceil(merged.toDuration("hours").hours);
 
-  const combinedInterval = first.union(last);
-  if (!combinedInterval.isValid) throw new Error("Invalid interval");
-
-  // pad by an hour on each side
-  const startHour = Math.max(0, combinedInterval.start.hour - 1);
-  const endHour = Math.min(23, combinedInterval.end.hour + 1);
-
-  // create an array of hours from the start to the end
-  return Array.from({ length: endHour - startHour + 1 }, (_, i) =>
-    DateTime.fromObject({ hour: startHour + i })
-  );
+  // length is duration + 1, since labels are rendered at end of grid, meaning
+  // there must be an extra grid row
+  return Array.from({ length: duration + 1 }, (_, i) =>
+    DateTime.fromObject({ hour: merged.start.hour + i }, opts)
+  ).filter((dt): dt is DateTime<true> => dt.isValid);
 };

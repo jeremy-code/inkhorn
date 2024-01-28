@@ -17,9 +17,9 @@ type FormProps<T> = {
  * A wrapper around the native form element that handles form submission and error handling. For
  * all errors, a toast notification is shown.
  *
- * @param children The form elements
- * @param action The form action (with state) that is used in `useFormState()`
- * @param onSubmitSuccess A callback that is called when the form is successfully submitted
+ * @param children - The form elements
+ * @param action - The form action (with state) that is used in `useFormState()`
+ * @param onSubmitSuccess - A callback that is called when the form is successfully submitted
  *                        (i.e. state.status === "ok")
  */
 export const Form = <T,>({ children, action, onSubmitSuccess, ...rest }: FormProps<T>) => {

@@ -1,13 +1,14 @@
-import { Info, type WeekdayNumbers } from "luxon";
+import type { DateTime, WeekdayNumbers } from "luxon";
 
 import { Text } from "@/components/ui";
 import type { Event } from "@/interfaces/time";
 import { Flex, GridItem } from "@/lib/styled/jsx";
 import { hexToRgb, rgbToYIQ } from "@/utils/colors";
 import { getPercentage } from "@/utils/common";
+import { getWeekdayOffset } from "@/utils/time";
 
 type CalendarEventProps = {
-  startHour: number;
+  timeRange: DateTime[];
   weekday: WeekdayNumbers;
 } & Omit<Event, "weekdays">;
 
@@ -15,15 +16,15 @@ export const CalendarEvent = ({
   name,
   interval,
   weekday,
-  startHour,
+  timeRange,
   color,
 }: CalendarEventProps) => {
   const duration = Math.ceil(interval.length("hour"));
   if (!interval.start?.isValid) return;
-  const startOfWeek = Info.getStartOfWeek();
+  const startHour = timeRange[0].hour;
 
   // offset by the start of the week
-  const col = ((weekday - startOfWeek + 7) % 7) + 1;
+  const col = getWeekdayOffset(weekday);
   const row = interval.start.hour - startHour + 2;
   const offset = interval.start.minute / 60;
 

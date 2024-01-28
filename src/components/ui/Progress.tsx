@@ -15,7 +15,7 @@ export interface ProgressProps
   children?: ReactNode;
   /**
    * The type of progress to render.
-   * @default linear
+   * @defaultValue linear
    */
   type?: "linear" | "circular";
 }
