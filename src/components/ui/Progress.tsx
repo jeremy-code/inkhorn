@@ -1,7 +1,7 @@
 import { forwardRef, type ReactNode } from "react";
 import {
   Progress as ArkProgress,
-  type ProgressProps as ArkProgressProps,
+  type ProgressRootProps as ArkProgressProps,
 } from "@ark-ui/react/progress";
 
 import { css, cx } from "@/lib/styled/css";

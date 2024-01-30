@@ -13,9 +13,7 @@ const StaticLayout = ({ children }: { children: ReactNode }) => {
           <FormButton action={signInAction} variant="ghost">
             Login
           </FormButton>
-          <FormButton action={signInAction} colorPalette="primary">
-            Get Started
-          </FormButton>
+          <FormButton action={signInAction}>Get Started</FormButton>
         </HStack>
       </Navbar>
       {children}

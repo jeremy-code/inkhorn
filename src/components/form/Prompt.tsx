@@ -68,7 +68,7 @@ export const Prompt = <T,>({ title, description, children, action, ...props }: P
                 </Dialog.CloseTrigger>
                 {/* Closes Dialog after completion */}
                 {/* FormTarget = "prompt-form" based on <Form /> id prop*/}
-                <SubmitButton w="full" type="submit" formTarget="prompt-form">
+                <SubmitButton w="full" formTarget="prompt-form">
                   Confirm
                 </SubmitButton>
               </Stack>

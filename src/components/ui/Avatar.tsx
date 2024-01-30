@@ -1,7 +1,7 @@
 "use client";
 
 import { forwardRef } from "react";
-import { Avatar as ArkAvatar, type AvatarProps as ArkAvatarProps } from "@ark-ui/react/avatar";
+import { Avatar as ArkAvatar, type AvatarRootProps as ArkAvatarProps } from "@ark-ui/react/avatar";
 import { User } from "lucide-react";
 
 import { css, cx } from "@/lib/styled/css";

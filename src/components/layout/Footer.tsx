@@ -16,12 +16,7 @@ export const Footer = styled((props: HTMLStyledProps<"footer">) => {
   return (
     <styled.footer {...props}>
       {"Made with ❤️ by "}
-      <Link
-        href="https://jeremy.ng"
-        colorPalette="primary"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
+      <Link href="https://jeremy.ng" target="_blank" rel="noreferrer noopener">
         Jeremy
       </Link>
     </styled.footer>

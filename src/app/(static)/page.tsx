@@ -15,7 +15,7 @@ const Home = async () => {
         <Stack gap="2" justify="center">
           <Heading as="h1" textStyle={["4xl", "5xl"]} maxW="15ch">
             {"the next-generation assistant for "}
-            <Text as="span" textGradient="to-r" gradientFrom="primary.6" gradientTo="primary.8">
+            <Text as="span" textGradient="to-r" gradientFrom="accent.8" gradientTo="accent.10">
               students
             </Text>
           </Heading>
@@ -23,7 +23,7 @@ const Home = async () => {
             inkhorn is a free and open-source note-taking and scheduling tool for your classes
           </Text>
           <Stack flexDir="row" mt={8}>
-            <FormButton action={signInAction} size="lg" colorPalette="primary">
+            <FormButton action={signInAction} size="lg">
               Get Started
             </FormButton>
             <FormButton action={signInAction} variant="ghost" size="lg">

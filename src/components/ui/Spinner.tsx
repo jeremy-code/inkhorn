@@ -13,8 +13,6 @@ export const Spinner = ({ isLoading = true, ...props }: SpinnerProps) => {
         // size 6 = 1.5rem = 24px, change height/width with size prop
         size="6"
         animation="spin"
-        // change color with colorPalette prop
-        colorPalette="primary"
         {...props}
       />
     )

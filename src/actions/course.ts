@@ -41,19 +41,14 @@ export const getCourses = unstable_cache(
 );
 
 export const createCourse: StatefulFormAction<InsertCourse | null> = async (_state, formData) => {
-  const user = await getUser();
-  if (!user?.id) return { status: "error", error: { user: ["Not authorized"] }, data: null };
+  const { id: userId } = await getUser();
 
-  const { success, output, issues } = safeParse(insertCourseSchema, {
-    ...parseFormData(formData),
-    userId: user.id,
-  });
+  const res = safeParse(insertCourseSchema, { ...parseFormData(formData), userId });
+  if (!res.success) return { status: "error", error: flatten(res.issues).nested, data: null };
 
-  if (!success) return { status: "error", error: flatten(issues).nested, data: null };
-
-  await db.insert(courses).values(output);
+  await db.insert(courses).values(res.output);
 
   revalidateTag("courses");
 
-  return { status: "ok", data: output };
+  return { status: "ok", data: res.output };
 };

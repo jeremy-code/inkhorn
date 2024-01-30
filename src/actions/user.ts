@@ -12,7 +12,7 @@ export const getUser = cache(async (): Promise<User> => {
 
   if (!session || !session.user || !session.user.id) notFound();
 
-  const userId = session.user.id;
+  const { id: userId } = session.user;
 
   const user = await db.query.users.findFirst({ where: (u, { eq }) => eq(u.id, userId) });
   if (!user) notFound();

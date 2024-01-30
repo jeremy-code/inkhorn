@@ -6,17 +6,7 @@ import { ColorPicker, IconButton, Input, Label, Text, type InputProps } from "@/
 import { HStack, Stack } from "@/lib/styled/jsx";
 import { token } from "@/lib/styled/tokens";
 
-// token() currently returns variable name, not value
-// waiting for panda css to fix this bug
-const presets = [
-  token("colors.primary.light.8"),
-  "#e5484d",
-  "#de51a8",
-  "#6e56cf",
-  "#5b5bd6",
-  "#12a594",
-  "#f76b15",
-];
+const presets = (["jade", "red", "sky", "gold"] as const).map((c) => token(`colors.${c}.light.8`));
 
 type ColorPickerInputProps = {
   label: string;
@@ -24,7 +14,7 @@ type ColorPickerInputProps = {
 
 export const ColorPickerInput = ({ label, ...rest }: ColorPickerInputProps) => {
   return (
-    <ColorPicker.Root defaultValue={token("colors.primary.light.8")}>
+    <ColorPicker.Root defaultValue={presets[0]}>
       {(api) => (
         <>
           <ColorPicker.Label asChild>

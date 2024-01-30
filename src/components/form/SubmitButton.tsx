@@ -7,10 +7,7 @@ import { cva } from "@/lib/styled/css";
 import { styled } from "@/lib/styled/jsx";
 
 const submitButtonLabel = cva({
-  base: {
-    display: "flex",
-    gap: "2",
-  },
+  base: { display: "flex", gap: "2" },
   variants: {
     pending: {
       true: { visibility: "hidden", opacity: 0 },
