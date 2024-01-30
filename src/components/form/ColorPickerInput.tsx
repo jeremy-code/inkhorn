@@ -9,7 +9,7 @@ import { token } from "@/lib/styled/tokens";
 // token() currently returns variable name, not value
 // waiting for panda css to fix this bug
 const presets = [
-  token("colors.primary.3"),
+  token("colors.primary.light.8"),
   "#e5484d",
   "#de51a8",
   "#6e56cf",
@@ -24,7 +24,7 @@ type ColorPickerInputProps = {
 
 export const ColorPickerInput = ({ label, ...rest }: ColorPickerInputProps) => {
   return (
-    <ColorPicker.Root defaultValue={token("colors.primary.3")}>
+    <ColorPicker.Root defaultValue={token("colors.primary.light.8")}>
       {(api) => (
         <>
           <ColorPicker.Label asChild>

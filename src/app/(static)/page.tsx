@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FormButton } from "@/components/form";
 import { Heading, Text } from "@/components/ui";
 import { css } from "@/lib/styled/css";
-import { Grid, Stack, styled } from "@/lib/styled/jsx";
+import { Grid, Stack } from "@/lib/styled/jsx";
 import { container } from "@/lib/styled/patterns";
 import { signInAction } from "@/actions/auth";
 import { heroImage } from "@/assets";
@@ -15,7 +15,7 @@ const Home = async () => {
         <Stack gap="2" justify="center">
           <Heading as="h1" textStyle={["4xl", "5xl"]} maxW="15ch">
             {"the next-generation assistant for "}
-            <Text as="span" bgGradient="textHighlight" bgClip="text" color="transparent">
+            <Text as="span" textGradient="to-r" gradientFrom="primary.6" gradientTo="primary.8">
               students
             </Text>
           </Heading>
@@ -39,25 +39,6 @@ const Home = async () => {
           className={css({ mx: "auto", w: "auto", hideBelow: "md" })}
         />
       </Grid>
-      {/* Gradient underneath hero */}
-      <styled.div
-        pos="absolute"
-        top="-80"
-        zIndex="hide"
-        overflow="hidden"
-        aria-hidden="true"
-        filter="auto"
-        blur="3xl"
-      >
-        <styled.div
-          pos="relative"
-          aspectRatio="wide"
-          w={["full", "2xl", "6xl"]}
-          bgGradient="hero"
-          opacity="0.2"
-          clipPath="polygon(74% 44%, 100% 62%, 98% 27%, 86% 0%, 81% 2%, 73% 33%, 60% 62%, 52% 68%, 48% 58%, 45% 35%, 28% 77%, 0% 65%, 18% 100%, 28% 77%, 76% 98%, 74% 44%)"
-        />
-      </styled.div>
     </main>
   );
 };

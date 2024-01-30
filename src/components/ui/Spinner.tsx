@@ -9,7 +9,7 @@ export const Spinner = ({ isLoading = true, ...props }: SpinnerProps) => {
     isLoading && (
       <Circle
         border="4px solid token(colors.gray.4)"
-        borderTopColor="colorPalette.6"
+        borderTopColor="colorPalette.8"
         // size 6 = 1.5rem = 24px, change height/width with size prop
         size="6"
         animation="spin"
