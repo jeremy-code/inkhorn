@@ -2,7 +2,7 @@ import React, { type ReactNode } from "react";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 
-import { Analytics } from "@/components/misc";
+import { Analytics, AppProvider } from "@/components/misc";
 
 import "./globals.css";
 
@@ -35,9 +35,15 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <html lang="en" className={outfit.variable}>
+    /**
+     * @remarks
+     * suppressHydrationWarning is necessary since html element is updated by next-themes for
+     * dark mode -- property only applies one level deep, so hydration warnings won't be blocked
+     * on children elements
+     */
+    <html lang="en" className={outfit.variable} suppressHydrationWarning>
       <body>
-        {children}
+        <AppProvider>{children}</AppProvider>
         <Analytics />
       </body>
     </html>

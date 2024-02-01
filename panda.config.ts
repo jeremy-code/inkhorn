@@ -12,6 +12,7 @@ export default defineConfig({
   importMap: "@/lib/styled",
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
   exclude: [],
+  conditions: { light: "[data-theme=light] &", dark: "[data-theme=dark] &" },
   globalCss: {
     "html, body": { h: "full" },
     body: { display: "flex", flexDir: "column" },
