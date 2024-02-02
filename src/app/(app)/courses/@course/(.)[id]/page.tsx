@@ -27,7 +27,7 @@ const CoursePage = async ({ params }: CoursePageProps) => {
 
   return (
     <Page minW="lg">
-      <Page.Heading>
+      <Page.Header>
         <HStack>
           <BackButton />
           <Heading>{name}</Heading>
@@ -43,7 +43,7 @@ const CoursePage = async ({ params }: CoursePageProps) => {
           <Icon name="Trash" />
           Delete
         </FormButton>
-      </Page.Heading>
+      </Page.Header>
       <VStack p={4} alignItems="normal">
         <Card.Title>{name}</Card.Title>
         <Text fontSize="sm" color="fg.muted">

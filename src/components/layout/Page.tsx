@@ -12,7 +12,7 @@ export const Page = ({ children, ...rest }: PageProps) => {
   );
 };
 
-const PageHeading = ({ children, ...rest }: PageProps) => {
+const PageHeader = ({ children, ...rest }: PageProps) => {
   return (
     <Flex h="16" p="4" borderBottom="muted" justify="space-between" align="center" {...rest}>
       {children}
@@ -20,4 +20,4 @@ const PageHeading = ({ children, ...rest }: PageProps) => {
   );
 };
 
-Page.Heading = PageHeading;
+Page.Header = PageHeader;

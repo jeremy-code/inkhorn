@@ -8,9 +8,9 @@ export const metadata: Metadata = { title: "dashboard" };
 const DashboardPage = () => {
   return (
     <Page>
-      <Page.Heading>
+      <Page.Header>
         <Heading fontWeight="normal">Dashboard</Heading>
-      </Page.Heading>
+      </Page.Header>
     </Page>
   );
 };

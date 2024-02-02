@@ -14,9 +14,9 @@ const SchedulePage = async () => {
 
   return (
     <Page>
-      <Page.Heading>
+      <Page.Header>
         <Heading fontWeight="normal">Schedule</Heading>
-      </Page.Heading>
+      </Page.Header>
       <Calendar m="4" events={events} />
     </Page>
   );

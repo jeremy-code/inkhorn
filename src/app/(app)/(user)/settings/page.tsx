@@ -10,9 +10,9 @@ export const metadata: Metadata = { title: "settings" };
 const SettingsPage = () => {
   return (
     <Page>
-      <Page.Heading>
+      <Page.Header>
         <Heading fontWeight="normal">Settings</Heading>
-      </Page.Heading>
+      </Page.Header>
       <Box>
         <ToggleDarkMode />
       </Box>

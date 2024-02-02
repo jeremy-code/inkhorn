@@ -5,9 +5,9 @@ import { styled } from "@/lib/styled/jsx";
 const Loading = () => {
   return (
     <Page>
-      <Page.Heading>
+      <Page.Header>
         <Heading fontWeight="normal">Notes</Heading>
-      </Page.Heading>
+      </Page.Header>
       <styled.div m="auto">
         <Spinner />
       </styled.div>

@@ -12,9 +12,9 @@ const Editor = dynamic(() => import("@/components/notes/Editor"));
 const NotesPage = () => {
   return (
     <Page>
-      <Page.Heading>
+      <Page.Header>
         <Heading fontWeight="normal">Notes</Heading>
-      </Page.Heading>
+      </Page.Header>
       <Toolbar />
       <Editor />
     </Page>

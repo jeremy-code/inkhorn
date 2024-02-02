@@ -8,9 +8,9 @@ export const metadata: Metadata = { title: "profile" };
 const ProfilePage = () => {
   return (
     <Page>
-      <Page.Heading>
+      <Page.Header>
         <Heading fontWeight="normal">Profile</Heading>
-      </Page.Heading>
+      </Page.Header>
     </Page>
   );
 };

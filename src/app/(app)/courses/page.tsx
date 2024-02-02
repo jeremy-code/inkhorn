@@ -14,12 +14,12 @@ const CoursesPage = async () => {
 
   return (
     <Page>
-      <Page.Heading>
+      <Page.Header>
         <Heading fontWeight="normal">Courses</Heading>
         <Prompt title="Create New Course" action={createCourse}>
           <CourseForm />
         </Prompt>
-      </Page.Heading>
+      </Page.Header>
       <Flex flexDir="column" overflowY="auto" p="3">
         {courses.map((course) => (
           <Course {...course} key={course.id} />
