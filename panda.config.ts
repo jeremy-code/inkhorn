@@ -20,6 +20,7 @@ export default defineConfig({
   },
   theme: {
     extend: {
+      recipes: { button: { jsx: ["Button", "SubmitButton", "FormButton"] } },
       semanticTokens: {
         colors: { bg: { canvas: { value: "{colors.bg.default}" } } },
       },
@@ -29,7 +30,6 @@ export default defineConfig({
           {}
         ),
       },
-      recipes: { button: { jsx: ["Button", "SubmitButton", "FormButton"] } },
     },
   },
   utilities: {

@@ -22,6 +22,7 @@ export * from "./IconButton";
 export * from "./Input";
 export * from "./Label";
 export * from "./Progress";
+export * from "./Skeleton";
 
 // Contextful Park UI components
 export * as Card from "./Card";
