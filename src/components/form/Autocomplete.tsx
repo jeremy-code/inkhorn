@@ -61,7 +61,7 @@ export const Autocomplete = ({ items, label, placeholder, ...rest }: Autocomplet
             <VirtualizedList
               count={items.length}
               estimateSize={() => 40}
-              listItems={(key, index) => (
+              listItems={({ key, index }) => (
                 <AutocompleteItem key={`${key}-item`} item={items[index]} />
               )}
             />

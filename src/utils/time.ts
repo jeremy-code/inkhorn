@@ -1,8 +1,8 @@
 import {
   DateTime,
-  DateTimeJSOptions,
   Info,
   Interval,
+  type DateTimeJSOptions,
   type IntervalMaybeValid,
   type WeekdayNumbers,
 } from "luxon";

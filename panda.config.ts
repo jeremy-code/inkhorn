@@ -11,13 +11,12 @@ export default defineConfig({
   minify: true,
   importMap: "@/lib/styled",
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
-  exclude: [],
-  conditions: { light: "[data-theme=light] &", dark: "[data-theme=dark] &" },
+  conditions: { extend: { light: "[data-theme=light] &", dark: "[data-theme=dark] &" } },
   globalCss: {
     "html, body": { h: "full" },
     body: { display: "flex", flexDir: "column" },
     "body > *": { flex: "initial" },
-    "header, footer": { flexShrink: 0 },
+    "header, footer": { flex: "none" },
   },
   theme: {
     extend: {

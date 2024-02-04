@@ -1,4 +1,12 @@
-export const NAV_ITEMS = [
+import type { IconProps } from "@/components/misc";
+
+type NavItem = {
+  label: string;
+  href: string;
+  icon: IconProps["name"];
+};
+
+export const NAV_ITEMS: NavItem[] = [
   {
     label: "Dashboard",
     href: "/dashboard",
@@ -24,4 +32,4 @@ export const NAV_ITEMS = [
     href: "/settings",
     icon: "Settings",
   },
-] as const;
+];

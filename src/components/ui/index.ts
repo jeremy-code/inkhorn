@@ -4,8 +4,10 @@ export * from "./Spacer";
 export * from "./ToastComponent";
 export * from "./HorizontalList";
 
-// Park UI components
-// see https://park-ui.com/
+/**
+ * Park UI components
+ * see {@link https://park-ui.com/}
+ */
 
 // Typography
 export * from "./Heading";
@@ -30,5 +32,6 @@ export * as Dialog from "./Dialog";
 export * as Menu from "./Menu";
 export * as Popover from "./Popover";
 export * as Splitter from "./Splitter";
+export * as Select from "./Select";
 export * as Toast from "./Toast";
 export * as ToggleGroup from "./ToggleGroup";

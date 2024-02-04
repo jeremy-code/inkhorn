@@ -4,11 +4,9 @@ type RGB = {
   b: number;
 };
 
-export function rgbToYIQ({ r, g, b }: RGB): number {
-  return (r * 299 + g * 587 + b * 114) / 1000;
-}
+export const rgbToYIQ = ({ r, g, b }: RGB) => (r * 299 + g * 587 + b * 114) / 1000;
 
-export function hexToRgb(hex: string): RGB {
+export const hexToRgb = (hex: string): RGB => {
   const bigint = parseInt(hex.slice(1), 16);
 
   return {
@@ -16,7 +14,7 @@ export function hexToRgb(hex: string): RGB {
     g: (bigint >> 8) & 255,
     b: bigint & 255,
   };
-}
+};
 
 export const rgbToHex = ({ r, g, b }: RGB) =>
   `#${[r, g, b].map((x) => x.toString(16).padStart(2, "0")).join("")}`;

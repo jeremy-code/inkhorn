@@ -1,7 +1,7 @@
 import type { DateTimeMaybeValid } from "luxon";
 
 import { Text } from "@/components/ui";
-import { Grid, GridProps } from "@/lib/styled/jsx";
+import { Grid, type GridProps } from "@/lib/styled/jsx";
 import { TIME_NARROW } from "@/utils/time";
 
 type CalendarTimesProps = {

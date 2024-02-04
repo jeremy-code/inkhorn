@@ -75,10 +75,10 @@ export const Sidebar = ({ children, ...rest }: ComponentProps<typeof Root>) => {
       <Box
         display={open ? "none" : "block"}
         // Width is 39px since the trigger is 40px wide and absolutely positioned (so on top of border of 1px width)
-        w="[39px]"
+        w="39px"
         h="16"
         borderBottom="muted"
-        flexShrink="0"
+        flex="none"
       />
     </>
   );

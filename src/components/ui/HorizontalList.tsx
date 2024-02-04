@@ -1,12 +1,7 @@
 import { cva } from "@/lib/styled/css";
 import { styled } from "@/lib/styled/jsx";
 
-const horizontalList = cva({
-  base: {
-    listStyle: "none",
-    display: "inline",
-  },
-});
+const horizontalList = cva({ base: { listStyle: "none", display: "inline" } });
 
 const horizontalListItem = cva({
   base: {

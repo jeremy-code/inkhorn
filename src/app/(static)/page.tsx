@@ -13,13 +13,13 @@ const Home = async () => {
     <main className={container({ h: "full", w: "full" })}>
       <Grid h="full" columns={[1, null, 2]} alignContent="center">
         <Stack gap="2" justify="center">
-          <Heading as="h1" textStyle={["4xl", "5xl"]} maxW="15ch">
+          <Heading as="h1" textStyle={["4xl", "5xl"]} textWrap="balance">
             {"the next-generation assistant for "}
             <Text as="span" textGradient="to-r" gradientFrom="accent.8" gradientTo="accent.10">
               students
             </Text>
           </Heading>
-          <Text textStyle={["lg", "xl"]} maxW="35ch">
+          <Text color="fg.subtle" textStyle={["lg", "xl"]} textWrap="balance">
             inkhorn is a free and open-source note-taking and scheduling tool for your classes
           </Text>
           <Stack flexDir="row" mt={8}>
