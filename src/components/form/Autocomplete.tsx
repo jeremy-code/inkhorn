@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 
 import { VirtualizedList } from "@/components/misc";
-import { Combobox, IconButton, Input, Label } from "@/components/ui";
+import { Combobox, IconButton, Input } from "@/components/ui";
 
 export type Item = {
   label: string;
@@ -32,12 +32,7 @@ export const Autocomplete = ({ items, label, placeholder, ...rest }: Autocomplet
 
   return (
     <Combobox.Root {...rest} onOpenChange={(e) => setIsOpen(e.open)} items={items}>
-      <Combobox.Label asChild>
-        {/* Since Combobox.Label has its own styles, overwrite to match with other labels */}
-        <Label color="fg.muted" fontSize="md" fontWeight="normal">
-          {label}
-        </Label>
-      </Combobox.Label>
+      <Combobox.Label>{label}</Combobox.Label>
       <Combobox.Control>
         <Combobox.Input placeholder={placeholder} asChild>
           <Input />

@@ -1,11 +1,6 @@
-import {
-  AsyncAutocomplete,
-  ColorPickerInput,
-  TimeField,
-  WeekDaysSelector,
-} from "@/components/form";
-import { Input, Label } from "@/components/ui";
-import { Box, HStack, Stack, type StackProps } from "@/lib/styled/jsx";
+import { AsyncAutocomplete, ColorPickerInput, TimeField, WeekDaysInput } from "@/components/form";
+import { FormLabel, Input } from "@/components/ui";
+import { HStack, Stack, type StackProps } from "@/lib/styled/jsx";
 import { fetchSubjects } from "@/actions/subject";
 
 export const CourseForm = (props: StackProps) => {
@@ -15,11 +10,11 @@ export const CourseForm = (props: StackProps) => {
   };
 
   return (
-    <Stack gap={4} {...props}>
-      <Box>
-        <Label>Course Name</Label>
+    <Stack gap={5} {...props}>
+      <Stack gap="1.5">
+        <FormLabel>Course Name</FormLabel>
         <Input placeholder="Course Name" type="text" name="name" />
-      </Box>
+      </Stack>
 
       <AsyncAutocomplete
         label="Subject"
@@ -28,10 +23,7 @@ export const CourseForm = (props: StackProps) => {
         name="subject"
       />
 
-      <Box>
-        <Label mt={2}>Schedule</Label>
-        <WeekDaysSelector />
-      </Box>
+      <WeekDaysInput label="Schedule" />
 
       <HStack>
         <TimeField options={{ label: "From" }} w="fit-content" name="startTime" />

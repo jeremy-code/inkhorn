@@ -1,4 +1,3 @@
-import React, { type CSSProperties } from "react";
 import { Info } from "luxon";
 
 import { CalendarEvent, CalendarHeader, CalendarTimes, CurrentTime } from "@/components/calendar";
@@ -25,10 +24,10 @@ export const Calendar = ({ events, ...rest }: CalendarProps) => {
         // using outline here since border would misalign the grid
         outline="muted"
         grid="[main-start] repeat(var(--rows), token(sizes.12)) [main-end] / [main-start] repeat(7, 1fr) [main-end]"
-        style={{ "--rows": timeRange.length } as CSSProperties}
+        style={{ "--rows": timeRange.length }}
       >
         {/* Indicates current time */}
-        <CurrentTime startHour={timeRange[0].hour} endHour={timeRange.at(-1)?.hour ?? 1} />
+        <CurrentTime startHour={timeRange[0].hour} endHour={timeRange[timeRange.length - 1].hour} />
 
         {/* Events */}
         {events.map((event) =>

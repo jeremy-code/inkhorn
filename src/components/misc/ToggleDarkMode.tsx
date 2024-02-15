@@ -4,13 +4,13 @@ import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { Select } from "@/components/ui";
-import { useMounted } from "@/hooks/useMounted";
+import { useHydrated } from "@/hooks";
 
 export const ToggleDarkMode = () => {
-  const mounted = useMounted();
   const { setTheme, theme, themes } = useTheme();
+  const hydrated = useHydrated();
 
-  if (!mounted || !theme) return null;
+  if (!hydrated || !theme) return null;
 
   return (
     <Select.Root

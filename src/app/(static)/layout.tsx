@@ -8,7 +8,7 @@ import { signInAction } from "@/actions/auth";
 const StaticLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <Navbar justify="spaced">
+      <Navbar>
         <HStack>
           <FormButton action={signInAction} variant="ghost">
             Login

@@ -1,11 +1,11 @@
-import type { DateTimeMaybeValid } from "luxon";
+import type { DateTime } from "luxon";
 
 import { Text } from "@/components/ui";
 import { Grid, type GridProps } from "@/lib/styled/jsx";
 import { TIME_NARROW } from "@/utils/time";
 
 type CalendarTimesProps = {
-  timeRange: DateTimeMaybeValid[];
+  timeRange: DateTime[];
 } & GridProps;
 
 export const CalendarTimes = ({ timeRange, ...rest }: CalendarTimesProps) => {

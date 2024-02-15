@@ -3,6 +3,7 @@
 import React, { useState, type ComponentProps } from "react";
 import { PanelLeftClose, PanelLeftOpen } from "lucide-react";
 
+import { Presence } from "@/components/ui";
 import { createStyleContext } from "@/lib/styled";
 import { sva } from "@/lib/styled/css";
 import { Box } from "@/lib/styled/jsx";
@@ -27,6 +28,7 @@ const sidebar = sva({
       right: "0",
       translate: "auto",
       bg: { base: "bg.subtle", _hover: "bg.muted" },
+      color: "fg.muted",
     },
   },
   variants: {
@@ -72,8 +74,8 @@ export const Sidebar = ({ children, ...rest }: ComponentProps<typeof Root>) => {
         {children}
       </Root>
       {/* Filler item to prevent Trigger overlapping with other items due to being absolutely positioned */}
-      <Box
-        display={open ? "none" : "block"}
+      <Presence
+        present={!open}
         // Width is 39px since the trigger is 40px wide and absolutely positioned (so on top of border of 1px width)
         w="39px"
         h="16"

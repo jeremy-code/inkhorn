@@ -1,5 +1,5 @@
 import { Link } from "@/components/ui";
-import { cva, type RecipeVariantProps } from "@/lib/styled/css";
+import { cva } from "@/lib/styled/css";
 import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
 
 const footer = cva({
@@ -23,4 +23,4 @@ export const Footer = styled((props: HTMLStyledProps<"footer">) => {
   );
 }, footer);
 
-export type FooterProps = HTMLStyledProps<typeof Footer> & RecipeVariantProps<typeof footer>;
+export type FooterProps = HTMLStyledProps<typeof Footer>;

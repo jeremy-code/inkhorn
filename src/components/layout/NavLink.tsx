@@ -8,7 +8,7 @@ import { splitCssProps } from "@/lib/styled/jsx";
 
 const navLink = cva({
   base: {
-    linkDecor: false,
+    underline: "none",
     fontWeight: "normal",
     rounded: "l2",
     px: 3,

@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Course, CourseForm } from "@/components/course";
 import { Prompt } from "@/components/form";
 import { Page } from "@/components/layout";
-import { Heading } from "@/components/ui";
 import { Flex } from "@/lib/styled/jsx";
 import { createCourse, getCourses } from "@/actions/course";
 
@@ -14,8 +13,7 @@ const CoursesPage = async () => {
 
   return (
     <Page>
-      <Page.Header>
-        <Heading fontWeight="normal">Courses</Heading>
+      <Page.Header heading="Courses">
         <Prompt title="Create New Course" action={createCourse}>
           <CourseForm />
         </Prompt>

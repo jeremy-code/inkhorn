@@ -1,5 +1,5 @@
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
-import NextAuth, { type Session, type User } from "next-auth";
+import NextAuth from "next-auth";
 // Providers
 import Discord from "next-auth/providers/discord";
 import GitHub from "next-auth/providers/github";
@@ -17,8 +17,8 @@ export const {
   providers: [GitHub, Discord, Google],
   callbacks: {
     // Add the User ID from the database to the session's user object
-    async session({ session, user }: { session: Session; user?: User }) {
-      if (session.user && user) {
+    async session({ session, user }) {
+      if (session.user) {
         session.user.id = user.id;
       }
       return session;

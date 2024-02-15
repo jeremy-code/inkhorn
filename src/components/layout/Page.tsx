@@ -1,10 +1,7 @@
-import React, { type ReactNode } from "react";
+import { Heading } from "@/components/ui";
+import { Flex, HStack, type FlexProps, type HstackProps } from "@/lib/styled/jsx";
 
-import { Flex, type FlexProps } from "@/lib/styled/jsx";
-
-type PageProps = { children?: ReactNode } & FlexProps;
-
-export const Page = ({ children, ...rest }: PageProps) => {
+export const Page = ({ children, ...rest }: FlexProps) => {
   return (
     <Flex w="full" h="full" flexDir="column" {...rest}>
       {children}
@@ -12,11 +9,12 @@ export const Page = ({ children, ...rest }: PageProps) => {
   );
 };
 
-const PageHeader = ({ children, ...rest }: PageProps) => {
+const PageHeader = ({ children, heading, ...rest }: { heading?: string } & HstackProps) => {
   return (
-    <Flex h="16" p="4" borderBottom="muted" justify="space-between" align="center" {...rest}>
+    <HStack h="16" p="4" borderBottom="muted" justify="space-between" {...rest}>
+      {heading && <Heading>{heading}</Heading>}
       {children}
-    </Flex>
+    </HStack>
   );
 };
 

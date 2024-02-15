@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 
 import { Autocomplete, Item, type AutocompleteProps } from "@/components/form";
 import { debounce } from "@/utils/common";
@@ -16,14 +16,18 @@ type AsyncAutocompleteProps = {
 export const AsyncAutocomplete = ({ fetchItems, ...rest }: AsyncAutocompleteProps) => {
   const [items, setItems] = useState([LOADING_ITEM]);
 
-  const handleChange = debounce(
-    async ({ value }: { value: string }) => {
-      setItems([LOADING_ITEM]);
-      const items = await fetchItems(value);
-      setItems(items.length ? items : [NO_RESULTS_ITEM]);
-    },
-    50,
-    false
+  const handleChange = useMemo(
+    () =>
+      debounce(
+        async ({ value }: { value: string }) => {
+          setItems([LOADING_ITEM]);
+          const items = await fetchItems(value);
+          setItems(items.length ? items : [NO_RESULTS_ITEM]);
+        },
+        50,
+        false
+      ),
+    [fetchItems]
   );
 
   return (

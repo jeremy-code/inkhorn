@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, type CSSProperties, type HTMLAttributes } from "react";
+import React, { useCallback, useRef, type HTMLAttributes } from "react";
 import { useVirtualizer, type VirtualItem } from "@tanstack/react-virtual";
 
 import { css, cx } from "@/lib/styled/css";
@@ -28,7 +28,7 @@ export const VirtualizedList = styled(({ listItems, className, ...rest }: Virtua
             h={`${item.size}px`}
             translate="auto"
             // Panda CSS won't know the the number of pixels during runtime, so we need to use CSS variables
-            style={{ "--translate-y": `${item.start}px` } as CSSProperties}
+            style={{ "--translate-y": `${item.start}px` }}
           >
             {listItems(item)}
           </styled.div>

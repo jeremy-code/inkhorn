@@ -5,18 +5,19 @@ export default defineConfig({
   presets: [
     "@pandacss/preset-panda",
     "@park-ui/panda-preset",
-    createPreset({ accentColor: "jade", grayColor: "sage" }),
+    createPreset({ accentColor: "jade", grayColor: "sage", borderRadius: "md" }),
   ],
   preflight: true,
   minify: true,
   importMap: "@/lib/styled",
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
-  conditions: { extend: { light: "[data-theme=light] &", dark: "[data-theme=dark] &" } },
   globalCss: {
-    "html, body": { h: "full" },
-    body: { display: "flex", flexDir: "column" },
-    "body > *": { flex: "initial" },
-    "header, footer": { flex: "none" },
+    extend: {
+      html: { h: "full", "--global-font-body": "{fonts.sans}" },
+      body: { h: "full", display: "flex", flexDir: "column" },
+      "body > *": { flex: "1 0 auto" },
+      "header, footer": { flex: "none" },
+    },
   },
   theme: {
     extend: {
@@ -24,20 +25,31 @@ export default defineConfig({
       semanticTokens: {
         colors: { bg: { canvas: { value: "{colors.bg.default}" } } },
       },
+      slotRecipes: {
+        // for some reason, the default font color here is "fg.muted", overriding it to "fg.default"
+        splitter: { base: { panel: { color: "fg.default" } } },
+      },
       tokens: {
         borders: ["default", "muted", "subtle", "disabled", "outlined"].reduce(
           (acc, border) => ({ ...acc, [border]: { value: `1px solid {colors.border.${border}}` } }),
           {}
         ),
+        fonts: { sans: { value: "{fonts.outfit}, var(--font-fallback)" } },
       },
     },
   },
   utilities: {
     extend: {
-      linkDecoration: {
-        shorthand: "linkDecor",
-        values: { type: "boolean" },
-        transform: (value: boolean) => (value ? {} : { textDecorationLine: "none" }),
+      underline: {
+        className: "underline",
+        shorthand: "ul",
+        values: ["always", "hover", "none"],
+        transform: (value: string) =>
+          ({
+            always: { textDecoration: "underline" },
+            none: { textDecoration: "none" },
+            hover: {},
+          })[value],
       },
     },
   },

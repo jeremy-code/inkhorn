@@ -7,7 +7,9 @@ import { ThemeProvider } from "next-themes";
 export const AppProvider = ({ children }: { children?: ReactNode }) => {
   return (
     <I18nProvider>
-      <ThemeProvider defaultTheme="light">{children}</ThemeProvider>
+      <ThemeProvider attribute="class" defaultTheme="light">
+        {children}
+      </ThemeProvider>
     </I18nProvider>
   );
 };

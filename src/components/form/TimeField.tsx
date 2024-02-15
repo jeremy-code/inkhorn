@@ -6,7 +6,7 @@ import { useLocale } from "@react-aria/i18n";
 import { useTimeFieldState, type TimeFieldStateOptions } from "@react-stately/datepicker";
 
 import { DateSegment } from "@/components/form";
-import { Label } from "@/components/ui";
+import { FormLabel } from "@/components/ui";
 import { cx, sva } from "@/lib/styled/css";
 import { styled, type HTMLStyledProps } from "@/lib/styled/jsx";
 
@@ -27,6 +27,7 @@ const timeField = sva({
         shadow: "0 0 0 1px var(--shadow-color)",
         shadowColor: "colorPalette.default",
       },
+      colorPalette: "accent",
     },
     input: {
       srOnly: true,
@@ -53,7 +54,7 @@ export const TimeField = styled(({ options, className, ...rest }: UnstyledTimeFi
   return (
     <>
       <div className={cx(classes.root, className)}>
-        <Label {...labelProps}>{options.label}</Label>
+        <FormLabel {...labelProps}>{options.label}</FormLabel>
         <div {...fieldProps} ref={ref} className={classes.field}>
           {state.segments.map((segment, i) => (
             <DateSegment key={`${i}-segment`} segment={segment} state={state} />

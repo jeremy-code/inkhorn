@@ -6,7 +6,7 @@ import { Analytics, AppProvider } from "@/components/misc";
 
 import "./globals.css";
 
-const outfit = Outfit({ weight: "variable", subsets: ["latin"], variable: "--global-font-body" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--fonts-outfit" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://inkhorn.io"),
@@ -37,7 +37,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     /**
      * @remarks
-     * suppressHydrationWarning is necessary since html element is updated by next-themes for
+     * `suppressHydrationWarning` is necessary since html element is updated by next-themes for
      * dark mode -- property only applies one level deep, so hydration warnings won't be blocked
      * on children elements
      */

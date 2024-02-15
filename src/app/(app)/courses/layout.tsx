@@ -15,16 +15,9 @@ const CoursesLayout = ({ children, course }: { children: ReactNode; course: Reac
   return (
     <Splitter.Root
       defaultSize={[
-        {
-          id: "courses",
-          size: 40,
-        },
-        {
-          id: "course",
-          size: 60,
-        },
+        { id: "courses", size: 40 },
+        { id: "course", size: 60 },
       ]}
-      overflow="visible!"
     >
       <Splitter.Panel id="courses" overflow="visible!" borderRight="muted!" border="none">
         {children}

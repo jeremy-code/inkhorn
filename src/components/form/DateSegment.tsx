@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef } from "react";
 import { useDateSegment } from "@react-aria/datepicker";
 import type { DateFieldState, DateSegment as Segment } from "@react-stately/datepicker";

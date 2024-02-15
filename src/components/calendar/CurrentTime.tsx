@@ -18,7 +18,7 @@ export const CurrentTime = ({ startHour, endHour }: CurrentTimeProps) => {
   const [curr, setCurr] = useState(DateTime.now().setLocale(locale));
 
   // update every minute
-  useInterval(() => setCurr(DateTime.now().setLocale(locale)), 60 * 1000);
+  useInterval(() => setCurr(DateTime.local({ locale })), 60 * 1000);
 
   if (!Info.features().localeWeek) return null;
 
@@ -28,9 +28,9 @@ export const CurrentTime = ({ startHour, endHour }: CurrentTimeProps) => {
   return (
     <GridItem
       // visibility is hidden to prevent empty space overlapping with events
-      // z-index is set to 1 to prevent the indicator from being covered by events
       visibility="hidden"
-      zIndex="1"
+      // z-index is set to prevent the indicator from being covered by events
+      zIndex="docked"
       style={{
         gridRow: curr.hour - startHour + 2,
         gridColumn: curr.localWeekday,
@@ -39,7 +39,7 @@ export const CurrentTime = ({ startHour, endHour }: CurrentTimeProps) => {
       <Box
         pos="relative"
         css={{
-          "&:before, &:after": {
+          "&::before, &::after": {
             content: '""',
             visibility: "visible",
             pos: "absolute",

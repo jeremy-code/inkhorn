@@ -39,12 +39,12 @@ const ProfilePopover = async () => {
               <ProfileInfo />
             </HStack>
           </Popover.Title>
-          <Link href="/profile" linkDecor={false}>
+          <Link href="/profile" underline="none">
             <Button variant="ghost" w="full">
               Profile
             </Button>
           </Link>
-          <Link href="/settings" linkDecor={false}>
+          <Link href="/settings" underline="none">
             <Button variant="ghost" w="full">
               Settings
             </Button>

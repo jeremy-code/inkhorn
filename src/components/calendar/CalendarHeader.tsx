@@ -7,7 +7,7 @@ export const CalendarHeader = (props: GridProps) => {
   return (
     <Grid columns={7} gap="1px" {...props}>
       {reorderWeekdaysByStart(Info.weekdays("short")).map((day) => (
-        <GridItem key={`${day}`} textAlign="center">
+        <GridItem key={day} textAlign="center">
           {day}
         </GridItem>
       ))}

@@ -1,3 +1,5 @@
+import { Presence } from "@ark-ui/react";
+
 import { Circle, type CircleProps } from "@/lib/styled/jsx";
 
 export type SpinnerProps = {
@@ -6,7 +8,7 @@ export type SpinnerProps = {
 
 export const Spinner = ({ isLoading = true, ...props }: SpinnerProps) => {
   return (
-    isLoading && (
+    <Presence present={isLoading} asChild>
       <Circle
         border="4px solid token(colors.gray.4)"
         borderTopColor="colorPalette.8"
@@ -15,6 +17,6 @@ export const Spinner = ({ isLoading = true, ...props }: SpinnerProps) => {
         animation="spin"
         {...props}
       />
-    )
+    </Presence>
   );
 };

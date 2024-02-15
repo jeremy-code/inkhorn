@@ -18,7 +18,7 @@ export const SidebarContent = () => {
     <>
       {/* logo */}
       <header className={flex({ h: 16, p: 4, justify: "center", borderBottom: "muted" })}>
-        <Link href="/dashboard" fontWeight="medium" fontSize="lg" linkDecor={false}>
+        <Link href="/dashboard" fontWeight="medium" fontSize="lg" underline="none">
           <Image src={logo} alt="inkhorn logo" height={16} style={{ width: "auto" }} priority />
           <SidebarAddon>inkhorn</SidebarAddon>
         </Link>

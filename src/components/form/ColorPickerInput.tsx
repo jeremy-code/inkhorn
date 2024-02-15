@@ -2,11 +2,12 @@
 
 import { Pipette } from "lucide-react";
 
-import { ColorPicker, IconButton, Input, Label, Text, type InputProps } from "@/components/ui";
+import { ColorPicker, IconButton, Input, Text, type InputProps } from "@/components/ui";
 import { HStack, Stack } from "@/lib/styled/jsx";
 import { token } from "@/lib/styled/tokens";
 
-const presets = (["jade", "red", "sky", "gold"] as const).map((c) => token(`colors.${c}.light.8`));
+const BASE_COLORS = ["purple", "pink", "rose", "blue"] as const;
+const presets = [token("colors.jade.light.8"), ...BASE_COLORS.map((c) => token(`colors.${c}.500`))];
 
 type ColorPickerInputProps = {
   label: string;
@@ -17,12 +18,7 @@ export const ColorPickerInput = ({ label, ...rest }: ColorPickerInputProps) => {
     <ColorPicker.Root defaultValue={presets[0]}>
       {(api) => (
         <>
-          <ColorPicker.Label asChild>
-            {/* Since ColorPicker.Label has its own styles, overwrite to match with other labels */}
-            <Label color="fg.muted" fontSize="md" fontWeight="normal">
-              {label}
-            </Label>
-          </ColorPicker.Label>
+          <ColorPicker.Label>{label}</ColorPicker.Label>
           <ColorPicker.Control>
             <ColorPicker.ChannelInput channel="hex" asChild>
               <Input {...rest} />
@@ -63,8 +59,8 @@ export const ColorPickerInput = ({ label, ...rest }: ColorPickerInputProps) => {
                     Saved Colors
                   </Text>
                   <ColorPicker.SwatchGroup>
-                    {presets.map((color, id) => (
-                      <ColorPicker.SwatchTrigger key={id} value={color}>
+                    {presets.map((color, i) => (
+                      <ColorPicker.SwatchTrigger key={i} value={color}>
                         <ColorPicker.Swatch value={color} />
                       </ColorPicker.SwatchTrigger>
                     ))}
