@@ -2,7 +2,7 @@ import type { IconProps } from "@/components/misc";
 
 type NavItem = {
   label: string;
-  href: string;
+  href: `/${string}`;
   icon: IconProps["name"];
 };
 

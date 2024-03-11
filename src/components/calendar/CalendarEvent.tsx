@@ -1,9 +1,9 @@
 import type { DateTime, WeekdayNumbers } from "luxon";
+import tinycolor from "tinycolor2";
 
 import { Text } from "@/components/ui";
 import type { Event } from "@/interfaces/time";
 import { Flex, GridItem } from "@/lib/styled/jsx";
-import { hexToRgb, rgbToYIQ } from "@/utils/colors";
 import { getPercentage } from "@/utils/common";
 import { getWeekdayOffset } from "@/utils/time";
 
@@ -35,7 +35,7 @@ export const CalendarEvent = ({
         pos="relative"
         justify="center"
         rounded="l1"
-        color={rgbToYIQ(hexToRgb(color)) >= 128 ? "black" : "white"}
+        color={tinycolor.isReadable(color, "white") ? "white" : "black"}
         style={{
           height: getPercentage(interval.length("hour"), duration),
           top: getPercentage(offset, duration),

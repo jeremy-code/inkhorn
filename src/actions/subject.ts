@@ -2,8 +2,7 @@
 
 import { db } from "@/lib/db/drizzle";
 
-export const fetchSubjects = async (search: string) => {
-  return await db.query.subjects.findMany({
+export const fetchSubjects = async (search: string) =>
+  db.query.subjects.findMany({
     where: (s, { ilike }) => ilike(s.name, `${search}%`),
   });
-};

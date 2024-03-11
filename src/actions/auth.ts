@@ -14,6 +14,4 @@ export const signInAction = async () => {
   await signIn(undefined, { redirectTo: SIGN_IN_REDIRECT });
 };
 
-export const signOutAction = async () => {
-  await signOut({ redirectTo: SIGN_OUT_REDIRECT });
-};
+export const signOutAction = async () => signOut({ redirectTo: SIGN_OUT_REDIRECT });

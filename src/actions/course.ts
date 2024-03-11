@@ -30,15 +30,16 @@ export const deleteCourse = async (id: number) => {
 };
 
 // Return all the courses of the current user
-export const getCourses = unstable_cache(
-  async () => {
-    const user = await getUser();
+export const getCourses = async () => {
+  const { id: userId } = await getUser();
 
-    return await db.query.courses.findMany({ where: (c, { eq }) => eq(c.userId, user.id) });
-  },
-  undefined,
-  { tags: ["courses"] }
-);
+  return unstable_cache(
+    async (userId: string) =>
+      await db.query.courses.findMany({ where: (c, { eq }) => eq(c.userId, userId) }),
+    ["userId"],
+    { tags: ["courses"] }
+  )(userId);
+};
 
 export const createCourse: StatefulFormAction<InsertCourse | null> = async (_state, formData) => {
   const { id: userId } = await getUser();
