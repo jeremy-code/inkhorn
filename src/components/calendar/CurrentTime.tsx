@@ -45,7 +45,7 @@ export const CurrentTime = ({ startHour, endHour }: CurrentTimeProps) => {
             pos: "absolute",
             // left, right, bottom are set to 0, or full width, bottom aligned
             inset: "auto 0 0",
-            bg: "red",
+            bg: "red.500",
           },
         }}
         _before={{

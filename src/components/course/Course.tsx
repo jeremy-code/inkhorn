@@ -6,7 +6,7 @@ import { getInterval, getWeekday, TIME_SIMPLE } from "@/utils/time";
 export const Course = async ({ id, name, weekdays, subject, startTime, endTime }: CourseProps) => {
   return (
     <Link href={`/courses/${encodeId(id)}`} underline="none" w="full">
-      <Card.Root w="full" minW="xs" boxShadow="none" _hover={{ bg: "bg.subtle" }}>
+      <Card.Root p={4} w="full" minW="xs" boxShadow="none" _hover={{ bg: "bg.subtle" }}>
         <Card.Header display="block" pb={0}>
           <Badge mb="2">{subject}</Badge>
           <Card.Title>{name}</Card.Title>

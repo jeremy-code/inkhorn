@@ -22,14 +22,14 @@ export interface ProgressProps
 
 export const Progress = forwardRef<HTMLDivElement, ProgressProps>((props, ref) => {
   const [variantProps, progressProps] = progress.splitVariantProps(props);
-  const [cssProps, localProps] = splitCssProps(progressProps);
+  const [{ css: cssProp, ...styleProps }, localProps] = splitCssProps(progressProps);
   const { children, className, type = "linear", ...rootProps } = localProps;
   const styles = progress(variantProps);
 
   return (
     <ArkProgress.Root
       ref={ref}
-      className={cx(styles.root, css(cssProps), className)}
+      className={cx(styles.root, css(styleProps, cssProp), className)}
       {...rootProps}
     >
       {children && <ArkProgress.Label className={styles.label}>{children}</ArkProgress.Label>}
